@@ -24,14 +24,23 @@ NVIDIA_API_KEY = os.environ.get("NVIDIA_API_KEY", "")
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-def api_request(url, headers, payload, retries=3):
+def api_request(url, headers, payload, retries=3, timeout=None):
     """带重试的 API 请求"""
+    headers["User-Agent"] = "RareDiseaseNewsBot/1.0"
     data = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
+    req_timeout = timeout or 60
     for attempt in range(retries):
         try:
-            with urllib.request.urlopen(req, timeout=60) as resp:
+            req = urllib.request.Request(url, data=data, headers=headers, method="POST")
+            with urllib.request.urlopen(req, timeout=req_timeout) as resp:
                 return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", errors="replace")
+            print(f"  请求失败 (第{attempt+1}次): HTTP {e.code} - {body[:200]}")
+            if attempt < retries - 1:
+                time.sleep(3 * (attempt + 1))
+            else:
+                raise
         except Exception as e:
             print(f"  请求失败 (第{attempt+1}次): {e}")
             if attempt < retries - 1:
@@ -71,10 +80,15 @@ def fetch_all_news():
         hour=0, minute=0, second=0, microsecond=0
     )
 
-    start_date = yesterday.strftime("%Y-%m-%dT%H:%M:%S.000Z")
-    end_date = now.strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    # 转换为 UTC 的 ISO 8601 格式
+    UTC = timezone.utc
+    start_utc = yesterday.astimezone(UTC)
+    end_utc = now.astimezone(UTC)
+    start_date = start_utc.strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    end_date = end_utc.strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
-    print(f"搜索时间范围: {start_date} ~ {end_date}")
+    print(f"搜索时间范围 (UTC): {start_date} ~ {end_date}")
+    print(f"对应北京时间: {yesterday.strftime('%Y-%m-%d %H:%M')} ~ {now.strftime('%Y-%m-%d %H:%M')}")
 
     queries = [
         "rare disease news treatment therapy breakthrough",
@@ -177,7 +191,7 @@ def translate_batch(news_items):
 
         try:
             print(f"  翻译第 {i+1}-{i+len(batch)} 条...")
-            result = api_request(url, headers, payload)
+            result = api_request(url, headers, payload, timeout=120)
             content = result["choices"][0]["message"]["content"]
 
             # 清理可能的 markdown 包裹
