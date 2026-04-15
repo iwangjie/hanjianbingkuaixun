@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>罕见病每日快讯</title>
+  <style>
+    :root {
+      --primary: #4a6cf7;
+      --primary-light: #6b8cff;
+      --bg: #f5f7fb;
+      --card-bg: #ffffff;
+      --text: #333333;
+      --text-secondary: #666666;
+      --border: #e2e8f0;
+      --shadow: 0 2px 8px rgba(0,0,0,0.08);
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      padding: 24px 0;
+      box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
+    }
+
+    .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .header p {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    .controls {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .date-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .date-nav button {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 14px;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+
+    .date-nav button:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .date-nav input[type="date"] {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 14px;
+      color: var(--text);
+      background: var(--card-bg);
+      cursor: pointer;
+    }
+
+    .lang-toggle {
+      display: flex;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-left: auto;
+    }
+
+    .lang-toggle button {
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 13px;
+      background: transparent;
+      color: var(--text-secondary);
+      transition: all 0.2s;
+    }
+
+    .lang-toggle button.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    .content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .news-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .news-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+
+    .news-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .news-card h3 a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .news-card h3 a:hover {
+      color: var(--primary);
+    }
+
+    .news-meta {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .news-meta span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .news-summary {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .news-link {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .news-link:hover {
+      text-decoration: underline;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-secondary);
+    }
+
+    .empty-state .icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .empty-state h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .loading {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-secondary);
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      border: 3px solid var(--border);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 12px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    @media (max-width: 640px) {
+      .controls {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .lang-toggle {
+        margin-left: 0;
+      }
+      .date-nav {
+        justify-content: center;
+      }
+      .news-card {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-inner">
+      <h1>🩺 罕见病每日快讯</h1>
+      <p>Rare Disease Daily News — 自动采集全球罕见病领域最新资讯</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="date-nav">
+      <button onclick="changeDate(-1)" title="前一天">◀ 前一天</button>
+      <input type="date" id="datePicker" onchange="loadDate(this.value)">
+      <button onclick="changeDate(1)" title="后一天">后一天 ▶</button>
+      <button onclick="loadToday()" title="今天">今天</button>
+    </div>
+    <div class="lang-toggle">
+      <button id="btnZh" class="active" onclick="switchLang('zh')">中文</button>
+      <button id="btnEn" onclick="switchLang('en')">English</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="status-bar">
+      <span id="dateLabel"></span>
+      <span id="countLabel"></span>
+    </div>
+    <div id="newsList" class="news-list">
+      <div class="loading">
+        <div class="spinner"></div>
+        <p>加载中...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>数据来源: <a href="https://exa.ai" target="_blank">Exa API</a> | 自动采集 · 每日更新 | <a href="https://github.com/iwangjie/hanjianbingkuaixun" target="_blank">GitHub</a></p>
+  </div>
+
+  <script>
+    let currentDate = '';
+    let currentLang = 'zh';
+    let availableDates = [];
+
+    // 获取北京时间今天的日期
+    function getTodayBJT() {
+      const now = new Date();
+      const bjt = new Date(now.getTime() + (8 * 60 - now.getTimezoneOffset()) * 60000);
+      return bjt.toISOString().split('T')[0];
+    }
+
+    // 初始化
+    async function init() {
+      try {
+        const resp = await fetch('data/dates.json');
+        if (resp.ok) {
+          availableDates = await resp.json();
+        }
+      } catch(e) {
+        console.log('No dates index found');
+      }
+      loadToday();
+    }
+
+    function loadToday() {
+      const today = getTodayBJT();
+      document.getElementById('datePicker').value = today;
+      loadDate(today);
+    }
+
+    function changeDate(delta) {
+      const picker = document.getElementById('datePicker');
+      const d = new Date(picker.value);
+      d.setDate(d.getDate() + delta);
+      const newDate = d.toISOString().split('T')[0];
+      picker.value = newDate;
+      loadDate(newDate);
+    }
+
+    function switchLang(lang) {
+      currentLang = lang;
+      document.getElementById('btnZh').classList.toggle('active', lang === 'zh');
+      document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+      loadDate(currentDate);
+    }
+
+    async function loadDate(date) {
+      currentDate = date;
+      const container = document.getElementById('newsList');
+      const dateLabel = document.getElementById('dateLabel');
+      const countLabel = document.getElementById('countLabel');
+
+      dateLabel.textContent = `📅 ${date}`;
+      container.innerHTML = '<div class="loading"><div class="spinner"></div><p>加载中...</p></div>';
+
+      const file = currentLang === 'zh' ? 'news_zh.json' : 'news_en.json';
+      const url = `data/${date}/${file}`;
+
+      try {
+        const resp = await fetch(url);
+        if (!resp.ok) throw new Error('Not found');
+        const news = await resp.json();
+
+        if (news.length === 0) {
+          container.innerHTML = `
+            <div class="empty-state">
+              <div class="icon">📭</div>
+              <h3>当日暂无快讯</h3>
+              <p>该日期暂未收录罕见病快讯信息</p>
+            </div>`;
+          countLabel.textContent = '共 0 条';
+          return;
+        }
+
+        countLabel.textContent = `共 ${news.length} 条`;
+        container.innerHTML = news.map((item, i) => `
+          <div class="news-card">
+            <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
+            <div class="news-meta">
+              <span>📅 ${formatDate(item.date)}</span>
+              <span>🔗 ${extractDomain(item.url)}</span>
+            </div>
+            <div class="news-summary">${escapeHtml(item.summary)}</div>
+            <a class="news-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">阅读原文 →</a>
+          </div>
+        `).join('');
+
+      } catch(e) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="icon">📭</div>
+            <h3>暂无数据</h3>
+            <p>该日期暂未采集快讯，请尝试其他日期</p>
+            ${availableDates.length > 0
+              ? `<p style="margin-top:12px">最近可用日期: ${availableDates.slice(0,5).map(d => `<a href="#" onclick="document.getElementById('datePicker').value='${d}';loadDate('${d}');return false;" style="color:var(--primary);margin:0 4px">${d}</a>`).join('')}</p>`
+              : ''}
+          </div>`;
+        countLabel.textContent = '';
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function formatDate(dateStr) {
+      if (!dateStr) return '未知日期';
+      try {
+        const d = new Date(dateStr);
+        return d.toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' });
+      } catch(e) {
+        return dateStr;
+      }
+    }
+
+    function extractDomain(url) {
+      try {
+        return new URL(url).hostname;
+      } catch(e) {
+        return '';
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>
