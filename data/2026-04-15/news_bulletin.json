@@ -1,82 +1,152 @@
 [
   {
-    "id": "6b31054eb67b",
-    "category": "药物进展",
-    "title": "FDA批准Filspari用于局灶节段性肾小球硬化治疗",
-    "summary": "2026年4月14日，美国食品药品监督管理局（FDA）批准了Filspari（sparsentan）用于治疗原发性局灶节段性肾小球硬化（FSGS）成人患者，以降低蛋白尿。该药是一种每日一次口服的血管紧张素II受体拮抗剂/内皮素A受体拮抗剂双重作用疗法。此前，Filspari已获批用于减缓原发性免疫球蛋白A肾病（IgAN）成人患者的肾功能下降。此次批准使其成为首个且目前唯一同时获批用于FSGS和IgAN这两种罕见慢性肾病的疗法，为患者提供了新的治疗选择。",
-    "source": "webmd(webmd.com)",
-    "date": "2026-04-14T00:00:00.000Z",
-    "url": "https://www.webmd.com/drugs/updates/filspari-dual-acting-oral-therapy-for-focal-segmental-glomerulosclerosis",
-    "fallback": false
-  },
-  {
-    "id": "0eacc6c775d8",
-    "category": "企业动态",
-    "title": "AI平台或加速捷格瑞健康Crofelemer罕见病药物开发",
-    "summary": "2026年4月14日，BioSpace报道称，人工智能（AI）平台可能增强捷格瑞健康公司（Jaguar Health）针对罕见病肠道衰竭（IF）项目的Crofelemer药物开发及预期商业化进程。该公司正探索利用AI技术优化药物研发流程，旨在提高效率并缩短上市时间。Crofelemer作为在研药物，其针对罕见病适应症的推进受到关注。此消息反映了AI在罕见病药物开发中的潜在应用，但具体效果仍需进一步验证。",
-    "source": "BioSpace",
-    "date": "2026-04-14T04:32:27.000Z",
-    "url": "https://www.biospace.com/press-releases/artificial-intelligence-ai-platforms-could-enhance-jaguar-healths-development-and-anticipated-commercialization-of-crofelemer-for-rare-disease-intestinal-failure-if-programs",
-    "fallback": false
-  },
-  {
     "id": "b41ccbc2c62e",
-    "category": "药物进展",
-    "title": "FDA授予GS-100基因疗法突破性疗法认定",
-    "summary": "2026年4月14日，美国食品药品监督管理局（FDA）授予Grace Science公司研发的基因疗法GS-100突破性疗法认定（RMAT），用于治疗NGLY1缺乏症。NGLY1缺乏症是一种极为罕见的常染色体隐性遗传病，由NGLY1基因功能丧失性突变引起，患者常表现为严重发育迟缓、运动障碍、异常哭闹及面部特征异常等，目前全球尚无获批的针对性疗法。GS-100作为一种旨在恢复NGLY1蛋白功能的基因疗法，其获得RMAT认定意味着FDA认可其初步临床证据显示在严重或危及生命的疾病中具有实质性改善潜力。该认定将促进FDA与Grace Science公司的密切指导与协作，以加速该疗法的后续研发与审评进程，为这一未满足重大医疗需求的罕见病患者群体带来潜在治疗希望。",
+    "category": "行业资讯",
+    "title": "美国FDA授予Grace Science公司NGLY1缺乏症基因疗法GS-100突破性疗法认定",
+    "summary": "美国食品药品监督管理局（FDA）已授予Grace Science, LLC公司用于治疗NGLY1缺乏症的基因疗法GS-100突破性疗法（RMAT）认定。该认定基于早期临床数据。公司总部位于加州门洛帕克。",
     "source": "雅虎财经(Yahoo Finance)",
     "date": "2026-04-14T12:00:00.000Z",
     "url": "https://finance.yahoo.com/sectors/healthcare/articles/u-fda-grants-rmat-designation-120000651.html",
-    "fallback": false
+    "fallback": true
   },
   {
-    "id": "589afc449c33",
+    "id": "77be3eeea44f",
+    "category": "行业资讯",
+    "title": "Travere Therapeutics宣布FILSPARI®（司帕生坦）获FDA完全批准，成为首款且唯一获批治疗FSGS的药物",
+    "summary": "Travere Therapeutics公司宣布，其药物FILSPARI®（司帕生坦）已获得美国FDA的完全批准，用于治疗具有进展风险的原发性局灶节段性肾小球硬化（FSGS）成人患者。这是首款且唯一获此适应症批准的药物。公司总部位于加州圣迭戈。",
+    "source": "加尔维斯顿新闻(Galveston News)",
+    "date": "2026-04-13T22:16:58.000Z",
+    "url": "https://www.galvnews.com/travere-therapeutics-announces-full-fda-approval-of-filspari-sparsentan-the-first-and-only-approved-medicine/article_8d8497d7-8e64-5736-acf6-95e12d583e70.html",
+    "fallback": true
+  },
+  {
+    "id": "4ccb4c16d47a",
     "category": "药物进展",
-    "title": "儿童罕见痴呆症新药Avlayah获FDA加速批准，首个应用“脑穿梭”技术",
-    "summary": "2026年4月14日，美国食品药品监督管理局（FDA）通过加速批准途径，批准了新型药物Avlayah用于治疗儿童罕见痴呆症。Avlayah是全球首个获批应用“脑穿梭”技术成功突破血脑屏障的药物，临床研究显示其能有效降低患者体内一种关键生物标志物的水平。该批准基于替代终点数据，为罕见病儿童患者提供了新的治疗选择，标志着中枢神经系统药物递送技术的重要突破。",
+    "title": "FDA加速批准首款“脑穿梭”技术新药Avlayah，治疗罕见儿童痴呆症",
+    "summary": "2026年4月14日，美国食品药品监督管理局（FDA）授予药物Avlayah加速批准，用于治疗特定罕见儿童痴呆症。该药物是首个获批应用“脑穿梭”技术以有效穿透血脑屏障的疗法，其临床研究显示能够显著降低疾病相关的关键生物标志物水平。此次批准标志着血脑屏障递送技术的重要里程碑，为神经系统罕见病治疗提供了新策略。",
     "source": "Being Patient",
     "date": "2026-04-14T05:00:39.000Z",
     "url": "https://beingpatient.com/new-drug-rare-childhood-dementia-fda-accelerated-approval/",
     "fallback": false
   },
   {
+    "id": "d287e7295bea",
+    "category": "行业资讯",
+    "title": "人工智能平台可能增强Jaguar Health公司用于罕见病肠道衰竭项目的Crofelemer药物开发及预期商业化进程 - BioSpace",
+    "summary": "人工智能平台可能增强Jaguar Health公司用于罕见病肠道衰竭项目的Crofelemer药物开发及预期商业化进程。2026年4月14日 | 阅读时间约4分钟 ... 之间",
+    "source": "BioSpace",
+    "date": "2026-04-14T04:32:27.000Z",
+    "url": "https://www.biospace.com/press-releases/artificial-intelligence-ai-platforms-could-enhance-jaguar-healths-development-and-anticipated-commercialization-of-crofelemer-for-rare-disease-intestinal-failure-if-programs",
+    "fallback": true
+  },
+  {
+    "id": "ea7586cb2486",
+    "category": "药物进展",
+    "title": "Travere公司FILSPARI获FDA完全批准，成FSGS首个治疗药物",
+    "summary": "2026年4月14日，美国食品药品监督管理局（FDA）授予Travere Therapeutics公司药物FILSPARI®（sparsentan）完全批准，用于治疗原发性局灶节段性肾小球硬化（FSGS）。该批准使FILSPARI成为全球首个且目前唯一获批专门用于治疗FSGS这一罕见肾脏疾病的药物。此次批准基于关键性DUAL III期临床试验的积极数据。该消息由Ligand Pharmaceuticals（Travere的合作伙伴）通过环球新闻社（GlobeNewswire）发布。",
+    "source": "环球新闻社(GlobeNewswire)",
+    "date": "2026-04-14T11:00:00.000Z",
+    "url": "https://www.globenewswire.com/news-release/2026/04/14/3273192/0/en/Ligand-Partner-Travere-Therapeutics-Receives-Full-FDA-Approval-for-FILSPARI-sparsentan-in-FSGS.html",
+    "fallback": false
+  },
+  {
+    "id": "99a29f6dc0bc",
+    "category": "行业资讯",
+    "title": "Travere Therapeutics宣布FILSPARI® (sparsentan) 获FDA完全批准，成为首个且唯一获批治疗FSGS的药物",
+    "summary": "Travere Therapeutics宣布FILSPARI® (sparsentan) 获FDA完全批准，成为首个且唯一获批治疗FSGS（局灶节段性肾小球硬化）的药物。2026年4月13日 - 下载（在新窗口中打开）",
+    "source": "ir.travere(ir.travere.com)",
+    "date": "2026-04-13T17:16:00.000Z",
+    "url": "https://ir.travere.com/press-releases/news-details/2026/Travere-Therapeutics-Announces-Full-FDA-Approval-of-FILSPARI-sparsentan-the-First-and-Only-Approved-Medicine-for-FSGS/default.aspx",
+    "fallback": true
+  },
+  {
+    "id": "2747e4c2c296",
+    "category": "行业资讯",
+    "title": "Praxis Precision Medicines宣布其用于治疗原发性震颤的乌利沙卡他胺HCl新药申请获FDA受理",
+    "summary": "Praxis Precision Medicines宣布，美国食品药品监督管理局（FDA）已受理其乌利沙卡他胺HCl（Ulixacaltamide HCl）用于治疗原发性震颤患者的新药申请（NDA）。该申请基于一项随机、双盲、安慰剂对照的III期临床研究（KINETIC 2研究）的数据，该研究评估了该药物在治疗药物难治性原发性震颤中的疗效和安全性。乌利沙卡他胺HCl是一种新型、高选择性的小分子电压门控钠通道1.7（NaV1.7）抑制剂，旨在减少导致震颤的异常神经信号。",
+    "source": "雅虎财经(Yahoo Finance)",
+    "date": "2026-04-14T11:30:00.000Z",
+    "url": "https://uk.finance.yahoo.com/news/praxis-precision-medicines-announces-fda-113000292.html",
+    "fallback": true
+  },
+  {
+    "id": "45c0797777e7",
+    "category": "药物进展",
+    "title": "Travere Therapeutics的sparsentan获FDA完全批准用于IgA肾病",
+    "summary": "2026年4月14日，Travere Therapeutics公司宣布其药物Filspari（sparsentan）获得美国食品药品监督管理局（FDA）完全批准，用于降低患有进展性肾脏疾病的IgA肾病成人患者发生肾脏功能衰竭的风险。该批准基于关键的III期DUAL临床试验的积极结果。Filspari是一种首创的口服双重内皮素血管紧张素受体拮抗剂（DEARA），通过同时阻断内皮素A受体和血管紧张素II 1型受体，减少肾脏内的压力、炎症和瘢痕形成。此前，该药物已获得FDA的优先审评认定和突破性疗法认定。",
+    "source": "制药技术(Pharmaceutical Technology)",
+    "date": "2026-04-14T10:24:21.000Z",
+    "url": "https://www.pharmaceutical-technology.com/news/travere-therapeutics-fda-approval-sparsentan/",
+    "fallback": false
+  },
+  {
+    "id": "9110e704d2c2",
+    "category": "政策法规",
+    "title": "罕见病药物年龄限制审批引公平性质疑",
+    "summary": "2026年4月14日，STAT发表评论文章指出，基于年龄限制批准罕见病疗法可能对患者群体造成毁灭性影响，并加剧领域内公平性问题。文章以黏多糖贮积症II型（MPS II，亨特综合征）为例，说明近期有针对特定年龄组（如5岁以下）的疗法获批，但许多年长患者因年龄门槛被排除在治疗机会之外。作者以其家庭长期为患病的双胞胎兄弟倡导治疗的经历，揭示了此类审批路径可能变相剥夺部分患者的潜在获益，引发对罕见病用药可及性与审批标准公平性的深刻担忧。",
+    "source": "STAT新闻(STAT News)",
+    "date": "2026-04-14T17:01:55.941Z",
+    "url": "https://www.statnews.com/2026/04/14/hunter-syndrome-avlayah-age-based-approvals/",
+    "fallback": false
+  },
+  {
+    "id": "344a483c220a",
+    "category": "政策法规",
+    "title": "海南1.6天审批模式为罕见病患者开通生命通道",
+    "summary": "2026年4月14日，中国国际电视台（CGTN）报道了海南省实施的罕见病用药快速审批模式，该模式将海外药品的审批时间大幅缩短至平均1.6天，而此前同类药品进入中国市场通常需要数年时间。这一政策创新旨在为罕见病患者提供更及时的国际先进治疗选择，被视为一条重要的‘生命线’。",
+    "source": "news.cgtn(news.cgtn.com)",
+    "date": "2026-04-14T06:12:29.000Z",
+    "url": "https://news.cgtn.com/news/2026-04-14/Hainan-s-1-6-day-approval-A-rare-disease-lifeline-1MkG2Ks3tSg/p.html",
+    "fallback": false
+  },
+  {
+    "id": "235d094afacf",
+    "category": "药物进展",
+    "title": "FDA批准首款FSGS治疗药物Filspari上市",
+    "summary": "2026年4月14日，美国食品药品监督管理局（FDA）批准了Travere Therapeutics公司研发的药物Filspari（sparsentan）上市，用于治疗具有进展风险的局灶节段性肾小球硬化症（FSGS）。这是全球首个获批用于该适应症的疗法，为这种进展性罕见肾病提供了长期延缓肾功能下降的治疗选择。该批准结束了Filspari曲折的监管历程，此前药物曾因临床数据要求而经历审评延期，此次获批基于关键的DUPLEX试验数据，显示其相比标准治疗厄贝沙坦在降低蛋白尿和延缓肾功能下降方面具有显著优势。该药物的上市标志着FSGS这一无有效治疗药物的罕见病领域迎来重大突破。",
+    "source": "biopharmadive(biopharmadive.com)",
+    "date": "2026-04-14T12:07:00.000Z",
+    "url": "https://www.biopharmadive.com/news/travere-fda-approve-flispari-fsgs-kidney-disease/817415/",
+    "fallback": false
+  },
+  {
+    "id": "e8ad4fdfdd3f",
+    "category": "行业资讯",
+    "title": "柳韩洋行高谢氏病药物候选物获美国FDA孤儿药资格 - THE ELEC",
+    "summary": "柳韩洋行的一款治疗高谢氏病（戈谢病）的药物候选物获得美国食品药品监督管理局的孤儿药资格认定，将加速该药物的开发进程。",
+    "source": "thelec(thelec.net)",
+    "date": "2026-04-14T05:47:19.000Z",
+    "url": "https://www.thelec.net/news/articleView.html?idxno=6537",
+    "fallback": true
+  },
+  {
     "id": "2518b05a498b",
     "category": "药物进展",
-    "title": "柳韩洋行戈谢病药物候选物获FDA孤儿药资格",
-    "summary": "2026年4月14日，柳韩洋行（Yuhan Corp.，股票代码：000100.KS）宣布其针对戈谢病（Gaucher disease）开发的药物候选物YH35995已获得美国食品药品监督管理局（FDA）的孤儿药资格（Orphan Drug Designation, ODD）。戈谢病是一种罕见的遗传性代谢疾病。FDA的孤儿药资格旨在通过提供市场独占期、研发激励等政策，促进罕见病治疗药物的开发。此次资格认定标志着YH35995在研发进程中取得重要监管里程碑，有望加速其后续临床研究及潜在商业化进程。",
+    "title": "柳韩洋行戈谢病在研药YH35995获FDA孤儿药资格",
+    "summary": "2026年4月13日，韩国柳韩洋行（Yuhan Corp.，股票代码：000100.KS）宣布，其用于治疗戈谢病的在研候选药物YH35995已获得美国食品药品监督管理局（FDA）授予的孤儿药资格（Orphan Drug Designation, ODD）。该资格旨在鼓励开发用于治疗罕见病（美国指患者人数少于20万人的疾病）的药品，可为研发提供包括市场独占期在内的多项激励政策。此次资格认定是基于该候选药物针对戈谢病这一罕见遗传性代谢疾病的潜在治疗价值。相关消息源于韩国《首尔经济日报》英文版（en.sedaily.com）的报道。",
     "source": "en.sedaily(en.sedaily.com)",
     "date": "2026-04-13T22:01:05.000Z",
     "url": "https://en.sedaily.com/finance/2026/04/14/yuhan-corp-drug-candidate-receives-fda-orphan-drug",
     "fallback": false
   },
   {
-    "id": "d6e42ccf7f8b",
+    "id": "836190cdb099",
     "category": "药物进展",
-    "title": "FDA批准全球首个LAD-I基因疗法Kresladi上市",
-    "summary": "2026年4月14日，美国食品药品监督管理局（FDA）批准了Rocket Pharmaceuticals公司开发的基因疗法Kresladi（marnetegragene autotemcel）上市。该疗法是全球首个获批用于治疗因ITGB2基因双等位基因变异导致的重症白细胞黏附缺陷症I型（LAD-I）儿科患者的基因疗法。其获批基于一项临床试验数据，该试验中9名接受治疗的患儿展现了显著的临床获益，为这一此前几乎无有效治疗手段的致命罕见病提供了根本性治疗选择。",
-    "source": "36氪(36Kr)",
-    "date": "2026-04-14T13:22:25.000Z",
-    "url": "https://36kr.com/p/3760253068001798",
+    "title": "Filspari获FDA完全批准用于治疗FSGS",
+    "summary": "2026年4月14日，美国食品药品监督管理局（FDA）授予Travere Therapeutics公司研发的Filspari（sparsentan）完全批准，用于治疗具有进展风险的局灶节段性肾小球硬化（FSGS）。该批准使Filspari成为全球首个获批的FSGS疗法，并标志着其适应症从已批准的IgA肾病扩展至另一种罕见肾病。此举为FSGS患者提供了首个经FDA完全批准的靶向治疗选择，进一步巩固了该药物在罕见肾病治疗领域的地位。",
+    "source": "pharmexec(pharmexec.com)",
+    "date": "2026-04-14T13:26:40.000Z",
+    "url": "https://www.pharmexec.com/view/travere-therapeutics-filspari-receives-full-fda-approval",
     "fallback": false
   },
   {
-    "id": "fac6c4c0d72f",
+    "id": "9dad4f10b326",
     "category": "药物进展",
-    "title": "国家药监局发布87个通知件，多款罕见病重磅药未获批准",
-    "summary": "2026年4月14日，国家药监局发布药品通知件送达信息，本批次共涉及87个受理号。其中，齐鲁制药的诺西那生钠注射液（用于罕见病脊髓性肌萎缩症）未获批准，该药原研价格曾高达70万元/针，后降至约3万元/针，齐鲁作为国内仿制龙头发起挑战；浙江圣兆药物的注射用醋酸亮丙瑞林微球未获批准，该复杂制剂目前仅原研武田及上海丽珠持有文号；比拉斯汀相关4个受理号（科伦口崩片、江苏长泰药业、珠海北杉、海南海灵化学口服溶液）均未获批准；人福药业的盐酸右哌甲酯缓释胶囊未获批准，该品种目前仅河南中帅药业一规格独家上市，人福拟成为第二家。所有产品均涉及罕见病或特殊制剂领域。",
-    "source": "daydaynews.cc(daydaynews.cc)",
-    "date": "2026-04-14T10:33:05.000Z",
-    "url": "https://daydaynews.cc/zh-hans/regimen/4299108.html",
-    "fallback": false
-  },
-  {
-    "id": "21f35266c8e8",
-    "category": "药物进展",
-    "title": "复星医药CAR-T产品FKC289注射液临床试验获批",
-    "summary": "2026年4月14日，复星医药宣布其控股子公司复星凯瑞收到国家药品监督管理局批准，可开展FKC289注射液的临床试验。FKC289是一种靶向B细胞成熟抗原（BCMA）和CD19的基因修饰CAR-T细胞产品，拟用于治疗复发/难治原发性轻链型淀粉样变及复发/难治膜性肾病两种罕见病。截至该公告日，全球范围内尚无具有相同双靶点分子机制的治疗产品获批上市。",
-    "source": "新浪网(Sina)",
-    "date": "2026-04-14T11:54:41.000Z",
-    "url": "https://finance.sina.com.cn/jjxw/2026-04-14/doc-inhunpmu1494206.shtml",
+    "title": "FDA批准Filspari成为首个治疗FSGS肾病药物",
+    "summary": "2026年4月14日，美国食品药品监督管理局（FDA）批准Travere Therapeutics公司研发的Filspari（sparsentan）用于治疗罕见肾病局灶节段性肾小球硬化（FSGS）。这是全球首个获批专门针对FSGS的特异性治疗药物，标志着该药物的适应症从此前已获批的IgA肾病成功扩展至FSGS领域。此次批准基于关键的DUPLEX临床试验的积极数据，为FSGS患者群体提供了首个经监管机构认可的疾病修饰治疗选择，具有重要的临床里程碑意义。",
+    "source": "endpoints.news(endpoints.news)",
+    "date": "2026-04-14T09:02:09.000Z",
+    "url": "https://endpoints.news/fda-approves-traveres-filspari-as-first-drug-for-the-kidney-disease-called-fsgs/",
     "fallback": false
   }
 ]

@@ -1,28 +1,42 @@
 #!/usr/bin/env python3
 """
-罕见病每日快讯采集脚本
-- 使用 Exa API 搜索罕见病相关新闻
-- 使用 NVIDIA LLM API 翻译为中文
-- 使用 LLM 生成快讯板式（过滤 + 分类 + 格式化）
+罕见病每日快讯采集脚本（多通道版）
+- 支持 Exa / Tavily / Jina / Metaso 等多个搜索通道
+- 通道级容错：单个通道失败不影响整体
+- 统一数据模型 + 合并去重
+- 使用 NVIDIA LLM API 翻译 + 快讯格式化
 - 按日期存储 JSON 文件（英文/中文/快讯 三个版本）
 """
 
 import json
 import os
+import re
 import sys
 import time
 import hashlib
 import urllib.request
 import urllib.error
 from datetime import datetime, timedelta, timezone
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
 
 BJT = timezone(timedelta(hours=8))
 UTC = timezone.utc
 
-EXA_API_KEY = os.environ.get("EXA_API_KEY", "")
 NVIDIA_API_KEY = os.environ.get("NVIDIA_API_KEY", "")
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# 每个通道最多返回的条目数（避免 LLM 成本爆炸）
+MAX_ITEMS_PER_CHANNEL = 15
+# 合并后送入 LLM 管线的最大条目数
+MAX_TOTAL_ITEMS = 30
+# 快讯最大条目数
+MAX_BULLETIN_ITEMS = 15
+
+# URL 追踪参数黑名单（去重用）
+TRACKING_PARAMS = {
+    "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+    "fbclid", "gclid", "ref", "source", "spm", "from", "isappinstalled",
+}
 
 # 已知域名 → 中文名(英文名) 映射表
 DOMAIN_NAMES = {
@@ -64,6 +78,7 @@ DOMAIN_NAMES = {
     "foxnews.com": "福克斯新闻(Fox News)",
     "cnn.com": "CNN",
     "theguardian.com": "卫报(The Guardian)",
+    "pharmaphorum.com": "PharmaPHorum",
     "sina.com.cn": "新浪网(Sina)",
     "163.com": "网易(NetEase)",
     "sohu.com": "搜狐(Sohu)",
@@ -78,35 +93,123 @@ DOMAIN_NAMES = {
 
 
 # ============================================================
-# API 工具函数
+# 通道注册表 — 增删通道只需修改此处 + 实现对应 search 函数
 # ============================================================
 
-def api_request(url, headers, payload, retries=3, timeout=None):
+def build_channel_registry():
+    """构建通道注册表，每个通道包含：搜索函数、API Key、查询列表、单通道上限"""
+    return {
+        "exa": {
+            "fn": channel_exa,
+            "env_key": "EXA_API_KEY",
+            "enabled_env": "CHANNEL_EXA_ENABLED",
+            "label": "Exa",
+            "queries_en": [
+                "rare disease news treatment therapy breakthrough",
+                "orphan drug approval clinical trial rare disease",
+            ],
+            "queries_zh": ["罕见病 治疗 新闻 药物"],
+            "max_items": 20,
+        },
+        "tavily": {
+            "fn": channel_tavily,
+            "env_key": "TAVILY_API_KEY",
+            "enabled_env": "CHANNEL_TAVILY_ENABLED",
+            "label": "Tavily",
+            "queries_en": [
+                "rare disease treatment drug approval news",
+                "orphan drug clinical trial breakthrough",
+            ],
+            "queries_zh": [],
+            "max_items": 15,
+        },
+        "jina": {
+            "fn": channel_jina,
+            "env_key": "JINA_API_KEY",
+            "enabled_env": "CHANNEL_JINA_ENABLED",
+            "label": "Jina",
+            "queries_en": ["rare disease drug approval treatment news 2026"],
+            "queries_zh": ["罕见病 药物 审批 治疗 新闻"],
+            "max_items": 10,
+        },
+        "metaso": {
+            "fn": channel_metaso,
+            "env_key": "METASO_API_KEY",
+            "enabled_env": "CHANNEL_METASO_ENABLED",
+            "label": "秘塔搜索",
+            "queries_en": [],
+            "queries_zh": [
+                "罕见病 药物 治疗 审批 新闻",
+                "罕见病 基因疗法 临床试验",
+            ],
+            "max_items": 10,
+        },
+    }
+
+
+CHANNELS = None  # 延迟初始化，见 get_channels()
+
+
+def get_channels():
+    """获取通道注册表（延迟初始化）"""
+    global CHANNELS
+    if CHANNELS is None:
+        CHANNELS = build_channel_registry()
+    return CHANNELS
+
+
+def is_channel_enabled(name):
+    """检查通道是否启用：有 API Key 且未被显式禁用"""
+    cfg = get_channels()[name]
+    api_key = os.environ.get(cfg["env_key"], "")
+    if not api_key:
+        return False
+    disabled = os.environ.get(cfg["enabled_env"], "1").strip()
+    return disabled != "0"
+
+
+# ============================================================
+# HTTP 工具函数
+# ============================================================
+
+def http_post(url, headers, payload, retries=3, timeout=60):
     """带重试的 HTTP POST 请求"""
     headers = {**headers, "User-Agent": "RareDiseaseNewsBot/1.0"}
     data = json.dumps(payload).encode("utf-8")
-    req_timeout = timeout or 60
     for attempt in range(retries):
         try:
             req = urllib.request.Request(url, data=data, headers=headers, method="POST")
-            with urllib.request.urlopen(req, timeout=req_timeout) as resp:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
             body = e.read().decode("utf-8", errors="replace")
             print(f"  请求失败 (第{attempt+1}次): HTTP {e.code} - {body[:200]}")
-            if attempt < retries - 1:
-                time.sleep(5 * (attempt + 1))
-            else:
-                raise
         except Exception as e:
             print(f"  请求失败 (第{attempt+1}次): {e}")
-            if attempt < retries - 1:
-                time.sleep(5 * (attempt + 1))
-            else:
-                raise
+        if attempt < retries - 1:
+            time.sleep(5 * (attempt + 1))
+    return None
 
 
-def llm_request(system_prompt, user_prompt, retries=5):
+def http_get(url, headers, retries=3, timeout=30):
+    """带重试的 HTTP GET 请求"""
+    headers = {**headers, "User-Agent": "RareDiseaseNewsBot/1.0"}
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers=headers, method="GET")
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", errors="replace")
+            print(f"  请求失败 (第{attempt+1}次): HTTP {e.code} - {body[:200]}")
+        except Exception as e:
+            print(f"  请求失败 (第{attempt+1}次): {e}")
+        if attempt < retries - 1:
+            time.sleep(3 * (attempt + 1))
+    return None
+
+
+def llm_request(system_prompt, user_prompt, retries=3, max_tokens=4096, timeout=120):
     """调用 NVIDIA LLM API（串行、带重试）"""
     url = "https://integrate.api.nvidia.com/v1/chat/completions"
     headers = {
@@ -121,12 +224,15 @@ def llm_request(system_prompt, user_prompt, retries=5):
         ],
         "temperature": 0.3,
         "top_p": 0.9,
-        "max_tokens": 4096,
+        "max_tokens": max_tokens,
         "stream": False,
     }
-    result = api_request(url, headers, payload, retries=retries, timeout=300)
-    content = result["choices"][0]["message"]["content"].strip()
-    # 清理 markdown 代码块包裹
+    result = http_post(url, headers, payload, retries=retries, timeout=timeout)
+    if not result:
+        raise RuntimeError("LLM 请求失败（已耗尽重试次数）")
+    content = (result.get("choices", [{}])[0].get("message", {}).get("content") or "").strip()
+    if not content:
+        raise RuntimeError("LLM 返回空内容")
     if content.startswith("```"):
         lines = content.split("\n")
         content = "\n".join(lines[1:])
@@ -136,107 +242,386 @@ def llm_request(system_prompt, user_prompt, retries=5):
     return content
 
 
+# ============================================================
+# URL 规范化与工具函数
+# ============================================================
+
+def canonical_url(raw_url):
+    """规范化 URL：去追踪参数、去 fragment、统一斜杠"""
+    try:
+        p = urlparse(raw_url)
+        host = (p.hostname or "").lower()
+        if host.startswith("www."):
+            host = host[4:]
+        qs = parse_qs(p.query, keep_blank_values=False)
+        clean_qs = {k: v for k, v in qs.items() if k.lower() not in TRACKING_PARAMS}
+        path = p.path.rstrip("/") or "/"
+        return urlunparse(("https", host, path, "", urlencode(clean_qs, doseq=True), ""))
+    except Exception:
+        return raw_url
+
+
 def get_source_name(url):
-    """从 URL 确定性提取来源名称（不依赖 LLM）"""
+    """从 URL 确定性提取来源名称"""
     try:
         parsed = urlparse(url)
         domain = (parsed.hostname or "").lower()
         if domain.startswith("www."):
             domain = domain[4:]
-        # 精确匹配
         if domain in DOMAIN_NAMES:
             return DOMAIN_NAMES[domain]
-        # 匹配父域名
         parts = domain.split(".")
         for i in range(1, len(parts)):
             parent = ".".join(parts[i:])
             if parent in DOMAIN_NAMES:
                 return DOMAIN_NAMES[parent]
-        # 兜底：使用域名本身
-        name = domain.replace(".com", "").replace(".org", "").replace(".net", "")
-        name = name.replace(".cn", "").replace(".co.uk", "")
+        name = re.sub(r"\.(com|org|net|cn|co\.uk|io)$", "", domain)
         return f"{name}({domain})"
     except Exception:
         return "未知来源"
 
 
 def make_id(url):
-    """根据 URL 生成稳定 ID"""
-    return hashlib.md5(url.encode()).hexdigest()[:12]
+    """根据规范化 URL 生成稳定 ID"""
+    return hashlib.md5(canonical_url(url).encode()).hexdigest()[:12]
+
+
+def parse_date_flexible(date_str):
+    """尝试多种格式解析日期，返回 ISO 8601 字符串或原样返回"""
+    if not date_str:
+        return ""
+    # 已经是 ISO 格式
+    if re.match(r"^\d{4}-\d{2}-\d{2}T", date_str):
+        return date_str
+    # RFC 2822: "Tue, 14 Apr 2026 10:04:45 GMT"
+    for fmt in [
+        "%a, %d %b %Y %H:%M:%S %Z",
+        "%a, %d %b %Y %H:%M:%S %z",
+        "%Y-%m-%d %H:%M:%S",
+        "%Y-%m-%d",
+    ]:
+        try:
+            dt = datetime.strptime(date_str, fmt)
+            return dt.strftime("%Y-%m-%dT%H:%M:%S")
+        except ValueError:
+            continue
+    # 中文日期: "2026年02月28日"
+    m = re.match(r"(\d{4})年(\d{1,2})月(\d{1,2})日", date_str)
+    if m:
+        return f"{m.group(1)}-{m.group(2).zfill(2)}-{m.group(3).zfill(2)}T00:00:00"
+    # Jina 格式: "Mar 26, 2026"
+    for fmt in ["%b %d, %Y", "%B %d, %Y"]:
+        try:
+            dt = datetime.strptime(date_str, fmt)
+            return dt.strftime("%Y-%m-%dT%H:%M:%S")
+        except ValueError:
+            continue
+    return date_str
+
+
+def is_within_date_range(date_str, start_dt, end_dt):
+    """检查日期是否在采集范围内（宽松：无日期的不过滤）"""
+    if not date_str:
+        return True
+    try:
+        dt_str = parse_date_flexible(date_str)
+        dt = datetime.fromisoformat(dt_str.replace("Z", "+00:00").split("+")[0])
+        # 宽松判断：只看日期部分，允许 ±1 天误差
+        start_day = start_dt.replace(tzinfo=None) - timedelta(days=1)
+        end_day = end_dt.replace(tzinfo=None) + timedelta(days=1)
+        return start_day <= dt <= end_day
+    except Exception:
+        return True
 
 
 # ============================================================
-# 搜索与提取
+# 通道实现 — Exa
 # ============================================================
 
-def search_exa(query, start_date, end_date, num_results=10):
-    """调用 Exa API 搜索新闻"""
-    url = "https://api.exa.ai/search"
-    headers = {"x-api-key": EXA_API_KEY, "Content-Type": "application/json"}
-    payload = {
-        "query": query,
-        "type": "auto",
-        "category": "news",
-        "num_results": num_results,
-        "startPublishedDate": start_date,
-        "endPublishedDate": end_date,
-        "contents": {
-            "highlights": {"max_characters": 2000},
-        },
-    }
-    print(f"  搜索: {query}")
-    result = api_request(url, headers, payload)
-    return result.get("results", [])
+def channel_exa(queries_en, queries_zh, start_date_utc, end_date_utc, max_items):
+    """Exa API 通道"""
+    api_key = os.environ.get("EXA_API_KEY", "")
+    items = []
+    seen = set()
+    all_queries = queries_en + queries_zh
 
+    for query in all_queries:
+        print(f"    Exa 搜索: {query}")
+        result = http_post(
+            "https://api.exa.ai/search",
+            {"x-api-key": api_key, "Content-Type": "application/json"},
+            {
+                "query": query,
+                "type": "auto",
+                "category": "news",
+                "num_results": 10,
+                "startPublishedDate": start_date_utc,
+                "endPublishedDate": end_date_utc,
+                "contents": {"highlights": {"max_characters": 2000}},
+            },
+        )
+        if not result:
+            print(f"    Exa 查询失败: {query}")
+            continue
+
+        for r in result.get("results", []):
+            url = r.get("url", "")
+            curl = canonical_url(url)
+            if not url or curl in seen:
+                continue
+            seen.add(curl)
+            highlights = r.get("highlights", [])
+            items.append({
+                "title": (r.get("title") or "").strip(),
+                "summary": " ".join(highlights)[:500] if highlights else "",
+                "url": url,
+                "date": parse_date_flexible(r.get("publishedDate", "")),
+                "channel": "exa",
+            })
+            if len(items) >= max_items:
+                break
+        print(f"    找到 {len(result.get('results', []))} 条")
+        if len(items) >= max_items:
+            break
+
+    return items
+
+
+# ============================================================
+# 通道实现 — Tavily
+# ============================================================
+
+def channel_tavily(queries_en, queries_zh, start_date_utc, end_date_utc, max_items):
+    """Tavily API 通道"""
+    api_key = os.environ.get("TAVILY_API_KEY", "")
+    items = []
+    seen = set()
+    all_queries = queries_en + queries_zh
+
+    for query in all_queries:
+        print(f"    Tavily 搜索: {query}")
+        result = http_post(
+            "https://api.tavily.com/search",
+            {"Content-Type": "application/json"},
+            {
+                "api_key": api_key,
+                "query": query,
+                "search_depth": "basic",
+                "topic": "news",
+                "days": 3,
+                "max_results": 10,
+                "include_answer": False,
+            },
+        )
+        if not result:
+            print(f"    Tavily 查询失败: {query}")
+            continue
+
+        for r in result.get("results", []):
+            url = r.get("url", "")
+            curl = canonical_url(url)
+            if not url or curl in seen:
+                continue
+            seen.add(curl)
+            items.append({
+                "title": (r.get("title") or "").strip(),
+                "summary": (r.get("content") or "")[:500],
+                "url": url,
+                "date": parse_date_flexible(r.get("published_date", "")),
+                "channel": "tavily",
+            })
+            if len(items) >= max_items:
+                break
+        print(f"    找到 {len(result.get('results', []))} 条")
+        if len(items) >= max_items:
+            break
+
+    return items
+
+
+# ============================================================
+# 通道实现 — Jina
+# ============================================================
+
+def channel_jina(queries_en, queries_zh, start_date_utc, end_date_utc, max_items):
+    """Jina Search API 通道"""
+    api_key = os.environ.get("JINA_API_KEY", "")
+    items = []
+    seen = set()
+    all_queries = queries_en + queries_zh
+
+    for query in all_queries:
+        print(f"    Jina 搜索: {query}")
+        encoded_q = urllib.request.quote(query)
+        result = http_get(
+            f"https://s.jina.ai/{encoded_q}",
+            {
+                "Authorization": f"Bearer {api_key}",
+                "Accept": "application/json",
+                "X-Retain-Images": "none",
+            },
+            timeout=30,
+        )
+        if not result or "data" not in result:
+            print(f"    Jina 查询失败: {query}")
+            continue
+
+        for r in result["data"]:
+            url = r.get("url", "")
+            curl = canonical_url(url)
+            if not url or curl in seen:
+                continue
+            seen.add(curl)
+            desc = r.get("description") or ""
+            content = r.get("content") or ""
+            summary = desc[:500] if desc else content[:500]
+            items.append({
+                "title": (r.get("title") or "").strip(),
+                "summary": summary,
+                "url": url,
+                "date": parse_date_flexible(r.get("publishedTime") or r.get("date") or ""),
+                "channel": "jina",
+            })
+            if len(items) >= max_items:
+                break
+        print(f"    找到 {len(result.get('data', []))} 条")
+        if len(items) >= max_items:
+            break
+
+    return items
+
+
+# ============================================================
+# 通道实现 — 秘塔搜索 (Metaso)
+# ============================================================
+
+def channel_metaso(queries_en, queries_zh, start_date_utc, end_date_utc, max_items):
+    """秘塔搜索 API 通道"""
+    api_key = os.environ.get("METASO_API_KEY", "")
+    items = []
+    seen = set()
+    all_queries = queries_zh + queries_en
+
+    for query in all_queries:
+        print(f"    秘塔搜索: {query}")
+        result = http_post(
+            "https://metaso.cn/api/v1/search",
+            {
+                "Authorization": f"Bearer {api_key}",
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+            },
+            {
+                "q": query,
+                "scope": "webpage",
+                "includeSummary": False,
+                "size": "10",
+                "includeRawContent": False,
+                "conciseSnippet": False,
+            },
+        )
+        if not result or "webpages" not in result:
+            print(f"    秘塔查询失败: {query}")
+            continue
+
+        for r in result["webpages"]:
+            url = r.get("link", "")
+            curl = canonical_url(url)
+            if not url or curl in seen:
+                continue
+            seen.add(curl)
+            items.append({
+                "title": (r.get("title") or "").strip(),
+                "summary": (r.get("snippet") or "")[:500],
+                "url": url,
+                "date": parse_date_flexible(r.get("date") or ""),
+                "channel": "metaso",
+            })
+            if len(items) >= max_items:
+                break
+        print(f"    找到 {len(result.get('webpages', []))} 条")
+        if len(items) >= max_items:
+            break
+
+    return items
+
+
+# ============================================================
+# 多通道采集 + 合并去重
+# ============================================================
 
 def fetch_all_news():
-    """多关键词搜索并合并去重"""
+    """遍历所有启用的通道，采集并合并去重"""
     now = datetime.now(BJT)
     yesterday = (now - timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
-    start_date = yesterday.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%S.000Z")
-    end_date = now.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    start_utc = yesterday.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    end_utc = now.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
-    print(f"搜索时间范围 (UTC): {start_date} ~ {end_date}")
+    print(f"搜索时间范围 (UTC): {start_utc} ~ {end_utc}")
     print(f"对应北京时间: {yesterday.strftime('%Y-%m-%d %H:%M')} ~ {now.strftime('%Y-%m-%d %H:%M')}")
 
-    queries = [
-        "rare disease news treatment therapy breakthrough",
-        "orphan drug approval clinical trial rare disease",
-        "罕见病 治疗 新闻 药物",
-    ]
-    all_results = []
-    seen_urls = set()
-    for query in queries:
+    channels = get_channels()
+    enabled = [name for name in channels if is_channel_enabled(name)]
+    disabled = [name for name in channels if not is_channel_enabled(name)]
+    print(f"启用通道: {', '.join(enabled) or '无'}")
+    if disabled:
+        print(f"未启用通道: {', '.join(disabled)}")
+
+    if not enabled:
+        print("错误: 没有任何可用通道")
+        return [], 0, 0
+
+    # 逐通道采集
+    all_items = []
+    success_count = 0
+
+    for name in enabled:
+        cfg = channels[name]
+        print(f"\n  [{cfg['label']}] 开始采集...")
         try:
-            results = search_exa(query, start_date, end_date, num_results=10)
-            for r in results:
-                url = r.get("url", "")
-                if url and url not in seen_urls:
-                    seen_urls.add(url)
-                    all_results.append(r)
-            print(f"  找到 {len(results)} 条结果")
+            items = cfg["fn"](
+                cfg["queries_en"], cfg["queries_zh"],
+                start_utc, end_utc, cfg["max_items"],
+            )
+            # 过滤空标题
+            items = [it for it in items if it.get("title")]
+            # 日期范围过滤（对无日期过滤的通道如 Metaso 尤为重要）
+            items = [it for it in items if is_within_date_range(it.get("date"), yesterday, now)]
+            print(f"  [{cfg['label']}] 采集到 {len(items)} 条有效新闻")
+            all_items.extend(items)
+            success_count += 1
         except Exception as e:
-            print(f"  搜索失败: {e}")
+            print(f"  [{cfg['label']}] 通道失败: {e}")
 
-    print(f"合计去重后: {len(all_results)} 条新闻")
-    return all_results
+    # 跨通道 URL 去重（保留第一条，通常来自更权威的通道）
+    seen_urls = set()
+    deduped = []
+    for item in all_items:
+        curl = canonical_url(item["url"])
+        if curl not in seen_urls:
+            seen_urls.add(curl)
+            deduped.append(item)
+
+    # 控制总量
+    if len(deduped) > MAX_TOTAL_ITEMS:
+        deduped = deduped[:MAX_TOTAL_ITEMS]
+
+    print(f"\n合计: {len(all_items)} 条 → 去重后 {len(deduped)} 条 "
+          f"(成功通道 {success_count}/{len(enabled)})")
+
+    return deduped, success_count, len(enabled)
 
 
-def extract_news_items(raw_results):
-    """从搜索结果中提取结构化新闻"""
+def extract_news_items(raw_items):
+    """标准化新闻条目（添加 id，规范日期）"""
     items = []
-    for r in raw_results:
-        title = r.get("title", "").strip()
-        if not title:
-            continue
-        highlights = r.get("highlights", [])
-        summary = " ".join(highlights)[:500] if highlights else ""
+    for r in raw_items:
         items.append({
-            "id": make_id(r.get("url", "")),
-            "title": title,
-            "summary": summary,
-            "date": r.get("publishedDate", ""),
-            "url": r.get("url", ""),
+            "id": make_id(r["url"]),
+            "title": r["title"],
+            "summary": r.get("summary", ""),
+            "date": r.get("date", ""),
+            "url": r["url"],
         })
     return items
 
@@ -269,6 +654,8 @@ def translate_batch(news_items):
             content = llm_request(
                 "你是专业的医学新闻翻译员。准确翻译罕见病相关新闻。只输出 JSON。",
                 prompt,
+                max_tokens=2048,
+                timeout=90,
             )
             translated = json.loads(content)
             for item_zh in translated:
@@ -294,7 +681,7 @@ def translate_batch(news_items):
 # 快讯管线：过滤 → 格式化
 # ============================================================
 
-def filter_news_with_llm(zh_items):
+def filter_news_with_llm(zh_items, max_bulletin=20):
     """使用 LLM 过滤不相关和重复新闻"""
     if not zh_items:
         return []
@@ -330,18 +717,20 @@ def filter_news_with_llm(zh_items):
         content = llm_request(
             "你是罕见病领域的资深医学编辑。严格按要求筛选新闻。只输出 JSON 数组。",
             prompt,
+            max_tokens=1024,
+            timeout=60,
         )
         keep_ids = json.loads(content)
         if not isinstance(keep_ids, list):
-            print("  筛选结果格式异常，保留全部")
-            return zh_items
+            print("  筛选结果格式异常，保留前 {max_bulletin} 条")
+            return zh_items[:max_bulletin]
 
         filtered = [zh_items[i] for i in keep_ids if isinstance(i, int) and 0 <= i < len(zh_items)]
         print(f"  筛选结果: {len(zh_items)} → {len(filtered)} 条")
-        return filtered
+        return filtered[:max_bulletin]
     except Exception as e:
-        print(f"  筛选失败: {e}，保留全部")
-        return zh_items
+        print(f"  筛选失败: {e}，保留前 {max_bulletin} 条")
+        return zh_items[:max_bulletin]
 
 
 def format_bulletin_batch(filtered_zh_items, en_items):
@@ -385,6 +774,8 @@ def format_bulletin_batch(filtered_zh_items, en_items):
             content = llm_request(
                 "你是罕见病领域资深医学编辑。将新闻格式化为专业快讯。只输出 JSON。",
                 prompt,
+                max_tokens=1024,
+                timeout=90,
             )
             formatted = json.loads(content)
             bulletin_items.append({
@@ -449,9 +840,6 @@ def update_dates_index(date_str):
 # ============================================================
 
 def main():
-    if not EXA_API_KEY:
-        print("错误: 未设置 EXA_API_KEY 环境变量")
-        sys.exit(1)
     if not NVIDIA_API_KEY:
         print("错误: 未设置 NVIDIA_API_KEY 环境变量")
         sys.exit(1)
@@ -460,16 +848,20 @@ def main():
     date_str = now.strftime("%Y-%m-%d")
     data_dir = os.path.join(PROJECT_ROOT, "data", date_str)
 
-    print("=== 罕见病每日快讯采集 ===")
+    print("=== 罕见病每日快讯采集（多通道） ===")
     print(f"日期: {date_str}")
     print(f"当前北京时间: {now.strftime('%Y-%m-%d %H:%M:%S')}")
     print()
 
-    # 1. 搜索
-    print("[1/6] 搜索罕见病新闻...")
-    raw_results = fetch_all_news()
+    # 1. 多通道搜索
+    print("[1/6] 多通道搜索罕见病新闻...")
+    raw_items, success_count, total_channels = fetch_all_news()
 
-    if not raw_results:
+    if success_count == 0:
+        print("错误: 所有通道均失败，无法继续")
+        sys.exit(1)
+
+    if not raw_items:
         print("未找到任何新闻，创建空文件。")
         for f in ["news_en.json", "news_zh.json", "news_bulletin.json"]:
             save_json(os.path.join(data_dir, f), [])
@@ -478,7 +870,7 @@ def main():
 
     # 2. 提取结构化数据
     print("\n[2/6] 提取新闻数据...")
-    news_items_en = extract_news_items(raw_results)
+    news_items_en = extract_news_items(raw_items)
     print(f"  提取到 {len(news_items_en)} 条有效新闻")
 
     # 3. 保存英文版
@@ -492,7 +884,7 @@ def main():
 
     # 5. LLM 筛选快讯
     print("\n[5/6] 筛选快讯内容...")
-    filtered_items = filter_news_with_llm(news_items_zh)
+    filtered_items = filter_news_with_llm(news_items_zh, max_bulletin=MAX_BULLETIN_ITEMS)
 
     # 6. LLM 格式化快讯
     print("\n[6/6] 生成快讯格式...")
@@ -502,7 +894,8 @@ def main():
     # 更新日期索引
     update_dates_index(date_str)
 
-    print(f"\n=== 完成! 英文 {len(news_items_en)} 条 | 中文 {len(news_items_zh)} 条 | 快讯 {len(bulletin_items)} 条 ===")
+    print(f"\n=== 完成! 英文 {len(news_items_en)} 条 | 中文 {len(news_items_zh)} 条 | 快讯 {len(bulletin_items)} 条 ==="
+          f"\n通道状态: {success_count}/{total_channels} 成功")
 
 
 if __name__ == "__main__":
