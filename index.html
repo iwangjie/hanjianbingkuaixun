@@ -8,6 +8,7 @@
     :root {
       --primary: #4a6cf7;
       --primary-light: #6b8cff;
+      --primary-bg: rgba(74,108,247,0.08);
       --bg: #f5f7fb;
       --card-bg: #ffffff;
       --text: #333333;
@@ -15,261 +16,160 @@
       --border: #e2e8f0;
       --shadow: 0 2px 8px rgba(0,0,0,0.08);
       --radius: 12px;
+      --green: #22c55e;
+      --orange: #f59e0b;
+      --red: #ef4444;
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
+      background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh;
     }
-
     .header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-      color: white;
-      padding: 24px 0;
-      box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
+      color: white; padding: 24px 0; box-shadow: 0 4px 12px rgba(74,108,247,0.3);
     }
-
-    .header-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .header h1 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .header p {
-      font-size: 14px;
-      opacity: 0.85;
-    }
+    .header-inner { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+    .header h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+    .header p { font-size: 14px; opacity: 0.85; }
 
     .controls {
-      max-width: 960px;
-      margin: 20px auto;
-      padding: 0 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
+      max-width: 960px; margin: 20px auto; padding: 0 20px;
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
     }
-
-    .date-nav {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+    .date-nav { display: flex; align-items: center; gap: 8px; }
+    .date-nav button, .date-nav input[type="date"] {
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px;
+      padding: 8px 14px; cursor: pointer; font-size: 14px; color: var(--text); transition: all 0.2s;
     }
+    .date-nav button:hover { background: var(--primary); color: white; border-color: var(--primary); }
 
-    .date-nav button {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 8px 14px;
-      cursor: pointer;
-      font-size: 14px;
-      color: var(--text);
+    .tab-toggle {
+      display: flex; background: var(--card-bg); border: 1px solid var(--border);
+      border-radius: 8px; overflow: hidden; margin-left: auto;
+    }
+    .tab-toggle button {
+      border: none; padding: 8px 16px; cursor: pointer; font-size: 13px;
+      background: transparent; color: var(--text-secondary); transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .tab-toggle button.active { background: var(--primary); color: white; }
+
+    /* 工具栏 */
+    .toolbar {
+      max-width: 960px; margin: 0 auto 12px; padding: 0 20px;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+    }
+    .toolbar-select {
+      display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-secondary);
+    }
+    .toolbar-select label {
+      display: flex; align-items: center; gap: 6px; cursor: pointer; user-select: none;
+    }
+    .toolbar-actions {
+      display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap;
+    }
+    .toolbar-actions button {
+      background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px;
+      padding: 6px 12px; cursor: pointer; font-size: 12px; color: var(--text-secondary);
+      transition: all 0.2s; white-space: nowrap;
+    }
+    .toolbar-actions button:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+    /* 自定义复选框 */
+    .custom-checkbox {
+      position: relative; width: 20px; height: 20px; flex-shrink: 0;
+    }
+    .custom-checkbox input {
+      position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; z-index: 1; margin: 0;
+    }
+    .custom-checkbox .checkmark {
+      position: absolute; top: 0; left: 0; width: 20px; height: 20px;
+      background: var(--card-bg); border: 2px solid var(--border); border-radius: 4px;
       transition: all 0.2s;
     }
-
-    .date-nav button:hover {
-      background: var(--primary);
-      color: white;
-      border-color: var(--primary);
+    .custom-checkbox input:checked ~ .checkmark {
+      background: var(--primary); border-color: var(--primary);
     }
-
-    .date-nav input[type="date"] {
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 8px 14px;
-      font-size: 14px;
-      color: var(--text);
-      background: var(--card-bg);
-      cursor: pointer;
+    .custom-checkbox .checkmark::after {
+      content: ""; position: absolute; display: none;
+      left: 6px; top: 2px; width: 5px; height: 10px;
+      border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg);
     }
+    .custom-checkbox input:checked ~ .checkmark::after { display: block; }
 
-    .lang-toggle {
-      display: flex;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      overflow: hidden;
-      margin-left: auto;
-    }
-
-    .lang-toggle button {
-      border: none;
-      padding: 8px 16px;
-      cursor: pointer;
-      font-size: 13px;
-      background: transparent;
-      color: var(--text-secondary);
-      transition: all 0.2s;
-    }
-
-    .lang-toggle button.active {
-      background: var(--primary);
-      color: white;
-    }
-
-    .content {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 20px 40px;
-    }
-
+    .content { max-width: 960px; margin: 0 auto; padding: 0 20px 40px; }
     .status-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      font-size: 14px;
-      color: var(--text-secondary);
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 16px; font-size: 14px; color: var(--text-secondary);
     }
-
-    .news-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+    .news-list { display: flex; flex-direction: column; gap: 16px; }
 
     .news-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      padding: 20px 24px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
+      background: var(--card-bg); border-radius: var(--radius); padding: 20px 24px;
+      box-shadow: var(--shadow); border: 1px solid var(--border);
       transition: transform 0.2s, box-shadow 0.2s;
+      display: flex; gap: 14px; align-items: flex-start;
     }
+    .news-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+    .news-card.unchecked { opacity: 0.5; }
+    .card-body { flex: 1; min-width: 0; }
 
-    .news-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    .category-badge {
+      display: inline-block; padding: 2px 10px; border-radius: 20px;
+      font-size: 12px; font-weight: 600; margin-bottom: 8px;
+      background: var(--primary-bg); color: var(--primary);
     }
-
-    .news-card h3 {
-      font-size: 17px;
-      font-weight: 600;
-      margin-bottom: 8px;
-      line-height: 1.4;
-    }
-
-    .news-card h3 a {
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .news-card h3 a:hover {
-      color: var(--primary);
-    }
-
+    .news-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+    .news-card h3 a { color: var(--text); text-decoration: none; }
+    .news-card h3 a:hover { color: var(--primary); }
     .news-meta {
-      display: flex;
-      gap: 16px;
-      margin-bottom: 10px;
-      font-size: 13px;
-      color: var(--text-secondary);
+      display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 10px;
+      font-size: 13px; color: var(--text-secondary);
     }
-
-    .news-meta span {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
+    .news-meta span { display: flex; align-items: center; gap: 4px; }
     .news-summary {
-      font-size: 14px;
-      color: var(--text-secondary);
-      line-height: 1.7;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      font-size: 14px; color: var(--text-secondary); line-height: 1.7;
+      display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;
     }
-
     .news-link {
-      display: inline-block;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--primary);
-      text-decoration: none;
+      display: inline-block; margin-top: 10px; font-size: 13px;
+      color: var(--primary); text-decoration: none;
     }
+    .news-link:hover { text-decoration: underline; }
 
-    .news-link:hover {
-      text-decoration: underline;
-    }
-
-    .empty-state {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--text-secondary);
-    }
-
-    .empty-state .icon {
-      font-size: 48px;
-      margin-bottom: 16px;
-    }
-
-    .empty-state h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
-      color: var(--text);
-    }
-
-    .loading {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--text-secondary);
-    }
-
+    .empty-state { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+    .empty-state h3 { font-size: 18px; margin-bottom: 8px; color: var(--text); }
+    .loading { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
     .spinner {
-      display: inline-block;
-      width: 32px;
-      height: 32px;
-      border: 3px solid var(--border);
-      border-top-color: var(--primary);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin-bottom: 12px;
+      display: inline-block; width: 32px; height: 32px;
+      border: 3px solid var(--border); border-top-color: var(--primary);
+      border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 12px;
     }
+    @keyframes spin { to { transform: rotate(360deg); } }
 
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+    /* Toast */
+    .toast {
+      position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+      background: #333; color: white; padding: 10px 24px; border-radius: 8px;
+      font-size: 14px; z-index: 999; opacity: 0; transition: opacity 0.3s;
+      pointer-events: none;
     }
+    .toast.show { opacity: 1; }
 
     .footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 13px;
-      color: var(--text-secondary);
-      border-top: 1px solid var(--border);
-      margin-top: 40px;
+      text-align: center; padding: 20px; font-size: 13px;
+      color: var(--text-secondary); border-top: 1px solid var(--border); margin-top: 40px;
     }
 
     @media (max-width: 640px) {
-      .controls {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .lang-toggle {
-        margin-left: 0;
-      }
-      .date-nav {
-        justify-content: center;
-      }
-      .news-card {
-        padding: 16px;
-      }
+      .controls { flex-direction: column; align-items: stretch; }
+      .tab-toggle { margin-left: 0; }
+      .date-nav { justify-content: center; }
+      .news-card { padding: 16px; gap: 10px; }
+      .toolbar { flex-direction: column; align-items: stretch; }
+      .toolbar-actions { margin-left: 0; justify-content: center; }
     }
   </style>
 </head>
@@ -283,14 +183,34 @@
 
   <div class="controls">
     <div class="date-nav">
-      <button onclick="changeDate(-1)" title="前一天">◀ 前一天</button>
+      <button onclick="changeDate(-1)">◀ 前一天</button>
       <input type="date" id="datePicker" onchange="loadDate(this.value)">
-      <button onclick="changeDate(1)" title="后一天">后一天 ▶</button>
-      <button onclick="loadToday()" title="今天">今天</button>
+      <button onclick="changeDate(1)">后一天 ▶</button>
+      <button onclick="loadToday()">今天</button>
     </div>
-    <div class="lang-toggle">
-      <button id="btnZh" class="active" onclick="switchLang('zh')">中文</button>
-      <button id="btnEn" onclick="switchLang('en')">English</button>
+    <div class="tab-toggle">
+      <button id="btnZh" class="active" onclick="switchTab('zh')">中文</button>
+      <button id="btnEn" onclick="switchTab('en')">English</button>
+      <button id="btnBulletin" onclick="switchTab('bulletin')">快讯</button>
+    </div>
+  </div>
+
+  <div class="toolbar" id="toolbar" style="display:none;">
+    <div class="toolbar-select">
+      <label>
+        <span class="custom-checkbox">
+          <input type="checkbox" id="selectAll" checked onchange="toggleSelectAll()">
+          <span class="checkmark"></span>
+        </span>
+        <span id="selectLabel">全选</span>
+      </label>
+      <span id="selectedCount" style="margin-left:4px;"></span>
+    </div>
+    <div class="toolbar-actions">
+      <button onclick="copyAs('md')">📋 复制 Markdown</button>
+      <button onclick="copyAs('txt')">📋 复制 TXT</button>
+      <button onclick="exportAs('md')">💾 导出 .md</button>
+      <button onclick="exportAs('txt')">💾 导出 .txt</button>
     </div>
   </div>
 
@@ -300,10 +220,7 @@
       <span id="countLabel"></span>
     </div>
     <div id="newsList" class="news-list">
-      <div class="loading">
-        <div class="spinner"></div>
-        <p>加载中...</p>
-      </div>
+      <div class="loading"><div class="spinner"></div><p>加载中...</p></div>
     </div>
   </div>
 
@@ -311,28 +228,25 @@
     <p>数据来源: <a href="https://exa.ai" target="_blank">Exa API</a> | 自动采集 · 每日更新 | <a href="https://github.com/iwangjie/hanjianbingkuaixun" target="_blank">GitHub</a></p>
   </div>
 
+  <div class="toast" id="toast"></div>
+
   <script>
     let currentDate = '';
-    let currentLang = 'zh';
+    let currentTab = 'zh';
+    let currentNews = [];
     let availableDates = [];
 
-    // 获取北京时间今天的日期
     function getTodayBJT() {
       const now = new Date();
       const bjt = new Date(now.getTime() + (8 * 60 - now.getTimezoneOffset()) * 60000);
       return bjt.toISOString().split('T')[0];
     }
 
-    // 初始化
     async function init() {
       try {
         const resp = await fetch('data/dates.json');
-        if (resp.ok) {
-          availableDates = await resp.json();
-        }
-      } catch(e) {
-        console.log('No dates index found');
-      }
+        if (resp.ok) availableDates = await resp.json();
+      } catch(e) {}
       loadToday();
     }
 
@@ -346,15 +260,15 @@
       const picker = document.getElementById('datePicker');
       const d = new Date(picker.value);
       d.setDate(d.getDate() + delta);
-      const newDate = d.toISOString().split('T')[0];
-      picker.value = newDate;
-      loadDate(newDate);
+      picker.value = d.toISOString().split('T')[0];
+      loadDate(picker.value);
     }
 
-    function switchLang(lang) {
-      currentLang = lang;
-      document.getElementById('btnZh').classList.toggle('active', lang === 'zh');
-      document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+    function switchTab(tab) {
+      currentTab = tab;
+      document.getElementById('btnZh').classList.toggle('active', tab === 'zh');
+      document.getElementById('btnEn').classList.toggle('active', tab === 'en');
+      document.getElementById('btnBulletin').classList.toggle('active', tab === 'bulletin');
       loadDate(currentDate);
     }
 
@@ -363,79 +277,225 @@
       const container = document.getElementById('newsList');
       const dateLabel = document.getElementById('dateLabel');
       const countLabel = document.getElementById('countLabel');
+      const toolbar = document.getElementById('toolbar');
 
-      dateLabel.textContent = `📅 ${date}`;
+      dateLabel.textContent = '📅 ' + date;
+      toolbar.style.display = 'none';
       container.innerHTML = '<div class="loading"><div class="spinner"></div><p>加载中...</p></div>';
 
-      const file = currentLang === 'zh' ? 'news_zh.json' : 'news_en.json';
-      const url = `data/${date}/${file}`;
+      const fileMap = { zh: 'news_zh.json', en: 'news_en.json', bulletin: 'news_bulletin.json' };
+      const url = 'data/' + date + '/' + fileMap[currentTab];
 
       try {
         const resp = await fetch(url);
         if (!resp.ok) throw new Error('Not found');
         const news = await resp.json();
+        currentNews = news;
 
         if (news.length === 0) {
-          container.innerHTML = `
-            <div class="empty-state">
-              <div class="icon">📭</div>
-              <h3>当日暂无快讯</h3>
-              <p>该日期暂未收录罕见病快讯信息</p>
-            </div>`;
+          container.innerHTML = '<div class="empty-state"><div class="icon">📭</div><h3>当日暂无快讯</h3><p>该日期暂未收录罕见病快讯信息</p></div>';
           countLabel.textContent = '共 0 条';
           return;
         }
 
-        countLabel.textContent = `共 ${news.length} 条`;
-        container.innerHTML = news.map((item, i) => `
-          <div class="news-card">
-            <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
-            <div class="news-meta">
-              <span>📅 ${formatDate(item.date)}</span>
-              <span>🔗 ${extractDomain(item.url)}</span>
-            </div>
-            <div class="news-summary">${escapeHtml(item.summary)}</div>
-            <a class="news-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">阅读原文 →</a>
-          </div>
-        `).join('');
-
+        toolbar.style.display = 'flex';
+        countLabel.textContent = '共 ' + news.length + ' 条';
+        renderNews(news);
+        updateSelectCount();
       } catch(e) {
-        container.innerHTML = `
-          <div class="empty-state">
-            <div class="icon">📭</div>
-            <h3>暂无数据</h3>
-            <p>该日期暂未采集快讯，请尝试其他日期</p>
-            ${availableDates.length > 0
-              ? `<p style="margin-top:12px">最近可用日期: ${availableDates.slice(0,5).map(d => `<a href="#" onclick="document.getElementById('datePicker').value='${d}';loadDate('${d}');return false;" style="color:var(--primary);margin:0 4px">${d}</a>`).join('')}</p>`
-              : ''}
-          </div>`;
+        currentNews = [];
+        let hint = '';
+        if (availableDates.length > 0) {
+          hint = '<p style="margin-top:12px">最近可用日期: ' +
+            availableDates.slice(0,5).map(function(d) {
+              return '<a href="#" onclick="document.getElementById(\'datePicker\').value=\'' + d + '\';loadDate(\'' + d + '\');return false;" style="color:var(--primary);margin:0 4px">' + d + '</a>';
+            }).join('') + '</p>';
+        }
+        container.innerHTML = '<div class="empty-state"><div class="icon">📭</div><h3>暂无数据</h3><p>该日期暂未采集快讯，请尝试其他日期</p>' + hint + '</div>';
         countLabel.textContent = '';
       }
     }
 
-    function escapeHtml(str) {
+    function renderNews(news) {
+      const container = document.getElementById('newsList');
+      container.innerHTML = news.map(function(item, i) {
+        const isBulletin = currentTab === 'bulletin';
+        const categoryHtml = (isBulletin && item.category)
+          ? '<span class="category-badge">'+esc(item.category)+'</span>' : '';
+        const sourceText = isBulletin && item.source
+          ? '📰 ' + esc(item.source)
+          : '🔗 ' + extractDomain(item.url);
+        return '<div class="news-card" id="card-'+i+'">' +
+          '<span class="custom-checkbox">' +
+            '<input type="checkbox" checked data-idx="'+i+'" onchange="onCardCheck('+i+')">' +
+            '<span class="checkmark"></span>' +
+          '</span>' +
+          '<div class="card-body">' +
+            categoryHtml +
+            '<h3><a href="'+esc(item.url)+'" target="_blank" rel="noopener">'+esc(item.title)+'</a></h3>' +
+            '<div class="news-meta">' +
+              '<span>📅 '+formatDate(item.date)+'</span>' +
+              '<span>'+sourceText+'</span>' +
+            '</div>' +
+            '<div class="news-summary">'+esc(item.summary)+'</div>' +
+            '<a class="news-link" href="'+esc(item.url)+'" target="_blank" rel="noopener">阅读原文 →</a>' +
+          '</div></div>';
+      }).join('');
+
+      // Reset select-all
+      document.getElementById('selectAll').checked = true;
+    }
+
+    function onCardCheck(idx) {
+      const card = document.getElementById('card-' + idx);
+      const cb = card.querySelector('input[type="checkbox"]');
+      card.classList.toggle('unchecked', !cb.checked);
+      updateSelectCount();
+    }
+
+    function toggleSelectAll() {
+      const checked = document.getElementById('selectAll').checked;
+      document.querySelectorAll('.news-card input[type="checkbox"]').forEach(function(cb) {
+        cb.checked = checked;
+        var card = cb.closest('.news-card');
+        if (card) card.classList.toggle('unchecked', !checked);
+      });
+      updateSelectCount();
+    }
+
+    function updateSelectCount() {
+      const all = document.querySelectorAll('.news-card input[type="checkbox"]');
+      const checked = document.querySelectorAll('.news-card input[type="checkbox"]:checked');
+      document.getElementById('selectedCount').textContent = '已选 ' + checked.length + '/' + all.length;
+      document.getElementById('selectAll').checked = (checked.length === all.length);
+    }
+
+    function getSelectedItems() {
+      const items = [];
+      document.querySelectorAll('.news-card input[type="checkbox"]:checked').forEach(function(cb) {
+        const idx = parseInt(cb.dataset.idx);
+        if (idx >= 0 && idx < currentNews.length) items.push(currentNews[idx]);
+      });
+      return items;
+    }
+
+    // ============ 导出格式化 ============
+
+    function formatItemMd(item) {
+      const isBulletin = currentTab === 'bulletin';
+      let md = '';
+      if (isBulletin && item.category) {
+        md += '### 【' + item.category + '】' + item.title + '\n\n';
+      } else {
+        md += '### ' + item.title + '\n\n';
+      }
+      md += item.summary + '\n\n';
+      if (isBulletin && item.source) {
+        md += '信息来源：' + item.source + '  \n';
+      }
+      if (currentTab === 'en') {
+        md += 'Date: ' + formatDate(item.date) + '  \n';
+        md += 'Link: ' + item.url + '\n';
+      } else {
+        md += '日期：' + formatDate(item.date) + '  \n';
+        md += '链接：' + item.url + '\n';
+      }
+      return md;
+    }
+
+    function formatItemTxt(item) {
+      const isBulletin = currentTab === 'bulletin';
+      let txt = '';
+      if (isBulletin && item.category) {
+        txt += '【' + item.category + '】' + item.title + '\n';
+      } else {
+        txt += item.title + '\n';
+      }
+      txt += item.summary + '\n';
+      if (isBulletin && item.source) {
+        txt += '信息来源：' + item.source + '\n';
+      }
+      if (currentTab === 'en') {
+        txt += 'Date: ' + formatDate(item.date) + '\n';
+        txt += 'Link: ' + item.url + '\n';
+      } else {
+        txt += '日期：' + formatDate(item.date) + '\n';
+        txt += '链接：' + item.url + '\n';
+      }
+      return txt;
+    }
+
+    function formatAllMd(items) {
+      const tabNames = { zh: '罕见病每日快讯（中文）', en: 'Rare Disease Daily News (English)', bulletin: '罕见病每日快讯' };
+      let md = '# ' + tabNames[currentTab] + '\n\n';
+      md += '> ' + currentDate + '  |  共 ' + items.length + ' 条\n\n---\n\n';
+      md += items.map(formatItemMd).join('\n---\n\n');
+      return md;
+    }
+
+    function formatAllTxt(items) {
+      const tabNames = { zh: '罕见病每日快讯（中文）', en: 'Rare Disease Daily News (English)', bulletin: '罕见病每日快讯' };
+      let txt = tabNames[currentTab] + '\n';
+      txt += currentDate + '  |  共 ' + items.length + ' 条\n';
+      txt += '========================================\n\n';
+      txt += items.map(formatItemTxt).join('\n----------------------------------------\n\n');
+      return txt;
+    }
+
+    function copyAs(fmt) {
+      const items = getSelectedItems();
+      if (items.length === 0) { showToast('请先选择至少一条快讯'); return; }
+      const text = fmt === 'md' ? formatAllMd(items) : formatAllTxt(items);
+      navigator.clipboard.writeText(text).then(function() {
+        showToast('已复制 ' + items.length + ' 条快讯到剪贴板 (' + fmt.toUpperCase() + ')');
+      }).catch(function() {
+        showToast('复制失败，请手动复制');
+      });
+    }
+
+    function exportAs(fmt) {
+      const items = getSelectedItems();
+      if (items.length === 0) { showToast('请先选择至少一条快讯'); return; }
+      const text = fmt === 'md' ? formatAllMd(items) : formatAllTxt(items);
+      const ext = fmt === 'md' ? '.md' : '.txt';
+      const tabSlug = { zh: '中文', en: 'english', bulletin: '快讯' };
+      const filename = '罕见病快讯_' + currentDate + '_' + tabSlug[currentTab] + ext;
+      const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(a.href);
+      showToast('已导出 ' + filename);
+    }
+
+    // ============ 工具函数 ============
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(function() { t.classList.remove('show'); }, 2500);
+    }
+
+    function esc(str) {
       if (!str) return '';
-      const div = document.createElement('div');
-      div.textContent = str;
-      return div.innerHTML;
+      var d = document.createElement('div');
+      d.textContent = str;
+      return d.innerHTML;
     }
 
     function formatDate(dateStr) {
       if (!dateStr) return '未知日期';
       try {
-        const d = new Date(dateStr);
+        var d = new Date(dateStr);
+        if (isNaN(d.getTime())) return dateStr;
         return d.toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' });
-      } catch(e) {
-        return dateStr;
-      }
+      } catch(e) { return dateStr; }
     }
 
     function extractDomain(url) {
-      try {
-        return new URL(url).hostname;
-      } catch(e) {
-        return '';
-      }
+      try { return new URL(url).hostname; } catch(e) { return ''; }
     }
 
     init();
