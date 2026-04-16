@@ -287,12 +287,21 @@ def make_id(url):
 
 
 def parse_date_flexible(date_str):
-    """尝试多种格式解析日期，返回 ISO 8601 字符串或原样返回"""
+    """尝试多种格式解析日期，返回统一的 UTC ISO 8601 字符串 (含 Z)"""
     if not date_str:
         return ""
-    # 已经是 ISO 格式
-    if re.match(r"^\d{4}-\d{2}-\d{2}T", date_str):
+    
+    # 已经是 ISO 格式且含 Z
+    if re.match(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$", date_str):
         return date_str
+        
+    # 如果是带时区偏移的 ISO 格式
+    try:
+        dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+        return dt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+    except ValueError:
+        pass
+
     # RFC 2822: "Tue, 14 Apr 2026 10:04:45 GMT"
     for fmt in [
         "%a, %d %b %Y %H:%M:%S %Z",
@@ -302,34 +311,56 @@ def parse_date_flexible(date_str):
     ]:
         try:
             dt = datetime.strptime(date_str, fmt)
-            return dt.strftime("%Y-%m-%dT%H:%M:%S")
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=UTC)
+            return dt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
         except ValueError:
             continue
+
     # 中文日期: "2026年02月28日"
     m = re.match(r"(\d{4})年(\d{1,2})月(\d{1,2})日", date_str)
     if m:
-        return f"{m.group(1)}-{m.group(2).zfill(2)}-{m.group(3).zfill(2)}T00:00:00"
+        dt = datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=BJT)
+        return dt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+
     # Jina 格式: "Mar 26, 2026"
     for fmt in ["%b %d, %Y", "%B %d, %Y"]:
         try:
             dt = datetime.strptime(date_str, fmt)
-            return dt.strftime("%Y-%m-%dT%H:%M:%S")
+            dt = dt.replace(tzinfo=UTC) # 假设国际来源为 UTC
+            return dt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
         except ValueError:
             continue
+
     return date_str
 
 
-def is_within_date_range(date_str, start_dt, end_dt):
-    """检查日期是否在采集范围内（宽松：无日期的不过滤）"""
+def to_bjt_datetime(date_str):
+    """将任何解析后的日期字符串转换为 BJT datetime 对象"""
+    if not date_str:
+        return None
+    try:
+        # 处理带有 Z 或偏移量的 ISO 格式
+        dt_str = parse_date_flexible(date_str)
+        if dt_str.endswith("Z"):
+            dt = datetime.fromisoformat(dt_str.replace("Z", "+00:00"))
+        else:
+            dt = datetime.fromisoformat(dt_str)
+        return dt.astimezone(BJT)
+    except Exception:
+        return None
+
+
+def is_within_date_range(date_str, start_dt_bjt, end_dt_bjt):
+    """检查日期是否在采集范围内（使用 BJT 进行判断）"""
     if not date_str:
         return True
     try:
-        dt_str = parse_date_flexible(date_str)
-        dt = datetime.fromisoformat(dt_str.replace("Z", "+00:00").split("+")[0])
-        # 宽松判断：只看日期部分，允许 ±1 天误差
-        start_day = start_dt.replace(tzinfo=None) - timedelta(days=1)
-        end_day = end_dt.replace(tzinfo=None) + timedelta(days=1)
-        return start_day <= dt <= end_day
+        dt_bjt = to_bjt_datetime(date_str)
+        if not dt_bjt:
+            return True
+        # 宽松判断：允许在 BJT 范围的前后各 12 小时内（照顾全球时差）
+        return (start_dt_bjt - timedelta(hours=12)) <= dt_bjt <= (end_dt_bjt + timedelta(hours=12))
     except Exception:
         return True
 
@@ -553,12 +584,14 @@ def channel_metaso(queries_en, queries_zh, start_date_utc, end_date_utc, max_ite
 def fetch_all_news():
     """遍历所有启用的通道，采集并合并去重"""
     now = datetime.now(BJT)
-    yesterday = (now - timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
-    start_utc = yesterday.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%S.000Z")
+    # 扩大搜索窗口到 48 小时以覆盖全球“今天”
+    start_dt_bjt = (now - timedelta(days=2)).replace(hour=0, minute=0, second=0, microsecond=0)
+    
+    start_utc = start_dt_bjt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     end_utc = now.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
     print(f"搜索时间范围 (UTC): {start_utc} ~ {end_utc}")
-    print(f"对应北京时间: {yesterday.strftime('%Y-%m-%d %H:%M')} ~ {now.strftime('%Y-%m-%d %H:%M')}")
+    print(f"对应北京时间: {start_dt_bjt.strftime('%Y-%m-%d %H:%M')} ~ {now.strftime('%Y-%m-%d %H:%M')}")
 
     channels = get_channels()
     enabled = [name for name in channels if is_channel_enabled(name)]
@@ -585,8 +618,8 @@ def fetch_all_news():
             )
             # 过滤空标题
             items = [it for it in items if it.get("title")]
-            # 日期范围过滤（对无日期过滤的通道如 Metaso 尤为重要）
-            items = [it for it in items if is_within_date_range(it.get("date"), yesterday, now)]
+            # 日期范围过滤
+            items = [it for it in items if is_within_date_range(it.get("date"), start_dt_bjt, now)]
             print(f"  [{cfg['label']}] 采集到 {len(items)} 条有效新闻")
             all_items.extend(items)
             success_count += 1
@@ -749,6 +782,10 @@ def format_bulletin_batch(filtered_zh_items, en_items):
         # 确定性提取来源
         source_name = get_source_name(item["url"])
 
+        # 转换为北京时间以便 LLM 生成
+        dt_bjt = to_bjt_datetime(item["date"])
+        date_bjt_str = dt_bjt.strftime("%Y年%m月%d日") if dt_bjt else "近期"
+
         # 获取英文原文作为 LLM 上下文
         en_item = en_map.get(item["url"], {})
         en_context = ""
@@ -760,13 +797,14 @@ def format_bulletin_batch(filtered_zh_items, en_items):
 中文标题：{item['title'][:100]}
 中文摘要：{item['summary'][:400]}{en_context}
 来源：{source_name}
-日期：{item['date']}
+原始发布日期（UTC/混合）：{item['date']}
+北京时间发布日期：{date_bjt_str}
 
 请返回严格的 JSON（不要添加任何其他文字）：
 {{
   "category": "从以下选一个：药物进展、临床试验、政策法规、研究发现、企业动态、诊断技术、患者关怀、行业资讯",
   "title": "简洁精炼的中文标题（15-30字，不含类别标签）",
-  "summary": "专业摘要（100-250字，客观描述新闻要点，包含关键数据和时间节点，以日期开头如'2026年4月14日，...'）"
+  "summary": "专业摘要（100-250字，客观描述新闻要点，包含关键数据和时间节点，**必须以北京时间日期开头**，如'{date_bjt_str}，...'）"
 }}"""
 
         fallback = False

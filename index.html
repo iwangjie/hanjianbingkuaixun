@@ -237,9 +237,17 @@
     let availableDates = [];
 
     function getTodayBJT() {
-      const now = new Date();
-      const bjt = new Date(now.getTime() + (8 * 60 - now.getTimezoneOffset()) * 60000);
-      return bjt.toISOString().split('T')[0];
+      const d = new Date();
+      const parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Asia/Shanghai',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).formatToParts(d);
+      const year = parts.find(p => p.type === 'year').value;
+      const month = parts.find(p => p.type === 'month').value;
+      const day = parts.find(p => p.type === 'day').value;
+      return `${year}-${month}-${day}`;
     }
 
     async function init() {
@@ -251,9 +259,11 @@
     }
 
     function loadToday() {
-      const today = getTodayBJT();
-      document.getElementById('datePicker').value = today;
-      loadDate(today);
+      const bjtToday = getTodayBJT();
+      // 优先显示今日，如果今日数据未出，则显示最新日期
+      const targetDate = availableDates.includes(bjtToday) ? bjtToday : (availableDates[0] || bjtToday);
+      document.getElementById('datePicker').value = targetDate;
+      loadDate(targetDate);
     }
 
     function changeDate(delta) {
