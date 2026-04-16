@@ -260,10 +260,8 @@
 
     function loadToday() {
       const bjtToday = getTodayBJT();
-      // 优先显示今日，如果今日数据未出，则显示最新日期
-      const targetDate = availableDates.includes(bjtToday) ? bjtToday : (availableDates[0] || bjtToday);
-      document.getElementById('datePicker').value = targetDate;
-      loadDate(targetDate);
+      document.getElementById('datePicker').value = bjtToday;
+      loadDate(bjtToday);
     }
 
     function changeDate(delta) {
@@ -321,7 +319,10 @@
               return '<a href="#" onclick="document.getElementById(\'datePicker\').value=\'' + d + '\';loadDate(\'' + d + '\');return false;" style="color:var(--primary);margin:0 4px">' + d + '</a>';
             }).join('') + '</p>';
         }
-        container.innerHTML = '<div class="empty-state"><div class="icon">📭</div><h3>暂无数据</h3><p>该日期暂未采集快讯，请尝试其他日期</p>' + hint + '</div>';
+        const isToday = (currentDate === getTodayBJT());
+        const emptyTitle = isToday ? '今日快讯尚未生成' : '暂无数据';
+        const emptyDesc = isToday ? '今日快讯正在采集中，请稍后再试' : '该日期暂未采集快讯，请尝试其他日期';
+        container.innerHTML = '<div class="empty-state"><div class="icon">📭</div><h3>' + emptyTitle + '</h3><p>' + emptyDesc + '</p>' + hint + '</div>';
         countLabel.textContent = '';
       }
     }
