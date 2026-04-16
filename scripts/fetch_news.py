@@ -359,8 +359,8 @@ def is_within_date_range(date_str, start_dt_bjt, end_dt_bjt):
         dt_bjt = to_bjt_datetime(date_str)
         if not dt_bjt:
             return True
-        # 宽松判断：允许在 BJT 范围的前后各 12 小时内（照顾全球时差）
-        return (start_dt_bjt - timedelta(hours=12)) <= dt_bjt <= (end_dt_bjt + timedelta(hours=12))
+        # 允许在采集起始时间前 6 小时内（捕获前一天深夜发布的新闻），上界不加容差
+        return (start_dt_bjt - timedelta(hours=6)) <= dt_bjt <= end_dt_bjt
     except Exception:
         return True
 
@@ -439,7 +439,7 @@ def channel_tavily(queries_en, queries_zh, start_date_utc, end_date_utc, max_ite
                 "query": query,
                 "search_depth": "basic",
                 "topic": "news",
-                "days": 3,
+                "days": 2,
                 "max_results": 10,
                 "include_answer": False,
             },
@@ -584,8 +584,8 @@ def channel_metaso(queries_en, queries_zh, start_date_utc, end_date_utc, max_ite
 def fetch_all_news():
     """遍历所有启用的通道，采集并合并去重"""
     now = datetime.now(BJT)
-    # 扩大搜索窗口到 48 小时以覆盖全球“今天”
-    start_dt_bjt = (now - timedelta(days=2)).replace(hour=0, minute=0, second=0, microsecond=0)
+    # 搜索窗口：从前一天 0 点 BJT 开始，覆盖昨日至今的新闻
+    start_dt_bjt = (now - timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
     
     start_utc = start_dt_bjt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     end_utc = now.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%S.000Z")

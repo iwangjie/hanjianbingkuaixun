@@ -501,7 +501,14 @@
       try {
         var d = new Date(dateStr);
         if (isNaN(d.getTime())) return dateStr;
-        return d.toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' });
+        // 使用 formatToParts 稳健地输出北京时间，避免 toLocaleString 格式因浏览器而异
+        var parts = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'Asia/Shanghai',
+          year: 'numeric', month: '2-digit', day: '2-digit',
+          hour: '2-digit', minute: '2-digit', hour12: false
+        }).formatToParts(d);
+        var get = function(type) { var p = parts.find(function(p){ return p.type === type; }); return p ? p.value : ''; };
+        return get('year') + '-' + get('month') + '-' + get('day') + ' ' + get('hour') + ':' + get('minute');
       } catch(e) { return dateStr; }
     }
 
