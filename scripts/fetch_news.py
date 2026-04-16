@@ -286,18 +286,99 @@ def make_id(url):
     return hashlib.md5(canonical_url(url).encode()).hexdigest()[:12]
 
 
+# 美国时区缩写 → IANA 时区名 映射
+US_TZ_ABBREV = {
+    "ET":  "America/New_York",
+    "EST": "America/New_York",
+    "EDT": "America/New_York",
+    "CT":  "America/Chicago",
+    "CST": "America/Chicago",
+    "CDT": "America/Chicago",
+    "MT":  "America/Denver",
+    "MST": "America/Denver",
+    "MDT": "America/Denver",
+    "PT":  "America/Los_Angeles",
+    "PST": "America/Los_Angeles",
+    "PDT": "America/Los_Angeles",
+}
+
+
+def _localize_us_tz(naive_dt, tz_abbrev):
+    """将 naive datetime 用美国 IANA 时区定位，自动处理夏令时"""
+    tz_name = US_TZ_ABBREV.get(tz_abbrev.upper())
+    if not tz_name:
+        return None
+    try:
+        from zoneinfo import ZoneInfo
+        tz = ZoneInfo(tz_name)
+        return naive_dt.replace(tzinfo=tz)
+    except ImportError:
+        # Python < 3.9 降级：使用固定偏移量（近似，不处理 DST）
+        offsets = {"EST": -5, "EDT": -4, "CST": -6, "CDT": -5,
+                   "MST": -7, "MDT": -6, "PST": -8, "PDT": -7,
+                   "ET": -4, "CT": -5, "MT": -6, "PT": -7}  # 默认夏令时
+        hours = offsets.get(tz_abbrev.upper())
+        if hours is None:
+            return None
+        return naive_dt.replace(tzinfo=timezone(timedelta(hours=hours)))
+
+
 def parse_date_flexible(date_str):
     """尝试多种格式解析日期，返回统一的 UTC ISO 8601 字符串 (含 Z)"""
     if not date_str:
         return ""
-    
+
+    date_str = date_str.strip()
+
     # 已经是 ISO 格式且含 Z
     if re.match(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$", date_str):
         return date_str
-        
+
+    # 带美国时区缩写的格式: "Apr 14, 2026, 17:45 ET" / "April 14, 2026 5:45 PM ET"
+    m = re.match(
+        r"^(\w{3,9})\s+(\d{1,2}),?\s+(\d{4}),?\s+(\d{1,2}):(\d{2})(?::(\d{2}))?\s*(AM|PM)?\s+(ET|EST|EDT|CT|CST|CDT|MT|MST|MDT|PT|PST|PDT)$",
+        date_str, re.IGNORECASE,
+    )
+    if m:
+        month_s, day_s, year_s, hour_s, min_s, sec_s, ampm, tz_ab = m.groups()
+        hour = int(hour_s)
+        # 若有 AM/PM 标记则为12小时制，否则为24小时制
+        if ampm:
+            if ampm.upper() == 'PM' and hour != 12:
+                hour += 12
+            elif ampm.upper() == 'AM' and hour == 12:
+                hour = 0
+        # 尝试缩写月名和全称月名两种格式
+        for fmt in ["%b %d %Y", "%B %d %Y"]:
+            try:
+                naive_dt = datetime.strptime(f"{month_s} {day_s} {year_s}", fmt)
+                naive_dt = naive_dt.replace(hour=hour, minute=int(min_s),
+                                            second=int(sec_s or 0))
+                aware_dt = _localize_us_tz(naive_dt, tz_ab)
+                if aware_dt:
+                    return aware_dt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+            except ValueError:
+                continue
+
+
+
+    # FDA 等政府网站格式: "Thu, 03/26/2026 - 14:36"
+    m = re.match(r'^\w{3},\s+(\d{1,2})/(\d{1,2})/(\d{4})\s+-\s+(\d{1,2}):(\d{2})$', date_str)
+    if m:
+        month_s, day_s, year_s, hour_s, min_s = m.groups()
+        try:
+            dt = datetime(int(year_s), int(month_s), int(day_s),
+                          int(hour_s), int(min_s), tzinfo=UTC)
+            return dt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+        except ValueError:
+            pass
+
     # 如果是带时区偏移的 ISO 格式
     try:
         dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            # 无时区信息的 ISO 字符串，假设为 UTC（新闻来源默认）
+            dt = dt.replace(tzinfo=UTC)
         return dt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
     except ValueError:
         pass
@@ -331,6 +412,29 @@ def parse_date_flexible(date_str):
             return dt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
         except ValueError:
             continue
+
+    # 尾部含 ET/PT 等但前面未匹配的，尝试去掉时区缩写后解析
+    m = re.match(r"^(.+?)\s+(ET|EST|EDT|CT|CST|CDT|MT|MST|MDT|PT|PST|PDT)$", date_str, re.IGNORECASE)
+    if m:
+        remaining, tz_ab = m.groups()
+        # 递归尝试去掉缩写后解析
+        parsed = parse_date_flexible(remaining.strip())
+        if parsed and parsed != remaining.strip():
+            try:
+                dt_utc = datetime.fromisoformat(parsed.replace("Z", "+00:00"))
+                # 守卫：若解析结果为纯日期（午夜UTC），跳过时区重定位以避免日期偏移
+                if dt_utc.hour == 0 and dt_utc.minute == 0 and dt_utc.second == 0:
+                    return parsed
+                # 把 UTC 时间当作原始时区的本地时间重新定位
+                aware_dt = _localize_us_tz(
+                    dt_utc.replace(tzinfo=None), tz_ab
+                )
+                if aware_dt:
+                    return aware_dt.astimezone(UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
+            except Exception:
+                pass
+            return parsed
+        return date_str  # 无法解析则返回原始值
 
     return date_str
 

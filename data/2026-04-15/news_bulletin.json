@@ -105,7 +105,7 @@
     "title": "Travere获FDA批准首个FSGS治疗药物Filspari",
     "summary": "2026年4月14日，Travere Therapeutics宣布其药物Filspari（sparsentan）获得美国FDA批准，用于治疗罕见肾脏疾病局灶节段性肾小球硬化症（FSGS）。这是首个获批专门针对FSGS的疗法。该药物是一种内皮素受体拮抗剂，此前已上市。此次批准在其实施代号为DUAL的III期临床试验未达到主要终点的情况下获得，标志着该公司在克服试验挫折后成功将药物推向这一未满足的医疗需求领域。FSGS是一种导致蛋白尿和肾功能进行性丧失的罕见病。",
     "source": "PharmaPHorum",
-    "date": "2026-04-14T10:04:45",
+    "date": "2026-04-14T10:04:45Z",
     "url": "https://pharmaphorum.com/news/travere-claims-first-fda-ok-rare-kidney-disease-fsgs",
     "fallback": false
   },
@@ -115,7 +115,7 @@
     "title": "FDA罕见病药物监管灵活性受关注，法规演变面临挑战",
     "summary": "2026年4月13日，美国食品药品监督管理局（FDA）在罕见病治疗药物监管方面的灵活性与清晰度持续受到政界、患者倡导组织及生物技术高管的批评。报道指出，包括Capricor Therapeutics、Replimune和uniQure在内的多家企业在过去一年中因前任FDA领导层提供的指导方针被推翻而陷入困境，凸显了监管环境动态变化所带来的不确定性。尽管FDA的监管框架在持续演进，但这一过程伴随着显著的适应难题与执行挑战，行业期待更稳定、透明的审批路径以加速罕见病疗法可及性。",
     "source": "BioSpace",
-    "date": "2026-04-13T04:03:00",
+    "date": "2026-04-13T04:03:00Z",
     "url": "https://www.biospace.com/fda/fda-flexibility-isnt-absent-but-evolving-regulations-come-with-growing-pains",
     "fallback": false
   },
@@ -125,7 +125,7 @@
     "title": "Travere公司Filspari获批，成FSGS首个且唯一治疗药物",
     "summary": "2026年4月14日，美国FDA批准Travere Therapeutics公司的Filspari（sparsentan）用于治疗具有进展风险的局灶节段性肾小球硬化症（FSGS）。该批准使Filspari成为全球首个且目前唯一专门针对该罕见肾病的获批药物。尽管此前与赛诺菲Avapro（厄贝沙坦）开展的III期DUAL试验未达到主要终点，FDA基于包括DUAL试验及其他支持性数据在内的完整证据 package 认为其获益大于风险，从而授予了上市许可。",
     "source": "BioSpace",
-    "date": "2026-04-14T11:12:30",
+    "date": "2026-04-14T11:12:30Z",
     "url": "https://www.biospace.com/fda/traveres-filspari-overcomes-phase-3-fail-to-become-first-drug-for-rare-kidney-disease",
     "fallback": false
   },
@@ -135,7 +135,7 @@
     "title": "诺和诺德携手OpenAI推进研发数字化转型",
     "summary": "2026年4月14日，丹麦制药企业诺和诺德宣布与人工智能公司OpenAI达成战略合作，旨在将OpenAI的先进技术整合至其从药物发现到生产的全流程运营中，以推动研发体系的全面“转型”。此举正值诺和诺德在全球肥胖与糖尿病治疗市场与美国礼来公司激烈竞争之际，双方希望通过AI赋能加速创新药物开发，巩固并扩大市场领先地位。该合作标志着传统制药巨头与AI前沿企业的深度融合，预计将显著提升研发效率与成功率。",
     "source": "PharmaPHorum",
-    "date": "2026-04-14T10:51:47",
+    "date": "2026-04-14T10:51:47Z",
     "url": "https://pharmaphorum.com/news/novo-nordisk-partners-openai-rd-transformation",
     "fallback": false
   },
@@ -145,7 +145,7 @@
     "title": "BioNTech与SynOx HER2-ADC II期试验达主要终点，应答率近50%",
     "summary": "2026年4月13日，BioNTech与其合作伙伴SynOx Therapeutics宣布，其联合开发的HER2靶向抗体偶联药物（ADC）在针对晚期或复发性子宫内膜癌的II期临床试验中达到主要终点。该研究共入组73名患者，客观应答率（ORR）达到49.3%。该积极数据为后续向美国FDA提交上市申请奠定了基础，标志着该公司在竞争性实体瘤治疗领域取得关键进展。本信息源自行业媒体Fierce Biotech的报道。",
     "source": "Fierce Biotech",
-    "date": "2026-04-13T09:10:00",
+    "date": "2026-04-13T09:10:00Z",
     "url": "https://www.fiercebiotech.com/biotech/biontech-synox-plot-paths-fda-trials-hit-goals-competitive-tumor-types",
     "fallback": false
   }

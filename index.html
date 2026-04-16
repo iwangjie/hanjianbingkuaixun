@@ -499,7 +499,17 @@
     function formatDate(dateStr) {
       if (!dateStr) return '未知日期';
       try {
-        var d = new Date(dateStr);
+        // 对无时区标记的 ISO 格式字符串（如 "2026-04-14T10:04:45"），补 "Z" 使其按 UTC 解析
+        // 否则 JS 引擎会按浏览器本地时区解析，导致转换到北京时间时偏移错误
+        var normalized = dateStr;
+        if (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?$/.test(normalized)) {
+          normalized = normalized + 'Z';
+        }
+        // 对仅有日期的格式（如 "2026-04-14"），也按 UTC 处理
+        if (/^\d{4}-\d{2}-\d{2}$/.test(normalized)) {
+          normalized = normalized + 'T00:00:00Z';
+        }
+        var d = new Date(normalized);
         if (isNaN(d.getTime())) return dateStr;
         // 使用 formatToParts 稳健地输出北京时间，避免 toLocaleString 格式因浏览器而异
         var parts = new Intl.DateTimeFormat('en-US', {
