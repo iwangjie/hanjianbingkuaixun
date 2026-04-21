@@ -3,7 +3,8 @@ name: 罕见病每日快讯
 on:
   schedule:
     # 每天北京时间下午4点 (UTC 8:00)
-    - cron: '0 8 * * *'
+    - cron: '15 8 * * *'
+  workflow_dispatch: # 支持手动触发
 
 permissions:
   contents: write
