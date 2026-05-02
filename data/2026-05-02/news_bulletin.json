@@ -1,0 +1,152 @@
+[
+  {
+    "id": "f8d154e93d51",
+    "category": "药物进展",
+    "title": "FDA批准首款黑尿症治疗药物Nitisinone",
+    "summary": "2026年05月01日，美国食品药品监督管理局（FDA）批准Nitisinone（商品名HARLIKU）用于治疗黑尿症（AKU），这是全球首个获批针对该罕见遗传病的疗法。黑尿症由基因突变导致，发病率约为十万分之一，可引发全身性 ochronosis（褐黄病）及严重关节、心脏并发症。该批准基于对2009年一项关键临床试验的事后分析，数据显示Nitisinone能有效降低患者尿液及组织中的同型尿黑酸水平，显著改善生活质量和身体功能。此次批准为全球约千余名黑尿症患者提供了首个疾病修饰治疗选择。",
+    "source": "hcplive(hcplive.com)",
+    "date": "2026-05-01T06:46:43.000Z",
+    "url": "https://www.hcplive.com/view/fda-approves-nitisinone-harliku-for-treatment-of-alkaptonuria",
+    "fallback": false
+  },
+  {
+    "id": "090a71fc96c1",
+    "category": "药物进展",
+    "title": "Arrowhead药物REDEMPLO获澳TGA批准，治疗家族性乳糜微粒血症综合征",
+    "summary": "2026年05月01日，Arrowhead Pharmaceuticals公司宣布其药物REDEMPLO®（plozasiran）获得澳大利亚药品管理局（TGA）批准，用于治疗家族性乳糜微粒血症综合征（FCS）。该药物是澳大利亚首个且唯一获批的FCS治疗药物，适用于经基因确诊或临床诊断的成人患者。此次批准进一步扩大了该疗法在全球范围内的可及性。相关消息由公司通过商业资讯（Business Wire）发布。",
+    "source": "商业资讯(Business Wire)",
+    "date": "2026-05-01T00:00:00.000Z",
+    "url": "https://www.businesswire.com/news/home/20260501510547/en/Arrowhead-Pharmaceuticals-Receives-TGA-Approval-of-REDEMPLO-plozasiran-in-Australia-Expanding-Global-Access-for-Patients-with-Familial-Chylomicronemia-Syndrome-FCS",
+    "fallback": false
+  },
+  {
+    "id": "b53d93447b83",
+    "category": "药物进展",
+    "title": "La Jolla Labs首例患者接受定制ASO疗法GBFsen治疗家族性ALS",
+    "summary": "2026年05月01日，生物技术公司La Jolla Labs, Inc.宣布，首例患者已接受其定制设计的反义寡核苷酸（ASO）疗法GBFsen的治疗。该疗法旨在靶向一种与遗传性、超罕见形式的肌萎缩侧索硬化（ALS）相关的TDP-43蛋白患者特异性突变。此次治疗标志着针对该特定基因突变的首个体内疗法应用，为这一患者群体提供了潜在的治疗希望。",
+    "source": "BioSpace",
+    "date": "2026-04-30T22:16:42.000Z",
+    "url": "https://www.biospace.com/press-releases/la-jolla-labs-inc-announces-first-patient-treated-with-custom-antisense-therapy-gbfsen-for-familial-als",
+    "fallback": false
+  },
+  {
+    "id": "c46714688876",
+    "category": "药物进展",
+    "title": "诺华Fabhalta®获加拿大批准用于治疗成人C3G",
+    "summary": "2026年05月02日，诺华公司宣布其口服疗法Fabhalta®（iptacopan胶囊）获得加拿大卫生部批准，用于治疗成人补体3肾小球病（C3G）患者以降低蛋白尿。该药物是一种口服因子B抑制剂。其获批基于三期临床试验APPEAR-C3G的关键数据，该试验表明，治疗6个月后，Fabhalta®实现了具有临床意义且在统计学上显著的蛋白尿降低。",
+    "source": "newswire.ca(newswire.ca)",
+    "date": "2026-05-01T18:00:00.000Z",
+    "url": "https://www.newswire.ca/news-releases/novartis-receives-health-canada-approval-for-fabhalta-r-oral-treatment-for-adults-with-c3g-884923293.html",
+    "fallback": false
+  },
+  {
+    "id": "4a89abe011f3",
+    "category": "行业资讯",
+    "title": "Vanda Pharmaceuticals宣布NEREUS™（tradipitant）在美国商业上市，这是40多年来首个用于治疗晕动病的新型药物",
+    "summary": "华盛顿，2026年5月1日 /PRNewswire/ -- Vanda Pharmaceuticals Inc.（Vanda）（纳斯达克股票代码：VNDA）今日宣布，NEREUS™（tradipitant）现已在美国商业上市，用于预防成人因运动诱发的呕吐，这标志着40多年来首个获批用于此适应症的新处方药。",
+    "source": "美通社(PR Newswire)",
+    "date": "2026-05-01T20:35:00.000Z",
+    "url": "https://www.prnewswire.com/news-releases/vanda-pharmaceuticals-announces-us-commercial-availability-of-nereus-tradipitant-the-first-new-pharmacologic-treatment-for-people-with-motion-sickness-in-more-than-40-years-302760461.html",
+    "fallback": true
+  },
+  {
+    "id": "9726437897ce",
+    "category": "药物进展",
+    "title": "FDA授予TERN-701治疗Ph阳性CML突破性疗法认定",
+    "summary": "2026年05月01日，美国食品药品监督管理局（FDA）基于一期/二期CARDINAL研究数据，授予TERN-701突破性疗法认定。该药物是一种新型变构BCR::ABL1抑制剂，拟用于治疗既往接受过大量预处理、且不携带T315I突变的Ph阳性慢性髓系白血病成人患者。该认定旨在加速针对这一难治患者群体的药物开发与审评进程。",
+    "source": "hmpgloballearningnetwork(hmpgloballearningnetwork.com)",
+    "date": "2026-04-30T16:02:46.000Z",
+    "url": "https://www.hmpgloballearningnetwork.com/site/onc/fda-alerts/fda-grants-breakthrough-therapy-designation-tern-701-ph-positive-chronic",
+    "fallback": false
+  },
+  {
+    "id": "54fc2af284fb",
+    "category": "临床试验",
+    "title": "塞阿拉州立大学启动雷特综合征首创治疗",
+    "summary": "2026年05月01日，巴西塞阿拉州立大学（Uece）宣布，其医学遗传学实验室（Lagem）于2026年4月29日启动了一项针对雷特综合征患儿的首创性治疗项目。此举标志着该校在罕见病科学研究和健康援助领域取得历史性进展，为患儿带来了新的治疗希望。该项目由塞阿拉州政府支持，具体治疗细节与初步数据尚未完全公开。",
+    "source": "ce.gov.br(ce.gov.br)",
+    "date": "2026-04-30T18:19:12.000Z",
+    "url": "https://www.ce.gov.br/2026/04/30/uece-inicia-tratamento-inedito-e-leva-esperanca-a-criancas-com-sindrome-de-rett/",
+    "fallback": false
+  },
+  {
+    "id": "5529df49ae8a",
+    "category": "药物进展",
+    "title": "Intellia宣布lonvo-z三期试验达主要终点，启动FDA上市申请滚动提交",
+    "summary": "2026年05月01日，Intellia Therapeutics公司宣布其评估用于治疗遗传性血管水肿（HAE）的试验性体内CRISPR基因编辑疗法lonvo-z的三期HAELO试验取得积极顶线结果，达到主要终点。基于此结果，公司已启动向美国食品药品监督管理局（FDA）滚动提交生物制品许可申请（BLA）的程序。该疗法旨在通过一次性治疗实现HAE的长期缓解，此次结果标志着CRISPR技术在罕见病治疗领域的关键里程碑。",
+    "source": "thelincolnianonline(thelincolnianonline.com)",
+    "date": "2026-04-30T19:12:31.000Z",
+    "url": "https://www.thelincolnianonline.com/2026/04/30/intellia-therapeutics-posts-phase-3-haelo-win-for-lonvo-z-begins-rolling-fda-bla-filing.html",
+    "fallback": false
+  },
+  {
+    "id": "e419b130a7be",
+    "category": "药物进展",
+    "title": "FDA授予实验性胰腺癌药物扩大使用指定",
+    "summary": "2026年05月02日，美国食品药品监督管理局（FDA）宣布授予一种处于研发阶段的实验性胰腺癌治疗药物“扩大使用”（Expanded Access）指定。该指定允许在药物完成正式上市审批前，由药企向不符合临床试验入组条件但存在未满足医疗需求的更广泛胰腺癌患者群体提供该药物，旨在加速潜在疗法的可及性。此举基于该药物在早期研究中展现出的前景，是监管机构支持突破性疗法的重要举措之一。",
+    "source": "华盛顿邮报(Washington Post)",
+    "date": "2026-05-01T19:41:25.000Z",
+    "url": "https://www.washingtonpost.com/health/2026/05/01/pancreatic-cancer-fda-revolution-medicines/",
+    "fallback": false
+  },
+  {
+    "id": "35bec208d2ce",
+    "category": "药物进展",
+    "title": "MHRA批准Linerixibat治疗胆道疾病瘙痒",
+    "summary": "2026年05月01日，英国药品和医疗产品监管局（MHRA）正式批准Linerixibat（商品名：Lynavoy）上市，用于治疗胆道疾病引起的瘙痒。该药物是首个获批的顶端钠依赖性胆汁酸转运体（IBAT）抑制剂，其适应症涵盖进行性家族性肝内胆汁淤积症（PFIC）等罕见胆道疾病患者。此次批准基于其有效降低血清胆汁酸水平、显著缓解顽固性瘙痒的临床数据，为相关罕见病患者提供了新的治疗选择。",
+    "source": "gov.uk(gov.uk)",
+    "date": "2026-05-01T13:26:42.000Z",
+    "url": "https://www.gov.uk/government/news/mhra-approves-linerixibat-lynavoy-for-the-treatment-of-itch-due-to-biliary-tract-disease",
+    "fallback": false
+  },
+  {
+    "id": "e2c0b298add2",
+    "category": "药物进展",
+    "title": "Orchard Therapeutics的OTL-201治疗MPS-IIIA获创新护照认定",
+    "summary": "2026年05月01日，Orchard Therapeutics宣布其基因疗法OTL-201用于治疗MPS-IIIA（桑菲利波综合征A型）获监管机构创新护照认定。该认定旨在通过指定平台促进持续合作，以加速针对该罕见致命神经代谢障碍的疗法开发。MPS-IIIA由基因突变导致硫酸肝素毒性积累引起，目前缺乏有效治疗。创新护照认定通常涉及在卫生技术评估等关键领域开展早期对话，旨在支持药物从研发到上市的全周期进程。",
+    "source": "pharmiweb(pharmiweb.com)",
+    "date": "2026-05-01T00:53:57.000Z",
+    "url": "https://www.pharmiweb.com/press-release/2026-05-01/orchard-therapeutics-awarded-innovation-passport-designation-for-otl-201-in-mps-iiia",
+    "fallback": false
+  },
+  {
+    "id": "def17d330d57",
+    "category": "药物进展",
+    "title": "FDA批准数十年来首款精神分裂症新药Cobenfy",
+    "summary": "2026年05月02日，美国食品药品监督管理局（FDA）批准了xanomeline和trospium chloride复方制剂（商品名：Cobenfy，曾用研发代号KarXT），用于治疗成人精神分裂症。该药物为口服制剂，是数十年来首个获批的、具有全新作用机制的精神分裂症治疗药物，标志着该领域的重要突破。此次批准基于其临床疗效与安全性数据，为患者提供了新的治疗选择。",
+    "source": "drugtopics(drugtopics.com)",
+    "date": "2026-05-02T03:39:27.000Z",
+    "url": "https://www.drugtopics.com/view/fda-approves-xanomeline-and-trospium-chloride-cobenfy-for-schizophrenia",
+    "fallback": false
+  },
+  {
+    "id": "0d5935b150ea",
+    "category": "药物进展",
+    "title": "Setmelanotide获FDA批准扩展适应症，TRANSCEND研究公布安全性数据",
+    "summary": "2026年05月01日，美国食品药品监督管理局（FDA）已批准Rhythm Pharmaceuticals关于IMCIVREE®（Setmelanotide）的补充新药申请（sNDA）。该批准基于TRANSCEND研究结果。研究显示，该药物最常见治疗期间出现的不良事件（发生率>20%）包括恶心、呕吐、腹泻、注射部位反应、皮肤色素沉着过度和头痛。此次获批标志着该疗法在特定罕见病治疗领域的进一步应用。",
+    "source": "hastingstribune(hastingstribune.com)",
+    "date": "2026-05-01T10:55:45.000Z",
+    "url": "https://www.hastingstribune.com/ap/business/rhythm-pharmaceuticals-announces-imcivree-setmelanotide-granted-marketing-authorization-by/article_7823fe65-913f-52c4-8f1c-317255c21007.html",
+    "fallback": false
+  },
+  {
+    "id": "de27813043bf",
+    "category": "药物进展",
+    "title": "FDA批准Incyte Jakafi XR缓释片新增三项罕见病适应症",
+    "summary": "2026年05月01日，Incyte公司宣布其创新药物Jakafi XR™（鲁索替尼）缓释片获得美国食品药品监督管理局（FDA）批准，用于治疗成人中危或高危骨髓纤维化（MF）、成人真性红细胞增多症（PV）以及用于治疗移植物抗宿主病（GVHD）。此次批准为上述罕见血液系统疾病和移植后并发症患者提供了新的口服长效治疗选择。Jakafi XR作为已上市药物Jakafi的缓释剂型，旨在提供更便捷的给药方案。该批准基于支持其疗效与安全性的临床数据，标志着Incyte在罕见病治疗领域的重要进展。",
+    "source": "商业资讯(Business Wire)",
+    "date": "2026-05-01T00:00:00.000Z",
+    "url": "https://www.businesswire.com/news/home/20260501334677/en/Incyte-Announces-FDA-Approval-of-Jakafi-XR-ruxolitinib-Extended-Release-Tablets-for-the-Treatment-of-Myelofibrosis-Polycythemia-Vera-and-Graft-Versus-Host-Disease",
+    "fallback": false
+  },
+  {
+    "id": "baf3e626ea82",
+    "category": "临床试验",
+    "title": "新型干细胞产品治疗血癌二期试验存活率达96%",
+    "summary": "2026年05月01日，一项发表于《临床肿瘤学杂志》的二期临床试验显示，名为dilanubicel的新型混合干细胞产品，在治疗接受脐带血移植的白血病及骨髓增生异常综合征患者中，实现高达96%的存活率，且未出现严重排异反应。该研究由美国弗雷德·哈金森癌症中心主导，为缺乏完全匹配捐献者、需进行干细胞移植的患者提供了更安全、可及的新治疗选择。",
+    "source": "新浪网(Sina)",
+    "date": "2026-05-01T01:21:38.000Z",
+    "url": "https://finance.sina.com.cn/tech/discovery/2026-05-01/doc-inhwkcck5640888.shtml",
+    "fallback": false
+  }
+]
