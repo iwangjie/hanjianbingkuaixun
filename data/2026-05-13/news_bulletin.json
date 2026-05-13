@@ -1,0 +1,152 @@
+[
+  {
+    "id": "5d6c2c15666b",
+    "category": "药物进展",
+    "title": "FDA批准首款LAD-1基因疗法Kresladi上市",
+    "summary": "2026年05月12日，美国食品药品监督管理局（FDA）批准了Rocket Pharmaceuticals公司研发的基因疗法Kresladi（lentiviral vector-based gene therapy）上市，用于治疗白细胞粘附缺陷症1型（LAD-1）。LAD-1是一种超罕见的原发性免疫缺陷病，由ITGB2基因突变导致，患者因中性粒细胞无法正常迁移至感染部位而反复发生严重感染，现有治疗手段（如抗生素、造血干细胞移植）效果有限且伴随高风险。Kresladi作为首款针对该病的基因疗法，通过体外修饰患者自体造血干细胞，使其表达功能性CD18蛋白，旨在从根本上纠正免疫缺陷。此次批准标志着LAD-1治疗领域的重大里程碑，为这一无有效疗法的患者群体提供了首个疾病修正型治疗选择，进一步凸显了基因疗法在超罕见病治疗中的关键作用。",
+    "source": "thebiointel(thebiointel.com)",
+    "date": "2026-05-12T11:59:18.000Z",
+    "url": "https://www.thebiointel.com/article/rocket-pharmaceuticals-fda-approval-kresladi-ultra-rare-immunodeficiency",
+    "fallback": false
+  },
+  {
+    "id": "f665d15a7847",
+    "category": "行业资讯",
+    "title": "临床试验成功推动首款体内 CRISPR 疗法迈向 FDA 批准 | PET",
+    "summary": "位于马萨诸塞州剑桥的 Intellia Therapeutics 报告了其实验性体内 CRISPR/Cas9 疗法 lonvoguran ziclumeran（lonvo-z，前称 NTLA-2002）用于治疗遗传性血管性水肿（一种导致严重肿胀发作的罕见遗传病）的积极 3 期试验结果。",
+    "source": "progress.org.uk(progress.org.uk)",
+    "date": "2026-05-11T16:41:26.000Z",
+    "url": "https://www.progress.org.uk/clinical-trial-success-moves-first-in-body-crispr-therapy-toward-fda-approval/",
+    "fallback": true
+  },
+  {
+    "id": "f0a6db665087",
+    "category": "行业资讯",
+    "title": "阿布扎比 Tawam 医院为一名患脊髓性肌萎缩症的阿曼儿童实施突破性基因治疗",
+    "summary": "Tawam 医院（隶属于 SEHA 集团）成功为一名患有脊髓性肌萎缩症（SMA）的阿曼儿童实施了基因治疗，为受 SMA 影响的家庭带来了新希望。",
+    "source": "gulfnews(gulfnews.com)",
+    "date": "2026-05-12T11:49:23.000Z",
+    "url": "https://gulfnews.com/uae/health/abu-dhabi-hospital-administers-gene-therapy-to-child-with-rare-disorder-1.500537870",
+    "fallback": true
+  },
+  {
+    "id": "7e57ad7e271a",
+    "category": "药物进展",
+    "title": "超罕见突变胆管癌获首款FDA靶向疗法",
+    "summary": "2026年05月12日，美国FDA批准了Partner Therapeutics公司研发的静脉输注靶向药物，用于治疗携带IDH1突变的晚期胆管癌。该疗法成为全球首款针对这一超罕见基因突变驱动的胆管癌的获批治疗手段，为患者提供了首个靶向治疗选择。胆管癌是一种罕见的肝脏胆管恶性肿瘤，IDH1突变在其特定亚型中发生率较低，此前缺乏有效靶向药物。此次批准标志着针对超罕见突变肿瘤的精准治疗取得重要突破。",
+    "source": "medcitynews(medcitynews.com)",
+    "date": "2026-05-11T19:39:18.000Z",
+    "url": "https://medcitynews.com/2026/05/liver-bile-duct-cancer-cholangiocarcinoma-partner-therapeutics-bizengri-nrg1-gene-fusion/",
+    "fallback": false
+  },
+  {
+    "id": "b9b1c5f871f9",
+    "category": "药物进展",
+    "title": "胰腺癌新药daraxonrasib获批，靶向治疗带来新希望",
+    "summary": "2026年05月12日，美国国家公共电台（NPR）报道指出，胰腺癌因其早期难以检测且治疗手段有限，一直是肿瘤学中的重大挑战。最新药物daraxonrasib（达拉松拉西布）的研发与应用取得突破，该药物通过特异性靶向并清除携带常见基因突变的癌细胞，为患者提供了新的治疗选择。患者斯廷森（Stinson）已成为该药物临床获益的实例。此进展代表了胰腺癌精准治疗策略的重要进步，有望改善患者预后。",
+    "source": "npr(npr.org)",
+    "date": "2026-05-12T09:00:00.000Z",
+    "url": "https://www.npr.org/2026/05/12/nx-s1-5783797/pancreatic-cancer-breakthroughs-daraxonrasib-mrna",
+    "fallback": false
+  },
+  {
+    "id": "ff4f9f196a41",
+    "category": "行业资讯",
+    "title": "Repair Biotechnologies因其在纯合子家族性高胆固醇血症中的REP-0003疗法获FDA授予罕见病证据原则(RDEP)资格 - BioSpace",
+    "summary": "美国纽约州锡拉丘兹 / 商业新闻社 / 2026年5月12日 / Repair Biotechnologies, Inc.，一家致力于开发能快速消退动脉粥样硬化斑块的同类首创疗法的生物技术公司，今日宣布美国食品药品监督管理局(FDA)已授予其REP-0003疗法用于纯合子家族性高胆固醇血症的罕见病证据原则(RDEP)资格。",
+    "source": "BioSpace",
+    "date": "2026-05-12T13:39:30.000Z",
+    "url": "https://www.biospace.com/press-releases/repair-biotechnologies-granted-rare-disease-evidence-principles-rdep-eligibility-by-the-fda-for-rep-0003-in-homozygous-familial-hypercholesterolemia",
+    "fallback": true
+  },
+  {
+    "id": "bf8311d3df74",
+    "category": "药物进展",
+    "title": "Emiltatug Ledadotin获FDA突破性疗法认定治疗腺样囊性癌",
+    "summary": "2026年05月12日，赛诺菲（Servier）公司宣布，其靶向药物Emiltatug Ledadotin（Emi-Le）已获得美国食品药品监督管理局（FDA）授予的突破性疗法认定，用于治疗腺样囊性癌（ACC）。该认定基于该药物在治疗复发/难治性ACC患者中展现的早期临床数据。突破性疗法认定旨在加速针对严重或危及生命疾病的药物开发与审评，为尚无有效治疗手段的患者提供潜在新疗法。此次认定标志着Emi-Le在推进ACC治疗领域迈出关键一步。",
+    "source": "美通社(PR Newswire)",
+    "date": "2026-05-12T12:30:00.000Z",
+    "url": "https://www.prnewswire.com/news-releases/emiltatug-ledadotin-emi-le-granted-breakthrough-therapy-designation-by-the-us-fda-for-adenoid-cystic-carcinoma-acc-302769049.html",
+    "fallback": false
+  },
+  {
+    "id": "580abd144e70",
+    "category": "药物进展",
+    "title": "aTyr Pharma公布Efzofitimod肺结节病项目FDA会议后新计划",
+    "summary": "2026年05月12日，aTyr Pharma公司宣布，在就III期EFZO-FIT™研究结果与美国食品药品监督管理局（FDA）召开Type C会议后，获得了关于其用于治疗肺结节病在研药物Efzofitimod的监管反馈。会议核心议题为评估现有III期研究数据并规划项目后续开发路径。基于FDA的明确指导意见，公司决定将不再基于现有EFZO-FIT™研究数据提交上市申请，而是计划启动一项新的、设计完善的III期确证性临床试验，以进一步评估Efzofitimod在肺结节病患者中的疗效与安全性，从而推进该项目的全球开发。",
+    "source": "BioSpace",
+    "date": "2026-05-12T04:10:20.000Z",
+    "url": "https://www.biospace.com/press-releases/atyr-pharma-provides-regulatory-and-clinical-update-for-efzofitimod-in-pulmonary-sarcoidosis-following-fda-type-c-meeting",
+    "fallback": false
+  },
+  {
+    "id": "0a459d32db9c",
+    "category": "药物进展",
+    "title": "BridgeBio就ADH1新药Encaleret向FDA提交上市申请",
+    "summary": "2026年05月12日，BridgeBio制药公司宣布已向美国食品药品监督管理局（FDA）提交其创新疗法Encaleret的新药申请（NDA），用于治疗常染色体显性低钙尿症（ADH1）。该申请基于III期CALIBRATE试验的完整数据，该试验所有预先指定的主要及关键次要疗效终点均获达成。试验主要结果已于2026年欧洲内分泌学大会（ECE）以口头报告形式发布，数据显示Encaleret在ADH1患者中实现了关键临床参数的快速且持久的改善。此次提交标志着该潜在首创疗法向获批上市迈出关键一步。",
+    "source": "环球新闻社(GlobeNewswire)",
+    "date": "2026-05-12T07:30:00.000Z",
+    "url": "https://www.globenewswire.com/news-release/2026/05/12/3292712/0/en/BridgeBio-Submits-NDA-to-FDA-for-Encaleret-for-Individuals-Living-with-ADH1.html",
+    "fallback": false
+  },
+  {
+    "id": "6bf1b2d81061",
+    "category": "药物进展",
+    "title": "FDA批准Zenocutuzumab用于NRG1融合胆管癌",
+    "summary": "2026年05月12日，美国食品药品监督管理局（FDA）批准Partner Therapeutics公司研发的Bizengri（zenocutuzumab-zbco）上市，用于治疗携带神经调节蛋白1（NRG1）基因融合、既往接受过系统治疗后病情进展的晚期、不可切除或转移性胆管癌成人患者。该批准针对一种由特定基因融合驱动的罕见胆管癌亚型，为这一难治性患者群体提供了新的靶向治疗选择。相关资讯由行业媒体《制药技术》（Pharmaceutical Technology）于北京时间2026年05月12日发布。",
+    "source": "制药技术(Pharmaceutical Technology)",
+    "date": "2026-05-12T08:24:57.000Z",
+    "url": "https://www.pharmaceutical-technology.com/news/partner-therapeutics-fda-approval-bizengri/",
+    "fallback": false
+  },
+  {
+    "id": "4ed1a0535fea",
+    "category": "行业资讯",
+    "title": "Partner Therapeutics 宣布 BIZENGRI®（Zenocutuzumab-zbco）获批用于治疗 NRG1 融合阳性胆管癌",
+    "summary": "私营综合生物技术公司 Partner Therapeutics, Inc. (PTx) 宣布，美国食品药品监督管理局（FDA）已批准 BIZENGRI®（zenocutuzumab-zbco），用于治疗携带神经调节蛋白1（NRG1）基因融合的晚期、不可切除或转移性胆管癌成人患者。",
+    "source": "pharmaceutical-era(pharmaceutical-era.com)",
+    "date": "2026-05-12T09:45:29.000Z",
+    "url": "https://www.pharmaceutical-era.com/press-releases/bizengri-r-zenocutuzumab-zbco-wins-fda-approval-for-nrg1-fusion-positive-cholangiocarcinoma-says-partner-therapeutics",
+    "fallback": true
+  },
+  {
+    "id": "5144ef3f48a0",
+    "category": "行业资讯",
+    "title": "FDA 批准 Efgartigimod 用于所有成人全身型重症肌无力类型",
+    "summary": "约20%的全身型重症肌无力患者体内检测不到乙酰胆碱受体（AChR）抗体，迄今为止，所有主要获批疗法均未将其纳入说明书范围。这一临床排除于5月8日终结，当日FDA批准了Efgartigimod的补充生物制品许可申请（sBLA），使其适应症覆盖所有成人gMG血清型，包括抗肌肉特异性酪氨酸激酶（MuSK）抗体阳性患者。",
+    "source": "clinicaltrialvanguard(clinicaltrialvanguard.com)",
+    "date": "2026-05-12T06:46:22.000Z",
+    "url": "https://www.clinicaltrialvanguard.com/news/fda-approves-efgartigimod-for-all-adult-generalized-myasthenia-gravis-types/",
+    "fallback": true
+  },
+  {
+    "id": "8f1595297b31",
+    "category": "药物进展",
+    "title": "FDA扩大艾加莫德用于全身型重症肌无力适应症",
+    "summary": "2026年05月12日，美国食品药品监督管理局（FDA）批准扩大Vyvgart®（艾加莫德α-fcab）的适应症范围，用于治疗全身型重症肌无力（gMG）。此次批准基于3期ADAPT SERON临床试验的关键数据，该试验专门针对乙酰胆碱受体抗体（AChR-Ab）血清阴性的gMG患者。研究结果显示，艾加莫德静脉注射治疗能在此患者群体中显著改善MG-ADL（重症肌无力日常生活活动）总评分，证实了其在该亚群中的临床获益。此次批准使该药物成为针对AChR-Ab血清阴性gMG患者的重要治疗选择。",
+    "source": "neurologyadvisor(neurologyadvisor.com)",
+    "date": "2026-05-12T00:54:43.000Z",
+    "url": "https://www.neurologyadvisor.com/news/fda-approval-broadens-gmg-indication-for-efgartigimod/",
+    "fallback": false
+  },
+  {
+    "id": "28087b76b305",
+    "category": "行业资讯",
+    "title": "Vyvgart：FDA扩大说明书适用范围，涵盖所有成人全身型重症肌无力患者",
+    "summary": "Vyvgart（艾加莫德α-fcab）和Vyvgart Hytrulo（艾加莫德α与透明质酸酶-qvfc）是用于治疗一种称为全身型重症肌无力（gMG）的肌肉疾病的处方药。FDA已扩大其使用范围，使其适用于所有成人gMG患者，无论其亚型如何，这意",
+    "source": "webmd(webmd.com)",
+    "date": "2026-05-12T00:00:00.000Z",
+    "url": "https://www.webmd.com/drugs/updates/vyvgart-all-adults-generalized-myasthenia-gravis",
+    "fallback": true
+  },
+  {
+    "id": "5b307fb595ce",
+    "category": "行业资讯",
+    "title": "CheckOrphan",
+    "summary": "### Drug Farm宣布DF-003用于治疗ROSAH综合征获得美国FDA孤儿药资格\n\n*\n[...]\n### Disc Medicine宣布在红细胞生成性原卟啉病中评估比托泊定的3期APOLLO试验已完成入组\n[...]\n### Rocket Pharmaceuticals宣布FDA批准",
+    "source": "checkorphan(checkorphan.org)",
+    "date": "2026-05-13T01:41:37.857Z",
+    "url": "https://checkorphan.org/",
+    "fallback": true
+  }
+]
