@@ -1,0 +1,152 @@
+[
+  {
+    "id": "ee73012269ff",
+    "category": "研究发现",
+    "title": "中国团队LEAPER技术治疗杜氏肌营养不良症获突破",
+    "summary": "2026年06月11日，中国研究团队宣布在RNA编辑技术LEAPER治疗杜氏肌营养不良症（DMD）方面取得突破。该技术通过编辑RNA来修复导致DMD的基因缺陷，为这种严重的X连锁隐性遗传病提供了新的潜在治疗策略。研究由国内科研机构完成，相关技术细节及临床转化前景需待后续研究进一步验证与公布。",
+    "source": "english.news(english.news.cn)",
+    "date": "2026-06-11T00:42:15.000Z",
+    "url": "https://english.news.cn/20260611/c572f9d6e95f4c0bb359eb26b01d54b0/c.html",
+    "fallback": false
+  },
+  {
+    "id": "ce34e3edd1f4",
+    "category": "企业动态",
+    "title": "贝伦公司获3亿美元推进尼曼-匹克病疗法上市",
+    "summary": "2026年06月11日，贝伦治疗公司宣布已获得至多3亿美元的战略融资，以支持其针对尼曼-匹克病（一种罕见溶酶体贮积症）的疗法adrabetadex的潜在商业上市准备工作。该资金将用于推进该疗法的监管提交、市场准入及商业化运营。此消息由行业媒体《制药技术》报道。",
+    "source": "制药技术(Pharmaceutical Technology)",
+    "date": "2026-06-11T09:35:23.000Z",
+    "url": "https://www.pharmaceutical-technology.com/news/beren-pockets-300m-to-take-niemann-pick-disease-therapy-to-market/",
+    "fallback": false
+  },
+  {
+    "id": "df3a949a85ae",
+    "category": "企业动态",
+    "title": "Sensorion选定GJB2听力损失基因疗法SENS-601为领先项目",
+    "summary": "2026年06月10日，法国蒙彼利埃 — Sensorion公司宣布，在达成数个关键监管里程碑后，已选择其用于治疗GJB2相关听力损失的基因疗法候选产品SENS-601作为公司的领先基因疗法项目。此决定标志着公司战略重心向基因疗法领域的显著转变，旨在加速推进该针对遗传性听力损失根本病因的潜在治疗方案的开发。",
+    "source": "hearinghealthmatters(hearinghealthmatters.org)",
+    "date": "2026-06-10T15:07:39.000Z",
+    "url": "https://hearinghealthmatters.org/hearing-news-watch/2026/sensorion-gene-therapy-sens-601/",
+    "fallback": false
+  },
+  {
+    "id": "527869d755a8",
+    "category": "行业资讯",
+    "title": "IMAAVY® (nipocalimab-aahu) 在温抗体型自身免疫性溶血性贫血 (wAIHA) 的关键性 II/III 期研究中展现出持久的血红蛋白应答与快速起效，该疾病由自身抗体驱动，目前尚无 FDA 批准的疗法",
+    "summary": "IMAAVY® (nipocalimab-aahu) 在温抗体型自身免疫性溶血性贫血 (wAIHA) 的关键性 II/III 期研究中展现出持久的血红蛋白应答与快速起效，该疾病由自身抗体驱动，目前尚无 FDA 批准的疗法。无障碍声明 跳过导航 [...] - IMAAVY 3 期的患者",
+    "source": "美通社(PR Newswire)",
+    "date": "2026-06-11T06:03:00.000Z",
+    "url": "https://www.prnewswire.com/news-releases/imaavy-nipocalimab-aahu-demonstrates-durable-hemoglobin-response-and-rapid-onset-of-effect-in-pivotal-phase-23-study-in-warm-autoimmune-hemolytic-anemia-waiha-an-autoantibody-driven-disease-with-no-fda-approved-therapies-302797243.html",
+    "fallback": true
+  },
+  {
+    "id": "7093753668f7",
+    "category": "行业资讯",
+    "title": "Italfarmaco 宣布加拿大卫生部接受并优先审查 Givinostat 作为杜氏肌营养不良症治疗的新药申请",
+    "summary": "加拿大卫生部的优先审查目标为加速的 180 天审查周期，体现了 Italfarmaco 对加拿大杜氏肌营养不良症社区的承诺。新药申请基于 Italfarmaco 的 III 期 EPIDYS 试验数据，该数据证明了杜氏肌营养不良症患者的显著治疗获益。 [...] 意大利米兰，2026 年 6 月 10 日",
+    "source": "bnnbloomberg.ca(bnnbloomberg.ca)",
+    "date": "2026-06-10T11:59:16.000Z",
+    "url": "https://www.bnnbloomberg.ca/press-releases/2026/06/10/italfarmaco-announces-health-canada-acceptance-and-priority-review-of-new-drug-submission-for-givinostat-as-a-duchenne-muscular-dystrophy-treatment/",
+    "fallback": true
+  },
+  {
+    "id": "6ec492d4fa74",
+    "category": "研究发现",
+    "title": "基因疗法在杜氏肌营养不良模型中恢复肌肉功能",
+    "summary": "2026年06月11日，德克萨斯大学MD安德森癌症中心的研究团队开发出一种新型治疗平台，该平台能够将全长杜氏肌营养不良症（DMD）基因的信使RNA（mRNA）有效递送至疾病临床前模型，并成功恢复了关键功能蛋白——抗肌萎缩蛋白的生产，实现了肌肉功能的改善。此项研究为DMD这一严重遗传性肌肉疾病提供了基于mRNA递送的新治疗策略，目前成果仍处于临床前研究阶段。",
+    "source": "miragenews(miragenews.com)",
+    "date": "2026-06-11T09:04:49.000Z",
+    "url": "https://www.miragenews.com/gene-therapy-restores-muscle-in-duchenne-models-1690593/",
+    "fallback": false
+  },
+  {
+    "id": "e5b965beae20",
+    "category": "临床试验",
+    "title": "CONNECTA启动CTH120治疗脆性X综合征IIa期试验",
+    "summary": "2026年06月10日，临床阶段生物技术公司CONNECTA Therapeutics宣布启动其候选药物CTH120用于治疗脆性X综合征的IIa期临床试验。CTH120是一种首创的神经可塑性调节剂，旨在解决中枢神经系统疾病的未满足医疗需求。该公司总部位于西班牙巴塞罗那，此次试验启动标志着该药物研发进程的重要里程碑。",
+    "source": "markets.businessinsider(markets.businessinsider.com)",
+    "date": "2026-06-10T09:33:36.000Z",
+    "url": "https://markets.businessinsider.com/news/stocks/connecta-therapeutics-initiates-phase-iia-clinical-trial-of-cth120-a-first-in-class-neuroplasticity-modulator-in-fragile-x-syndrome-1036238022",
+    "fallback": false
+  },
+  {
+    "id": "729f4d1224e2",
+    "category": "企业动态",
+    "title": "Incyte 12.5亿美元收购Vega，布局罕见出血病药物",
+    "summary": "2026年06月10日，生物制药公司Incyte（纳斯达克：INCY）宣布，已同意以12.5亿美元的前期付款，收购专注于罕见病治疗的Star Therapeutics旗下全资子公司Vega Therapeutics。此次收购的核心目标是获得Vega在研的一款针对罕见出血性疾病的潜在重磅疗法。该交易体现了Incyte对拓展其在罕见病领域，特别是出血性疾病治疗管线的重要战略布局。交易细节和该候选药物的具体临床阶段与数据将在后续披露。",
+    "source": "benzinga(benzinga.com)",
+    "date": "2026-06-09T18:08:29.000Z",
+    "url": "https://www.benzinga.com/news/health-care/26/06/53098895/incyte-bets-1-25-billion-on-rare-bleeding-disorder-drug-with-blockbuster-potential",
+    "fallback": false
+  },
+  {
+    "id": "32e2d526248d",
+    "category": "药物进展",
+    "title": "以色列完成世界首例脑部基因疗法治疗婴儿罕见癫痫",
+    "summary": "2026年06月10日，以色列施耐德儿童医疗中心宣布，为一名八个月大WOREE综合征患儿成功实施世界首例脑部基因疗法。该疗法通过颅内注射功能性WWOQ基因，旨在纠正致病基因缺陷，依据同情使用方案进行。WOREE综合征是一种由WWOQ基因双等位基因突变引起的罕见癫痫性脑病，目前尚无有效治疗方法。此次治疗标志着基因疗法在罕见神经疾病领域的重要突破。",
+    "source": "archynetys(archynetys.com)",
+    "date": "2026-06-09T20:54:25.000Z",
+    "url": "https://www.archynetys.com/israels-world-first-brain-gene-therapy-for-rare-epilepsy-in-infant/",
+    "fallback": false
+  },
+  {
+    "id": "d0696bda604d",
+    "category": "药物进展",
+    "title": "全球首例脑内基因疗法成功治疗婴儿罕见遗传性癫痫",
+    "summary": "2026年06月10日，以色列施耐德儿童医疗中心宣布成功实施全球首例直接注入婴儿大脑的基因替代疗法，用于治疗罕见遗传性癫痫。该突破性疗法通过脑内直接递送功能基因，针对特定遗传病因，为患有此类难治性癫痫的婴儿提供了新的治疗可能，标志着罕见病精准治疗领域的重要里程碑。",
+    "source": "gdcclasses(gdcclasses.com)",
+    "date": "2026-06-10T05:00:00.000Z",
+    "url": "https://gdcclasses.com/first-ever-gene-therapy-delivered-directly-to-infants-brain-offers-hope-for-rare-genetic-epilepsy/",
+    "fallback": false
+  },
+  {
+    "id": "431f3ffdac92",
+    "category": "药物进展",
+    "title": "FDA授予GEn-1123杜氏肌营养不良症罕见病认定",
+    "summary": "2026年06月10日，美国食品药品监督管理局（FDA）已授予在研口服小分子疗法GEn-1123用于治疗杜氏肌营养不良症（DMD）的孤儿药认定（Orphan Drug Designation）与罕见儿科疾病认定（Rare Pediatric Disease Designation）。该认定旨在激励针对严重儿童罕见病的新药研发，可能为GEn-1123的后续开发提供包括市场独占期在内的潜在激励。然而，目前该药物的临床数据仍然有限，其有效性与安全性尚需通过充分的临床试验进一步验证。此次认定消息由Contemporary Pediatrics报道。",
+    "source": "contemporarypediatrics(contemporarypediatrics.com)",
+    "date": "2026-06-09T16:25:38.000Z",
+    "url": "https://www.contemporarypediatrics.com/view/fda-grants-gen-1123-rare-disease-designations-for-duchenne-muscular-dystrophy",
+    "fallback": false
+  },
+  {
+    "id": "a05ce8111b6c",
+    "category": "临床试验",
+    "title": "TX01儿科研究计划获EMA批准，开启PUMA注册路径",
+    "summary": "2026年06月10日，专注于罕见神经疾病治疗的THX Pharma与Insud Pharma集团旗下全球制药公司Exeltis宣布，欧洲药品管理局（EMA）已正式批准其关于在研药物TX01的儿科研究计划（PIP）。该计划依据欧盟儿科用药法规（PUMA）提交，旨在系统性地在儿童患者中开展临床研究，以支持该药物用于治疗罕见神经疾病的儿科适应症。完成获批的PIP是获取基于PUMA途径的上市许可的关键步骤，成功获批后，TX01将可能获得10年的儿科用药市场独占期。THX Pharma主导药物开发，Exeltis将利用其全球注册经验支持后续的上市申请工作。",
+    "source": "marketscreener(marketscreener.com)",
+    "date": "2026-06-09T16:03:05.000Z",
+    "url": "https://www.marketscreener.com/news/thx-pharma-thx-pharma-theranexus-and-exeltis-secure-ema-approval-of-the-paediatric-investiga-ce7f5cdadb8fff23",
+    "fallback": false
+  },
+  {
+    "id": "b552cec6fe48",
+    "category": "临床试验",
+    "title": "Rafael Holdings宣布Trappsol® Cyclo™治疗尼曼-匹克病C型III期研究完成末例患者访视",
+    "summary": "2026年06月10日，Rafael Holdings宣布其评估Trappsol® Cyclo™用于治疗尼曼-匹克病C型（NPC）的关键性III期TransportNPC™研究已完成末例患者的末次访视。该研究是一项随机、双盲、安慰剂对照试验，旨在评估该药物对NPC患者神经功能衰退的疗效与安全性。完成末例患者末次访视标志着研究入组与随访阶段的正式结束，后续将进入数据清理与统计分析阶段。研究结果将为Trappsol® Cyclo™的注册审批提供关键证据，有望为这一罕见、致命性遗传代谢病带来新的治疗选择。",
+    "source": "markets.businessinsider(markets.businessinsider.com)",
+    "date": "2026-06-10T13:30:00.000Z",
+    "url": "https://markets.businessinsider.com/news/stocks/rafael-holdings-announces-completion-of-last-patient-last-visit-for-pivotal-phase-3-transportnpc-study-evaluating-trappsol-cyclo-for-the-treatment-of-niemann-pick-disease-type-c-1036238584",
+    "fallback": false
+  },
+  {
+    "id": "7eb9ccd52d1c",
+    "category": "药物进展",
+    "title": "Disc公司罕见血液病药物获FDA重新提交路径",
+    "summary": "2026年06月10日，Disc Medicine宣布，在其治疗罕见血液疾病的在研药物bitopertin于四个月前被美国FDA拒绝后，公司已与FDA达成正式协议，明确了重新提交监管申请的路径。根据协议，FDA将接受公司当前正在进行的名为APOLLO的III期临床试验数据，用以支持bitopertin的后续申请。此举标志着该药物研发进程取得关键性进展。",
+    "source": "BioSpace",
+    "date": "2026-06-10T12:31:25.000Z",
+    "url": "https://www.biospace.com/fda/discs-fda-meeting-sets-clear-path-for-embattled-rare-blood-disease-drug",
+    "fallback": false
+  },
+  {
+    "id": "c3b31003dc70",
+    "category": "药物进展",
+    "title": "小野制药提交VELEXBRU片剂新适应症补充申请",
+    "summary": "2026年06月11日，小野制药公司向日本药品医疗器械综合机构（PMDA）提交了VELEXBRU®片剂（通用名：伏立诺他）的补充申请，旨在扩大该药物的已批准适应症。此次申请寻求部分变更该药物的生产和销售批准，新增适应症为：用于治疗对现有疗法应答不足或不适用现有疗法的恶性淋巴瘤中枢神经系统（CNS）受累患者。VELEXBRU®此前已在日本获批用于某些类型的外周T细胞淋巴瘤治疗。本次申请若获批准，将为特定恶性淋巴瘤CNS受累患者提供新的治疗选择。",
+    "source": "ono-pharma(ono-pharma.com)",
+    "date": "2026-06-11T00:00:00.000Z",
+    "url": "https://www.ono-pharma.com/en/news/20260611_2.html",
+    "fallback": false
+  }
+]
