@@ -1,0 +1,152 @@
+[
+  {
+    "id": "ee73012269ff",
+    "category": "研究发现",
+    "title": "中国团队LEAPER技术突破治疗杜氏肌营养不良",
+    "summary": "2026年06月11日，新华社报道称，中国研究团队在利用新型RNA编辑技术LEAPER治疗杜氏肌营养不良症（DMD）方面取得重要突破。DMD是一种严重且罕见的X连锁隐性遗传性肌肉疾病。该研究展示了LEAPER技术在体外和动物模型中对DMD致病基因突变进行精准编辑的潜力，为开发新型基因治疗策略提供了关键实验依据。相关技术细节与临床前研究数据已发表于最新学术论文，标志着该技术在罕见病治疗领域的应用迈出关键一步。",
+    "source": "english.news(english.news.cn)",
+    "date": "2026-06-11T00:00:00.000Z",
+    "url": "https://english.news.cn/20260611/c572f9d6e95f4c0bb359eb26b01d54b0/c.html",
+    "fallback": false
+  },
+  {
+    "id": "41cc5ba1e43d",
+    "category": "临床试验",
+    "title": "诺华RNA疗法临床试验结果积极，有望成罕见肌肉疾病首款疗法",
+    "summary": "2026年06月12日，诺华公司宣布其源自120亿美元交易的RNA疗法在针对特定类型肌营养不良症的临床试验中取得积极结果。试验数据显示，该疗法显著降低了患者血液中作为该疾病关键生物标志物的蛋白质水平。这一结果为支持该疗法作为该罕见遗传性肌肉疾病潜在首款治疗方案的快速监管申请提供了关键证据，标志着该疗法研发进程中的重要进展。",
+    "source": "medcitynews(medcitynews.com)",
+    "date": "2026-06-11T17:59:04.000Z",
+    "url": "https://medcitynews.com/2026/06/novartis-fshd-muscular-dystrophy-dux4-rna-genetic-medicine-neuroscience-aoc-nvs/",
+    "fallback": false
+  },
+  {
+    "id": "61629589cbe9",
+    "category": "临床试验",
+    "title": "nipocalimab-aahu治疗wAIHA关键研究显示持久血红蛋白应答",
+    "summary": "2026年06月11日，强生公司宣布其药物IMAAVY® (nipocalimab-aahu) 在治疗温抗体型自身免疫性溶血性贫血（wAIHA）的关键性2/3期研究中取得积极结果。该研究显示，接受30 mg/kg剂量治疗的患者实现了持久的血红蛋白应答与快速起效。wAIHA是一种由自身抗体驱动的疾病，目前尚无获得美国FDA批准的疗法。此项研究结果为该罕见病领域提供了潜在的新的治疗选择。",
+    "source": "jnj(jnj.com)",
+    "date": "2026-06-11T11:36:49.000Z",
+    "url": "https://www.jnj.com/media-center/press-releases/imaavy-nipocalimab-aahu-demonstrates-durable-hemoglobin-response-and-rapid-onset-of-effect-in-pivotal-phase-2-3-study-in-warm-autoimmune-hemolytic-anemia-waiha-an-autoantibody-driven-disease-with-no-fda-approved-therapies",
+    "fallback": false
+  },
+  {
+    "id": "2c9cc933c3a4",
+    "category": "临床试验",
+    "title": "基因编辑疗法CS-206首例患者症状缓解超一年",
+    "summary": "2026年06月11日，一项发表于 sicklecellanemianews.com 的早期临床数据显示，一名严重镰状细胞病（SCD）患者在接受单剂量实验性基因编辑疗法 CS-206 治疗后，两种关键症状（包括痛苦的血管闭塞危象）已缓解超过一年。该患者是中国一项针对 CS-206 的 I 期临床试验（注册号：NCT06565026）的首位入组者，由 Correctsequence Therapeutics 公司开发。此首次人体试验结果为该疗法的进一步研究提供了初步支持。",
+    "source": "sicklecellanemianews(sicklecellanemianews.com)",
+    "date": "2026-06-11T14:45:00.000Z",
+    "url": "https://sicklecellanemianews.com/news/gene-editing-therapy-cs-206-frees-first-trial-partipant-scd-symptoms/",
+    "fallback": false
+  },
+  {
+    "id": "7aaf36f09482",
+    "category": "行业资讯",
+    "title": "Novartis delpacibart braxlosiran (del-brax) Phase I/II",
+    "summary": "- FORTITUDE study met primary and key secondary endpoints of reduction in KHDC1L and creatine kinase levels, with safety profile consistent with previous results\n- Del-brax indicates potential to become the first disease-modifying treatment for FSHD, a progressive and irreversible neuromuscular disease affecting approximately 45-87k people in the US and EU\n- Novartis plans to engage global regulatory authorities on Phase I/II data; Phase III study currently enrolling\n[...]\nBasel, June 11, 2026 –",
+    "source": "环球新闻社(GlobeNewswire)",
+    "date": "2026-06-11T01:00:00.000Z",
+    "url": "https://www.globenewswire.com/news-release/2026/06/11/3310187/0/en/Novartis-delpacibart-braxlosiran-del-brax-Phase-I-II-study-in-facioscapulohumeral-muscular-dystrophy-FSHD-meets-primary-biomarker-endpoint.html",
+    "fallback": true
+  },
+  {
+    "id": "361c29aca4eb",
+    "category": "研究发现",
+    "title": "新型基因治疗平台在DMD模型中恢复肌肉功能",
+    "summary": "2026年06月11日，一项发表于mdanderson.org的研究展示了一种针对杜氏肌营养不良（DMD）的新型基因治疗平台。DMD是一种遗传性疾病，患者因无法产生重要蛋白抗肌萎缩蛋白而导致肌肉无力与退化。该创新平台利用天然细胞外囊泡，其尺寸足以携带包含完整遗传指令的mRNA。在临床前模型中，该疗法安全地恢复了抗肌萎缩蛋白的表达，并显著改善了肌肉功能。",
+    "source": "mdanderson(mdanderson.org)",
+    "date": "2026-06-11T02:06:54.000Z",
+    "url": "https://www.mdanderson.org/newsroom/research-newsroom/novel-gene-therapy-platform-restores-muscle-function-in-models-of-Duchenne-muscular-dystrophy.h00-159856134.html",
+    "fallback": false
+  },
+  {
+    "id": "03e315467154",
+    "category": "药物进展",
+    "title": "FDA批准辉瑞HYMPAVZI扩展血友病A/B治疗人群",
+    "summary": "2026年06月12日，美国食品药品监督管理局（FDA）批准辉瑞公司的HYMPAVZI用于治疗两种此前未覆盖的A型或B型血友病患者群体。该批准扩展了该疗法的适用人群，旨在为更广泛的血友病患者提供治疗选择。具体新增的患者群体类型未在现有信息中详细说明。此消息由美国血友病联合会（Hemophilia Federation of America）报道，原始新闻稿发布于2026年6月11日（UTC时间）。",
+    "source": "hemophiliafed(hemophiliafed.org)",
+    "date": "2026-06-11T16:23:28.000Z",
+    "url": "https://www.hemophiliafed.org/fda-approves-pfizers-hympavzi-for-the-treatment-of-two-additional-hemophilia-a-or-b-patient-populations/",
+    "fallback": false
+  },
+  {
+    "id": "bbef552f7991",
+    "category": "临床试验",
+    "title": "全球首例WWOX基因替代疗法用于婴儿脑部治疗",
+    "summary": "2026年06月11日，一名八个月大患有严重遗传性癫痫的婴儿在施耐德儿童医疗中心成为全球首位接受实验性WWOX基因替代疗法的患者。该疗法通过直接向大脑递送功能基因，旨在恢复WWOX基因缺失导致的功能障碍。此次治疗标志着该罕见病基因疗法从临床前研究正式进入人体试验阶段，为后续研究提供关键安全性与初步有效性数据。",
+    "source": "deeptechdigest(deeptechdigest.com)",
+    "date": "2026-06-11T07:05:00.000Z",
+    "url": "https://deeptechdigest.com/biotech/first-gene-therapy-delivers-missing-gene-to-infants-brain/",
+    "fallback": false
+  },
+  {
+    "id": "186ca5a0a139",
+    "category": "药物进展",
+    "title": "Imaavy获英国批准用于治疗全身性重症肌无力",
+    "summary": "2026年06月11日，英国监管机构正式批准强生公司（Johnson & Johnson）的疗法Imaavy，用于治疗12岁及以上年龄段的全身性重症肌无力患者。该药物为一种输液治疗，旨在帮助患者缓解症状并降低疾病的整体严重程度。此批准为全身性重症肌无力这一罕见病群体提供了新的治疗选择。相关信息由专业新闻平台myastheniagravisnews于当日发布。",
+    "source": "myastheniagravisnews(myastheniagravisnews.com)",
+    "date": "2026-06-11T13:00:11.000Z",
+    "url": "https://myastheniagravisnews.com/news/imaavy-wins-uk-approval-treatment-option-generalized-myasthenia-gravis/",
+    "fallback": false
+  },
+  {
+    "id": "39773e2445ac",
+    "category": "临床试验",
+    "title": "首例人体肝活检证实碱基编辑实现SERPINA1 54-57%靶向修正",
+    "summary": "2026年06月12日，一项发表于medRxiv预印本（尚未经同行评审）的I/Ia期试验单患者病例报告提供了首项直接组织学证据。该研究评估了在研碱基编辑器YOLT-202在人体内的效果，结果显示其能对肝细胞中导致α1-抗胰蛋白酶缺乏症的PI*ZZ SERPINA1变异实现54-57%的靶向修正，且未检测到脱靶编辑。",
+    "source": "thevitalrecord.ai(thevitalrecord.ai)",
+    "date": "2026-06-11T20:15:21.000Z",
+    "url": "https://thevitalrecord.ai/2026/06/11/serpina1-base-editing-first-human/",
+    "fallback": false
+  },
+  {
+    "id": "8545dc73f3c8",
+    "category": "行业资讯",
+    "title": "GSK的momelotinib在美国和欧盟获批用于治疗VEXAS综合征的孤儿药资格 | 美国GSK",
+    "summary": "- VEXAS综合征是一种罕见的、危及生命的血液炎症性疾病，目前尚无获批的治疗方案\n- 针对VEXAS的ATLAS II/III期临床试验正在进行中，推动momelotinib更广泛的开发计划\n- 孤儿药资格认定支持具有潜在疗效药物的开发工作和监管评估",
+    "source": "us.gsk(us.gsk.com)",
+    "date": "2026-06-12T06:23:34.000Z",
+    "url": "https://us.gsk.com/en-us/media/press-releases/gsk-s-momelotinib-granted-orphan-drug-designations-in-the-us-and-eu-for-vexas-syndrome/",
+    "fallback": true
+  },
+  {
+    "id": "eb25ab3822e2",
+    "category": "临床试验",
+    "title": "诺华Del-Brax FSHD I/II期试验达主要终点，有望成首款疾病修正疗法",
+    "summary": "2026年06月11日，诺华宣布其Del-Brax在FSHD的FORTITUDE I/II期试验（NCT05747924）中达到主要生物标志物终点。该试验是一项随机、双盲、安慰剂对照的临床研究，共入组90名FSHD患者，设置三个剂量队列，旨在评估Del-Brax的安全性、耐受性、药代动力学、药效学及探索性疗效。此积极结果为首款可能改变FSHD疾病进程的修正疗法开发奠定了关键基础。",
+    "source": "trial.medpath(trial.medpath.com)",
+    "date": "2026-06-11T06:07:58.000Z",
+    "url": "https://trial.medpath.com/news/novartis-del-brax-hits-primary-biomarker-endpoint-in-phase-i-ii-fshd-trial-paving-way-for-first-disease-modifying-therapy",
+    "fallback": false
+  },
+  {
+    "id": "30a00047cda9",
+    "category": "药物进展",
+    "title": "Precigen成人RRP疗法获FDA批准，百年疾病迎来首款获批疗法",
+    "summary": "2026年06月11日，Precigen公司与复发性呼吸道乳头状瘤（RRP）基金会联合发起国际RRP宣传日活动，旨在提升患者与社区的声音。此次宣传的核心是纪念2025年08月美国食品药品监督管理局（FDA）批准Precigen的HPV特异性免疫疗法（用于治疗成人RRP），这是该疾病在超过百年历史中首个且唯一获批的疗法，标志着长期缺乏有效治疗方案的成年患者群体正式进入新时代。该批准被视为RRP治疗领域的重大里程碑。",
+    "source": "美通社(PR Newswire)",
+    "date": "2026-06-11T12:00:00.000Z",
+    "url": "https://www.prnewswire.com/news-releases/precigen-and-the-recurrent-respiratory-papillomatosis-foundation-recognize-international-rrp-awareness-day-by-elevating-patient-and-community-voices-302797644.html",
+    "fallback": false
+  },
+  {
+    "id": "c3b31003dc70",
+    "category": "行业资讯",
+    "title": "小野制药向日本提交补充申请，以扩展 VELEXBRU® 片剂用于治疗对现有疗法反应不足或无合适疗法的恶性淋巴瘤中枢神经系统受累患者",
+    "summary": "- 已向日本提交补充申请，拟部分变更 VELEXBRU 针对恶性淋巴瘤中枢神经系统受累适应症的生产和销售批准，该适应症适用于对现有疗法反应不足或无合适疗法的患者。",
+    "source": "ono-pharma(ono-pharma.com)",
+    "date": "2026-06-11T00:00:00.000Z",
+    "url": "https://www.ono-pharma.com/en/news/20260611_2.html",
+    "fallback": true
+  },
+  {
+    "id": "322472fc7885",
+    "category": "临床试验",
+    "title": "Quetzal公司启动QTX-2101全球三期临床试验",
+    "summary": "2026年06月11日，专注于罕见血液恶性肿瘤疗法开发的生物制药公司Quetzal Therapeutics宣布，其评估新型疗法QTX-2101的全球性三期临床试验QUATRO-APL已完成首位患者给药。该试验旨在为特定罕见血液恶性肿瘤患者提供潜在新治疗选择，标志着该药物研发进程进入关键阶段。",
+    "source": "环球新闻社(GlobeNewswire)",
+    "date": "2026-06-11T06:52:00.000Z",
+    "url": "https://www.globenewswire.com/news-release/2026/06/11/3310304/0/en/Quetzal-Therapeutics-Announces-First-Patient-Dosed-in-Phase-3-QUATRO-APL-Trial-of-QTX-2101-for-Frontline-Acute-Promyelocytic-Leukemia.html",
+    "fallback": false
+  }
+]
