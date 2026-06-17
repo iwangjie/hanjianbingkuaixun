@@ -1,0 +1,152 @@
+[
+  {
+    "id": "822020ba1315",
+    "category": "行业资讯",
+    "title": "首个体内CRISPR疗法III期试验成功减少遗传性血管性水肿发作",
+    "summary": "阿姆斯特丹大学医学中心与其他医院合作的研究人员，成功完成了首个体内CRISPR疗法的III期研究。在这项大规模双盲试验中，80名遗传性血管性水肿患者被随机分组接受CRISPR疗法或安慰剂治疗。",
+    "source": "medicalxpress(medicalxpress.com)",
+    "date": "2026-06-15T17:20:07.000Z",
+    "url": "https://medicalxpress.com/news/2026-06-vivo-crispr-therapy-successfully-hereditary.html",
+    "fallback": true
+  },
+  {
+    "id": "ca883b0551f8",
+    "category": "药物进展",
+    "title": "阿培利司获EMA批准用于治疗CLOVES综合征等PROS疾病",
+    "summary": "2026年06月16日，欧洲药品管理局（EMA）正式批准阿培利司（Alpelisib）上市，用于治疗严重PIK3CA相关过度生长谱系疾病（PROS），其中包括CLOVES综合征。此次批准标志着该药物在欧盟市场的关键进展，此前阿培利司已于2022年获得美国食品药品监督管理局（FDA）的同类适应症批准。PROS是一组由PIK3CA基因突变引起的罕见、严重且进行性的过度生长疾病，CLOVES综合征是其典型代表之一。该批准为欧洲相关患者提供了首个获批的靶向治疗选择，是罕见病治疗领域的重要突破。新闻来源为法国国家健康与医学研究院（Inserm）。",
+    "source": "presse.inserm.fr(presse.inserm.fr)",
+    "date": "2026-06-16T08:00:46.000Z",
+    "url": "https://presse.inserm.fr/en/cloves-syndrome-european-medicines-agency-grants-marketing-authorisation-for-alpelisib/73041/",
+    "fallback": false
+  },
+  {
+    "id": "28618e7d5358",
+    "category": "药物进展",
+    "title": "FDA审查Casgevy用于5岁及以上镰状细胞病儿童",
+    "summary": "2026年06月17日，美国食品药品监督管理局（FDA）正在审查Vertex Pharmaceuticals提交的补充生物制品许可申请（sBLA），寻求批准其基因编辑疗法Casgevy（exagamglogene autotemcel）用于治疗5岁及以上、患有复发性血管闭塞危象的镰状细胞病（SCD）儿童患者。该疗法作为一种一次性体外自体基因编辑疗法，此前已在美国、英国、欧盟等多个国家和地区获批用于治疗12岁及以上SCD患者。此次审查旨在将适用人群年龄范围进一步下探至5岁儿童群体。",
+    "source": "sicklecellanemianews(sicklecellanemianews.com)",
+    "date": "2026-06-16T16:15:43.000Z",
+    "url": "https://sicklecellanemianews.com/news/fda-reviewing-casgevy-children-sickle-cell-young-5/",
+    "fallback": false
+  },
+  {
+    "id": "147006e0cfd9",
+    "category": "行业资讯",
+    "title": "SYNAPSE-CMT 二期临床研究数据在会议中公布",
+    "summary": "Ignaseclant 耐受性良好，所有不良事件均报告为轻度或中度，无严重不良事件或停药。总体而言，研究结果表明，通过 ignaseclant 进行 21 天的 ClC-1 抑制，改善了成人 CMT（腓骨肌萎缩症）患者的肌肉力量和运动功能，且效果具有持续性。",
+    "source": "环球新闻社(GlobeNewswire)",
+    "date": "2026-06-17T01:00:00.000Z",
+    "url": "https://www.globenewswire.com/news-release/2026/06/17/3313167/0/en/SYNAPSE-CMT-Phase-2a-Clinical-Study-Data-Presented-in-Late-Breaking-Oral-Presentation-at-2026-PNS-Annual-Meeting.html",
+    "fallback": true
+  },
+  {
+    "id": "ffe8d84e0121",
+    "category": "临床试验",
+    "title": "婴儿接受针对严重遗传性癫痫的首例人体基因疗法",
+    "summary": "2026年06月16日，一项针对WWOX相关癫痫性脑病（WOREE综合征）的实验性基因疗法完成全球首例人体给药，并在一名婴儿患者中显示出早期治疗成功。WOREE综合征是一种罕见的神经发育障碍，特征为药物难治性癫痫发作、进行性智力障碍及极高的过早死亡风险。该里程碑式试验由progress.org.uk报道，标志着针对此类严重遗传性癫痫的基因治疗研究迈出关键一步。",
+    "source": "progress.org.uk(progress.org.uk)",
+    "date": "2026-06-15T16:33:12.000Z",
+    "url": "https://www.progress.org.uk/infant-receives-first-in-human-gene-therapy-for-severe-genetic-epilepsy/",
+    "fallback": false
+  },
+  {
+    "id": "00ac2e54b0c1",
+    "category": "临床试验",
+    "title": "中国首例RNA编辑治疗杜氏肌营养不良获临床突破",
+    "summary": "2026年06月17日，中国研究人员报告了首例使用国产自主开发的RNA编辑技术治疗杜氏肌营养不良（DMD）的临床案例。DMD是一种严重的X连锁隐性遗传病，会导致进行性肌肉萎缩与丧失。该团队同时发布了该技术的显著升级平台版本，有望扩大治疗适用范围并提升编辑效率与精准度。此项进展标志着国产新型基因编辑技术在罕见病治疗领域迈出关键一步。",
+    "source": "中国日报(China Daily)",
+    "date": "2026-06-17T01:10:00.000Z",
+    "url": "https://www.chinadaily.com.cn/a/202606/17/WS6a31f41ca310986e2b4606b0.html",
+    "fallback": false
+  },
+  {
+    "id": "52b20eb2ff40",
+    "category": "药物进展",
+    "title": "阿斯利康Ultomiris获FDA优先审评用于治疗IgA肾病",
+    "summary": "2026年06月16日，美国食品药品监督管理局（FDA）授予阿斯利康旗下罕见病部门Alexion的药物Ultomiris优先审评资格，用于治疗成人免疫球蛋白A肾病（IgAN）。优先审评将FDA的目标审评时间从标准的10个月缩短至6个月，旨在加速该药物的上市进程。此次审评资格基于关键性临床数据，标志着Ultomiris在IgAN治疗领域的监管进程可能达到重要里程碑。Ultomiris是一种长效补体C5抑制剂，此前已获批用于治疗某些补体介导的疾病。",
+    "source": "globalgenes(globalgenes.org)",
+    "date": "2026-06-15T17:34:51.000Z",
+    "url": "https://globalgenes.org/raredaily/alexions-ultomiris-wins-fda-priority-review-in-iga-nephropathy/",
+    "fallback": false
+  },
+  {
+    "id": "c72ec7a33448",
+    "category": "研究发现",
+    "title": "环状RNA基因疗法修复杜氏肌营养不良突变前景显现",
+    "summary": "2026年06月16日，北京大学研究团队开发出一种基于环状RNA的外显子跳跃基因治疗平台。该平台通过设计特定环状RNA，能招募患者自身细胞内的腺苷脱氨酶（ADAR）对导致杜氏肌营养不良（DMD）的基因突变进行精准RNA编辑修复，为这一严重遗传性肌肉疾病提供了新的潜在治疗策略。相关成果由GenomeWeb报道。",
+    "source": "genomeweb(genomeweb.com)",
+    "date": "2026-06-15T20:49:33.000Z",
+    "url": "https://www.genomeweb.com/gene-editing-gene-silencing-crispr/circular-rna-gene-therapy-shows-promise-repairing-duchenne",
+    "fallback": false
+  },
+  {
+    "id": "72794376275b",
+    "category": "药物进展",
+    "title": "VYKAT XR在普拉德-威利综合征长期疗效获ENDO 2026新数据支持",
+    "summary": "2026年06月16日，现已成为Neurocrine Biosciences一部分的Soleno Therapeutics在ENDO 2026会议上公布了其药物VYKAT XR（氯化重氮烷胆碱）缓释片针对普拉德-威利综合征（PWS）的新临床数据。数据显示，在经过设计的随机停药期后，该药物对PWS患者的核心症状——暴食症及相关行为问题仍能产生持久的改善。此次公布的数据进一步强化了VYKAT XR在该罕见病中长期治疗获益的证据基础。",
+    "source": "pharmadevicenews(pharmadevicenews.com)",
+    "date": "2026-06-16T04:03:34.000Z",
+    "url": "https://pharmadevicenews.com/soleno-therapeutics-vykat-xr-data-strengthens-long-term-case-in-prader-willi-syndrome/",
+    "fallback": false
+  },
+  {
+    "id": "1cf10fc47ea8",
+    "category": "药物进展",
+    "title": "Belite Bio完成Tinlarebant治疗斯塔加特病滚动NDA提交",
+    "summary": "2026年06月16日，Belite Bio, Inc.宣布完成其口服在研药物Tinlarebant治疗斯塔加特病（Stargardt disease）向美国食品药品监督管理局（FDA）的滚动新药申请（NDA）提交。Tinlarebant是一种靶向维生素A代谢通路的小分子药物，旨在减缓这种遗传性视网膜疾病导致的视力丧失。此次滚动提交是该药物在上市审评程序中的关键里程碑。斯塔加特病目前尚无获批的疾病修饰疗法，存在显著的未满足临床需求。",
+    "source": "glance.eyesoneyecare(glance.eyesoneyecare.com)",
+    "date": "2026-06-16T15:30:37.000Z",
+    "url": "https://glance.eyesoneyecare.com/stories/2026-06-16/belite-bio-completes-rolling-nda-submission-of-oral-tinlarebant-for-stargardt/",
+    "fallback": false
+  },
+  {
+    "id": "9747ed0c1217",
+    "category": "行业资讯",
+    "title": "Belite Bio 就 Tinlarebant 治疗斯塔加特病向 FDA 提交新药申请 - Pharmacally",
+    "summary": "Belite Bio 已向美国食品药品监督管理局（FDA）完成其新药申请（NDA）的滚动提交，该申请针对其潜在同类首创疗法 Tinlarebant，用于治疗斯塔加特病，该申请得到积极的 III 期 DRAGON 试验结果的支持。",
+    "source": "pharmacally(pharmacally.com)",
+    "date": "2026-06-16T15:30:25.000Z",
+    "url": "https://pharmacally.com/belite-bio-files-fda-nda-for-tinlarebant-in-stargardt-disease/",
+    "fallback": true
+  },
+  {
+    "id": "8aedf1eb3ba1",
+    "category": "药物进展",
+    "title": "FDA受理Inhibrx公司Ozekibart生物制品许可申请",
+    "summary": "2026年06月16日，美国食品药品监督管理局（FDA）已正式受理Inhibrx公司关于在研疗法Ozekibart的生物制品许可申请（BLA）。该申请基于ChonDRAgon研究的积极数据。这是一项针对转移性或不可切除的常规软骨肉瘤患者开展的随机、双盲、安慰剂对照、确证性（registrational）临床试验，研究成功达到了预设的主要终点，显示出具有统计学显著性的临床获益。此次BLA的提交与受理标志着该针对罕见骨肉瘤亚型的潜在治疗药物向监管审批迈出关键一步。",
+    "source": "stocktitan(stocktitan.net)",
+    "date": "2026-06-15T20:06:58.000Z",
+    "url": "https://www.stocktitan.net/sec-filings/INBX/8-k-inhibrx-biosciences-inc-reports-material-event-85a009ffdc56.html",
+    "fallback": false
+  },
+  {
+    "id": "43bbffbca894",
+    "category": "临床试验",
+    "title": "Soleno公布VYKAT XR治疗普拉德-威利综合征长期数据：症状持续改善",
+    "summary": "2026年06月16日，Soleno Therapeutics在ENDO 2026会议上公布其药物VYKAT® XR（重酒石酸二氮嗪）治疗普拉德-威利综合征（PWS）的新临床数据。数据源自两项研究：一项为在4岁及以上遗传确诊PWS伴贪食患者中进行的13周随机、双盲、平行分组对照研究（C601），比较VYKAT XR与安慰剂；另一项为后续为期约两至四年的开放标签延伸研究（C602 OLE）。关键结果显示，在随机停药期后，接受VYKAT XR治疗的患者其贪食及相关行为症状获得了有意义且持久的改善，支持了该药物的长期疗效与安全性。",
+    "source": "美通社(PR Newswire)",
+    "date": "2026-06-15T20:10:00.000Z",
+    "url": "https://www.prnewswire.com/news-releases/soleno-therapeutics-presents-new-vykat-xr-diazoxide-choline-data-at-endo-2026-demonstrating-meaningful-and-durable-improvements-in-hyperphagia-and-behavioral-symptoms-in-prader-willi-syndrome-following-randomized-withdrawal-per-302799792.html",
+    "fallback": false
+  },
+  {
+    "id": "2cfce1c0d8ef",
+    "category": "行业资讯",
+    "title": "Inhibrx公司Ozekibart治疗软骨肉瘤的生物制品许可申请获FDA受理 - cGxP.wire",
+    "summary": "Inhibrx Biosciences公司达成一项重大监管里程碑：美国食品药品监督管理局 (FDA) 已受理其关于ozekibart (INBRX-109) 用于治疗不可切除或转移性常规软骨肉瘤（一种罕见且侵袭性强的骨癌）患者的生物制品许可申请 (BLA)",
+    "source": "cgxpwire(cgxpwire.com)",
+    "date": "2026-06-16T04:48:55.000Z",
+    "url": "https://cgxpwire.com/clinical-trial-research/inhibrx-wins-fda-bla-acceptance-for-ozekibart-in-chondrosarcoma/",
+    "fallback": true
+  },
+  {
+    "id": "56194f2f13d0",
+    "category": "药物进展",
+    "title": "Alkermes公司alixorexton获FDA和EC孤儿药资格认定",
+    "summary": "2026年06月16日，Alkermes公司宣布其试验性口服食欲素2受体（OX2R）激动剂alixorexton同时获得美国食品药品监督管理局（FDA）和欧盟委员会（EC）的孤儿药资格认定（ODD）。该药物旨在治疗特发性...，孤儿药资格针对患者人数少于20万的罕见病，可提供市场独占期、监管支持等激励措施，此次双认定将加速该药物的全球临床开发与审批进程。",
+    "source": "制药技术(Pharmaceutical Technology)",
+    "date": "2026-06-16T10:04:49.000Z",
+    "url": "https://www.pharmaceutical-technology.com/news/alkermes-alixorexton-fda-ec-orphan-designations/",
+    "fallback": false
+  }
+]
