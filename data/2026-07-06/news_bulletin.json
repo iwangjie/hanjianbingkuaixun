@@ -1,0 +1,152 @@
+[
+  {
+    "id": "4b68b5b805c0",
+    "category": "药物进展",
+    "title": "瑞士研究利用老药库开发罕见病新疗法",
+    "summary": "2026年07月06日，瑞士日内瓦大学研究人员宣布，其团队正系统性地筛查已获批准的现有药物库，以寻找治疗罕见病的新适应症，并已取得初步成功。该‘药物再利用’策略通过分析老药的作用机制与罕见病病理的潜在关联，旨在加速、降低新药研发成本。随着大型制药公司因市场小众等因素对罕见病药物开发投入减少，这种高效、低风险的研发模式正获得国际学术界与产业界日益广泛的关注，被视为应对罕见病治疗缺口的重要替代路径。",
+    "source": "swissinfo.ch(swissinfo.ch)",
+    "date": "2026-07-06T07:00:00.000Z",
+    "url": "https://www.swissinfo.ch/eng/new-treatments/how-a-swiss-lab-is-finding-new-cures-in-old-drugs/91640346",
+    "fallback": false
+  },
+  {
+    "id": "e205fb8f2bdc",
+    "category": "药物进展",
+    "title": "FDA批准Casgevy扩展用于2岁及以上镰状细胞病患儿",
+    "summary": "2026年07月06日，美国食品药品监督管理局（FDA）对Casgevy（exagamglogene autotemcel）授予补充批准，将其治疗适应症扩展至2岁及以上、伴有反复血管闭塞危象（VOCs）和输血依赖型β-地中海贫血的镰状细胞病（SCD）患儿。此次批准基于支持该疗法在低龄儿童群体中安全性和有效性的临床数据，标志着该基因疗法适用患者年龄范围的下限进一步降低。该新闻由cGxP.wire于当日发布。",
+    "source": "cgxpwire(cgxpwire.com)",
+    "date": "2026-07-06T06:20:08.000Z",
+    "url": "https://cgxpwire.com/biopharma/fda-approves-casgevy-for-young-children-with-sickle-cell-disease/",
+    "fallback": false
+  },
+  {
+    "id": "2fdd8b2da1e3",
+    "category": "药物进展",
+    "title": "FDA将全球首款CRISPR基因疗法适用年龄扩展至两岁及以上儿童",
+    "summary": "2026年07月06日，美国食品药品监督管理局（FDA）宣布扩大对全球首款CRISPR基因编辑疗法（商品名：Casgevy）的批准范围，将适用患者年龄下限从原批准的12岁及以上降低至2岁及以上。该疗法用于治疗输血依赖性β-地中海贫血及严重镰状细胞病等特定严重血液疾病。此次年龄扩展基于支持性临床数据，标志着CRISPR疗法在更年幼儿童群体中的应用取得重要监管进展。",
+    "source": "medindia(medindia.net)",
+    "date": "2026-07-06T00:00:00.000Z",
+    "url": "https://www.medindia.net/news/healthinfocus/fda-expands-worlds-first-crispr-gene-therapy-to-children-as-young-as-two-224008-1.htm",
+    "fallback": false
+  },
+  {
+    "id": "5298d12e289c",
+    "category": "药物进展",
+    "title": "全球首例WOREE综合征基因疗法成功应用",
+    "summary": "2026年07月06日，以色列施耐德儿童医疗中心宣布成功完成全球首例针对WOREE综合征的基因疗法，治疗对象为一名八个月大的婴儿。WOREE综合征是一种极为罕见的遗传性疾病，此次疗法的成功应用为该病治疗开辟了新途径，展现了基因疗法在罕见病领域的巨大潜力，有望推动更多类似疗法的研发与应用。",
+    "source": "therobinboaengroup(therobinboaengroup.com)",
+    "date": "2026-07-06T11:10:40.000Z",
+    "url": "https://therobinboaengroup.com/article/world-s-first-gene-therapy-for-woree-syndrome-a-glimpse-into-the-future-of-rare-disease-treatment",
+    "fallback": false
+  },
+  {
+    "id": "a8ef06e19e15",
+    "category": "研究发现",
+    "title": "XL20靶向TDP-43蛋白保护ALS运动神经元",
+    "summary": "2026年07月06日，亚利桑那大学科学家发表研究显示，小分子药物XL20能够穿过血脑屏障，通过特异性结合TDP-43蛋白的特定区域，有效减少肌萎缩侧索硬化（ALS）患者的运动神经元退化。该研究揭示了XL20独特的作用机制，为ALS治疗提供了新型策略。",
+    "source": "drugtargetreview(drugtargetreview.com)",
+    "date": "2026-07-06T10:09:09.000Z",
+    "url": "https://www.drugtargetreview.com/xl20-drug-candidate-shields-motor-neurons-from-als-linked-tdp-43-damage/2135865.article",
+    "fallback": false
+  },
+  {
+    "id": "e505647fa488",
+    "category": "行业资讯",
+    "title": "两名严重自身免疫疾病患者经免疫系统“重置”后进入缓解期 | ScienceAlert",
+    "summary": "这种名为视神经脊髓炎（NMO）的严重且侵袭性强的自身免疫疾病，如今迎来了新的克星。研究人员报告称，采用异基因造血细胞移植（alloHCT）治疗两名患者后，取得了极其积极的效果。",
+    "source": "sciencealert(sciencealert.com)",
+    "date": "2026-07-05T01:10:00.000Z",
+    "url": "https://www.sciencealert.com/two-people-with-severe-autoimmune-disease-are-in-remission-after-stem-cell-transplant",
+    "fallback": true
+  },
+  {
+    "id": "ca3b6482678d",
+    "category": "临床试验",
+    "title": "Santhera公布AGAMREE一期临床积极数据",
+    "summary": "2026年07月06日，Santhera Pharmaceuticals宣布其北美授权合作伙伴Catalyst Pharmaceuticals完成的AGAMREE®（vamorolone）一期临床研究取得积极顶线结果。该药物作为解离性皮质类固醇，在试验中展现出强效糖皮质激素受体激动活性与显著抗炎效应，其安全性及药代动力学特征支持进一步开发，为杜氏肌营养不良等罕见病治疗领域提供了潜在新选择。",
+    "source": "cgxpwire(cgxpwire.com)",
+    "date": "2026-07-06T06:59:52.000Z",
+    "url": "https://cgxpwire.com/clinical-trial-research/santhera-reports-positive-phase-1-agamree-data/",
+    "fallback": false
+  },
+  {
+    "id": "f779fa492879",
+    "category": "行业资讯",
+    "title": "医学革命：Intellia的遗传性血管性水肿基因编辑疗法（2026）",
+    "summary": "我个人认为，Intellia的新闻不仅是基因编辑领域的里程碑；它引发我们更广泛地反思如何评估一次性治愈与持续治疗的价值，以及监管机构如何在希望与现实间取得平衡。尤其引人入胜的是，lonvo-z被定位为一种体内基因编辑疗法。",
+    "source": "fulleffectback(fulleffectback.com)",
+    "date": "2026-07-06T11:10:39.000Z",
+    "url": "https://fulleffectback.com/article/revolutionizing-medicine-intellia-s-gene-editing-therapy-for-hereditary-angioedema",
+    "fallback": true
+  },
+  {
+    "id": "0684ee8e21e8",
+    "category": "研究发现",
+    "title": "碱基编辑治疗克拉伯病小鼠模型获进展",
+    "summary": "2026年07月05日，一项发表于2026年的小鼠模型研究显示，针对克拉伯病（Krabbe disease）的腺嘌呤碱基编辑技术，尽管仅校正了约0.5%的基因组DNA和5%的mRNA，但成功将GALC酶活性恢复至野生型水平的约5%，并将致病性鞘糖脂水平降低了约47%。该研究在颤抖小鼠（twitcher mouse）模型中进行，结果表明极低水平的编辑信号即可产生显著的生化与症状改善效应，为碱基编辑治疗遗传性溶酶体贮积症提供了重要的临床前证据。",
+    "source": "mentalhealthdaily(mentalhealthdaily.com)",
+    "date": "2026-07-04T23:15:00.000Z",
+    "url": "https://mentalhealthdaily.com/2026/07/04/krabbe-disease-base-editing-galc-mice/",
+    "fallback": false
+  },
+  {
+    "id": "c638e39a6638",
+    "category": "药物进展",
+    "title": "FDA批准首款适用于2岁及以上镰状细胞病患者的基因疗法",
+    "summary": "2026年07月05日，美国食品药品监督管理局（FDA）批准了Casgevy（exagamglogene autotemcel）的补充生物制品许可申请（sBLA），将其适应症扩展至2岁及以上、患有复发性血管闭塞危象（VOCs）的镰状细胞病（SCD）或输血依赖型β地中海贫血（TDT）的儿科患者。此次批准使Casgevy成为首款获批用于治疗如此低龄镰状细胞病患者的基因疗法，为该群体提供了潜在的治愈性选择。该疗法基于体外自体造血干细胞基因编辑技术。",
+    "source": "world-today-journal(world-today-journal.com)",
+    "date": "2026-07-04T17:21:13.000Z",
+    "url": "https://www.world-today-journal.com/fda-approves-first-gene-therapy-for-young-children-with-sickle-cell-disease/",
+    "fallback": false
+  },
+  {
+    "id": "c77ff6ec485f",
+    "category": "药物进展",
+    "title": "FDA批准卡麦角林用于X连锁复杂痉挛性截瘫",
+    "summary": "2026年07月06日，美国食品药品监督管理局（FDA）已批准卡麦角林（CABERGOLINE）用于治疗X连锁复杂痉挛性截瘫（X-linked complicated spastic paraplegia）。该批准为这一罕见神经系统疾病患者提供了新的潜在治疗选择。卡麦角林此前已获批用于治疗催乳素瘤及其他特发性疾病，此次扩展其适应症至该特定罕见病，标志着该药物在神经疾病治疗领域的重要进展。",
+    "source": "uniterare(uniterare.org)",
+    "date": "2026-07-06T04:41:59.000Z",
+    "url": "https://www.uniterare.org/news/844c9822-6be6-4e6f-9688-501382cb21b3",
+    "fallback": false
+  },
+  {
+    "id": "5830e072a464",
+    "category": "行业资讯",
+    "title": "FDA批准Viridian公司的LUMVOA用于治疗甲状腺眼病 - 美国医疗保健新闻",
+    "summary": "美国FDA已批准LUMVOA（veligrotug-vvze）作为首个在说明书中包含活跃期和慢性期患者数据的甲状腺眼病治疗方法。这一里程碑标志着Viridian Therapeutics公司首款获得FDA批准并上市销售的药物，为患者提供了新的治疗选择。",
+    "source": "mondaq(mondaq.com)",
+    "date": "2026-07-06T00:00:00.000Z",
+    "url": "https://www.mondaq.com/unitedstates/healthcare/1811988/fda-approves-viridians-lumvoa-for-thyroid-eye-disease",
+    "fallback": true
+  },
+  {
+    "id": "11677d0648c3",
+    "category": "行业资讯",
+    "title": "FDA将Casgevy批准范围扩大至2岁及以上儿童 - MyChesCo",
+    "summary": "华盛顿特区——美国食品药品监督管理局（FDA）已扩大基因疗法Casgevy的批准范围，将年龄低至2岁、患有镰状细胞病或输血依赖性β地中海贫血的儿童纳入其中，使更年轻患者得以使用首个获批用于这些遗传性血液疾病的基因编辑疗法。",
+    "source": "mychesco(mychesco.com)",
+    "date": "2026-07-05T17:00:00.000Z",
+    "url": "https://www.mychesco.com/a/news/national/fda-expands-casgevy-approval-to-children-as-young-as-2/",
+    "fallback": true
+  },
+  {
+    "id": "c16cef98b802",
+    "category": "临床试验",
+    "title": "长春高新GenSci164获NMPA批准开展HP临床试验",
+    "summary": "2026年07月06日，长春高新技术产业（集团）股份有限公司（深交所：000661）宣布，其自主研发的候选药物GenSci164（一种在研甲状旁腺激素1型受体（PTH1R）激动剂）已获得中国国家药品监督管理局（NMPA）批准，将开展针对甲状旁腺功能减退症（HP）的临床试验。该药物旨在通过激活PTH1R来调节钙磷代谢，以治疗这一罕见内分泌疾病。GenSci164依托公司专有技术平台开发，此次获批标志着该公司在罕见病治疗领域管线取得重要进展。",
+    "source": "flcube(flcube.com)",
+    "date": "2026-07-06T03:27:16.000Z",
+    "url": "https://flcube.com/?p=69407",
+    "fallback": false
+  },
+  {
+    "id": "d6c7809b75b4",
+    "category": "行业资讯",
+    "title": "三种新药拓展巴西癫痫治疗选择 - Peq42",
+    "summary": "巴西国家卫生监督局（Anvisa）已批准cenobamate用于治疗患有耐药性癫痫的成年人的部分性发作。该药物通过调节神经元兴奋性来减少脑部异常电活动。在关键临床试验中，cenobamate显著降低了部分性发作频率。",
+    "source": "peq42(peq42.com)",
+    "date": "2026-07-05T21:14:05.000Z",
+    "url": "https://peq42.com/blog/three-new-medications-expand-treatment-options-for-epilepsy-in-brazil/",
+    "fallback": true
+  }
+]
