@@ -1,0 +1,152 @@
+[
+  {
+    "id": "11eac1877c96",
+    "category": "药物进展",
+    "title": "个性化ASO疗法显著改善SCN2A相关癫痫患者症状",
+    "summary": "2026年07月22日，加州大学圣迭戈分校团队报道了个性化反义寡核苷酸（ASOs）治疗SCN2A相关发育性癫痫性脑病的初步成果。该疗法针对两名患者，其中一例癫痫发作显著减少，并已恢复独立行走能力。研究展示了ASOs在罕见遗传性癫痫中的治疗潜力，为个体化医疗提供了新范例。",
+    "source": "genomeweb(genomeweb.com)",
+    "date": "2026-07-22T00:00:00.000Z",
+    "url": "https://www.genomeweb.com/drug-discovery-development/personalized-asos-reduce-seizures-rare-epileptic-disorder-enable-one",
+    "fallback": false
+  },
+  {
+    "id": "c717a2104650",
+    "category": "药物进展",
+    "title": "罕见癫痫患儿个性化基因治疗显效",
+    "summary": "2026年07月22日，国际权威媒体Discover Magazine报道了一项突破性个体化医疗案例：两名分别9岁及14岁、长期受难治性癫痫困扰的儿童，在确诊为SCN2A相关发育性癫痫性脑病（一种由SCN2A基因突变引起的严重儿童期癫痫）后，接受了针对其特定基因突变的个性化基因治疗，并均获得显著的临床改善。该治疗代表了针对单基因病精准干预的前沿进展，为这类罕见病治疗提供了新的希望。新闻基于原始研究或临床报告，具体治疗方案与长期随访数据有待进一步公布。",
+    "source": "discovermagazine(discovermagazine.com)",
+    "date": "2026-07-22T00:00:00.000Z",
+    "url": "https://www.discovermagazine.com/two-children-with-a-rare-epilepsy-mutation-show-improvement-after-personalized-genetic-treatment-49436",
+    "fallback": false
+  },
+  {
+    "id": "7d92b49f00be",
+    "category": "企业动态",
+    "title": "Broad研究所等三机构启动合作，推进罕见病基因疗法研发",
+    "summary": "2026年07月21日，Broad研究所、波士顿儿童医院与缅因州杰克逊实验室宣布启动一项联合倡议，共同致力于为罕见病患者开发创新的基因疗法。该合作旨在整合三方在基因组学、临床研究和模式生物模型方面的核心资源与专长，加速疗法研发进程，并通过技术创新与规模化生产降低治疗成本，提升疗法的全球可及性。这一举措反映了罕见病治疗领域向协作化、可负担化方向发展的趋势。",
+    "source": "STAT新闻(STAT News)",
+    "date": "2026-07-21T10:33:48.152Z",
+    "url": "https://www.statnews.com/2026/07/21/center-for-therapeutic-genetics-rare-disease-gene-therapies/",
+    "fallback": false
+  },
+  {
+    "id": "eae8239bff09",
+    "category": "药物进展",
+    "title": "BridgeBio Encaleret新药申请获FDA受理并启动审评",
+    "summary": "2026年07月22日，BridgeBio Pharma, Inc.宣布美国食品药品监督管理局（FDA）已正式接受其针对Encaleret的新药申请（NDA）并启动审评程序。该公司是一家专注于开发遗传病药物的商业化阶段多产品生物制药公司。此次申请受理标志着该在研疗法向获批上市迈出关键一步，审评结果将直接影响其用于治疗特定遗传病患者的可及性。",
+    "source": "环球新闻社(GlobeNewswire)",
+    "date": "2026-07-22T00:00:00.000Z",
+    "url": "https://www.globenewswire.com/news-release/2026/07/22/3331254/0/en/BridgeBio-Announces-FDA-Acceptance-of-NDA-for-Encaleret-for-ADH1.html",
+    "fallback": false
+  },
+  {
+    "id": "5639602d987a",
+    "category": "研究发现",
+    "title": "阿布扎比干细胞中心发现亨廷顿病新机制及潜在疗法",
+    "summary": "2026年07月23日，阿布扎比干细胞中心（ADSCC）研究团队在亨廷顿病领域取得基础研究突破，揭示了一种此前未知的疾病相关机制。该发现被认为可能从根本上改变对该神经退行性疾病的病理生理理解，并为开发新型靶向疗法提供了关键科学依据。此项研究为亨廷顿病这一罕见病的治疗策略探索开辟了新方向，相关成果由阿联酋科学家主导完成。",
+    "source": "gulfnews(gulfnews.com)",
+    "date": "2026-07-23T10:01:12.000Z",
+    "url": "https://gulfnews.com/uae/health/uae-scientists-uncover-breakthrough-that-could-reshape-huntingtons-disease-treatment-1.500617562",
+    "fallback": false
+  },
+  {
+    "id": "97c9da93a413",
+    "category": "药物进展",
+    "title": "三大机构合作成立罕见病精准治疗中心",
+    "summary": "2026年07月21日，Broad研究所、波士顿儿童医院及杰克逊实验室宣布联合建立罕见病精准治疗中心。该合作旨在通过共享基础设施与标准化可重复实践，加速开发包括碱基编辑及先导编辑在内的新型精准药物，以应对罕见病治疗挑战。中心将整合三方在基因组学、临床研究及模型生物领域的优势，推动从靶点发现到疗法转化的全流程研发，最终惠及全球罕见病患者。",
+    "source": "broadinstitute(broadinstitute.org)",
+    "date": "2026-07-21T10:33:48.152Z",
+    "url": "https://www.broadinstitute.org/news/broad-institute-boston-childrens-hospital-and-jackson-laboratory-launch-center-therapeutic",
+    "fallback": false
+  },
+  {
+    "id": "14267a1782e6",
+    "category": "研究发现",
+    "title": "阿布扎比科学家发现亨廷顿病潜在治疗方法",
+    "summary": "2026年07月22日，阿布扎比干细胞中心（ADSCC）发布研究成果，表明其科学家可能发现了一种针对亨廷顿病的潜在治疗方法。该研究旨在通过相关疗法显著改善患者生活质量，并为延缓疾病进展带来新希望。相关发现由阿布扎比科研团队主导，为这一进行性神经退行性罕见病的治疗策略提供了新的研究方向。",
+    "source": "thenationalnews(thenationalnews.com)",
+    "date": "2026-07-22T13:02:24.000Z",
+    "url": "https://www.thenationalnews.com/news/uae/2026/07/22/abu-dhabi-scientists-offer-new-hope-for-people-with-huntingtons-disease/",
+    "fallback": false
+  },
+  {
+    "id": "9fd35dc513d9",
+    "category": "行业资讯",
+    "title": "Monopar 公司启动 ALXN1840 治疗威尔逊病滚动新药申请提交 - Monopar Therapeutics (NASDAQ:MNPR)",
+    "summary": "# Monopar 启动 ALXN1840 治疗威尔逊病滚动新药申请提交 - Monopar Therapeutics (NASDAQ:MNPR\n...\n如果完整的新药申请被接受受理并最终获批，ALXN1840 将成为美国首个获批用于治疗威尔逊病、具有新型作用机制的疗法。",
+    "source": "benzinga(benzinga.com)",
+    "date": "2026-07-22T12:00:00.000Z",
+    "url": "https://www.benzinga.com/pressreleases/26/07/g60603260/monopar-initiates-rolling-nda-submission-alxn1840-wilson-disease",
+    "fallback": true
+  },
+  {
+    "id": "6dc0b3660f81",
+    "category": "药物进展",
+    "title": "Monopar启动ALXN1840治疗威尔逊病滚动新药申请",
+    "summary": "2026年07月22日，临床阶段生物制药公司Monopar Therapeutics Inc.（纳斯达克股票代码：MNPR）宣布，已启动其候选药物ALXN1840用于治疗威尔逊病的新药申请（NDA）滚动提交程序。该行动标志着该公司在推进针对这一罕见遗传性铜代谢障碍疾病的潜在疗法方面迈出关键监管步骤。ALXN1840是一种旨在促进铜排泄的创新疗法。此消息由公司通过全球新闻swire发布。",
+    "source": "financialcontent(financialcontent.com)",
+    "date": "2026-07-22T00:00:00.000Z",
+    "url": "https://www.financialcontent.com/article/gnwcq-2026-7-22-monopar-initiates-rolling-nda-submission-for-alxn1840-in-wilson-disease",
+    "fallback": false
+  },
+  {
+    "id": "49893f3d17c8",
+    "category": "行业资讯",
+    "title": "FDA授予Affinia Therapeutics公司AFTX-201孤儿药资格，用于治疗BAG3相关扩张型心肌病（DCM）- BioSpace",
+    "summary": "该药物正在被评估...作为一种治疗...BEAT©...正在美国及加拿大多地招募患者...马萨诸塞州沃尔瑟姆--（商业通讯社）--Affinia Therapeutics（“Affinia”）是一家创新的临床阶段基因疗法公司，拥有同类首创和/或同类最佳的腺相关病毒...",
+    "source": "BioSpace",
+    "date": "2026-07-22T00:00:00.000Z",
+    "url": "https://www.biospace.com/press-releases/fda-grants-orphan-drug-designation-to-affinia-therapeutics-aftx-201-for-the-treatment-of-bag3-associated-dilated-cardiomyopathy-dcm",
+    "fallback": true
+  },
+  {
+    "id": "42036a4534b7",
+    "category": "药物进展",
+    "title": "Monopar就ALXN1840启动滚动新药申请",
+    "summary": "2026年07月22日，临床阶段生物制药公司Monopar Therapeutics Inc.（纳斯达克：MNPR）宣布，已为其针对罕见病的创新疗法ALXN1840启动向美国食品药品监督管理局（FDA）的滚动新药申请（Rolling NDA）提交流程。滚动NDA允许公司分阶段提交完整申请数据，以寻求潜在的加速审评。此举标志着该候选药物研发进程的关键里程碑，旨在为相关罕见病患者提供新的治疗选择。",
+    "source": "环球新闻社(GlobeNewswire)",
+    "date": "2026-07-22T00:00:00.000Z",
+    "url": "https://www.globenewswire.com/news-release/2026/07/22/3331283/0/en/Monopar-Initiates-Rolling-NDA-Submission-for-ALXN1840-in-Wilson-Disease.html",
+    "fallback": false
+  },
+  {
+    "id": "dfcef68c56d3",
+    "category": "药物进展",
+    "title": "Affinia公司AFTX-201获FDA孤儿药资格，治疗BAG3相关DCM",
+    "summary": "2026年07月22日，美国食品药品监督管理局（FDA）授予Affinia Therapeutics公司其研究性基因疗法AFTX-201孤儿药资格，用于治疗由BAG3基因突变引起的扩张型心肌病（DCM）。AFTX-201是一种潜在同类最佳（best-in-class）的腺相关病毒（AAV）基因疗法，通过单次静脉输注给药，旨在纠正导致这种严重、进行性遗传性心肌病的根本遗传缺陷。该资格认定基于其针对罕见病（美国患病人数少于20万）的治疗潜力，将为药物研发提供激励措施，包括潜在的市场独占期保护。",
+    "source": "financialcontent(financialcontent.com)",
+    "date": "2026-07-22T00:00:00.000Z",
+    "url": "https://www.financialcontent.com/article/bizwire-2026-7-22-fda-grants-orphan-drug-designation-to-affinia-therapeutics-aftx-201-for-the-treatment-of-bag3-associated-dilated-cardiomyopathy-dcm",
+    "fallback": false
+  },
+  {
+    "id": "d557ee3656ed",
+    "category": "药物进展",
+    "title": "Monopar启动威尔逊病药物ALXN1840滚动NDA提交",
+    "summary": "2026年07月22日，临床阶段生物制药公司Monopar（纳斯达克：MNPR）宣布已启动向美国食品药品监督管理局（FDA）滚动提交其候选药物ALXN1840的新药申请（NDA），用于治疗威尔逊病。滚动提交允许公司分阶段提交完整申请所需的数据模块，最终完成NDA。该公司专注于开发针对未满足医疗需求患者的创新疗法。",
+    "source": "hk.marketscreener(hk.marketscreener.com)",
+    "date": "2026-07-22T12:00:13.000Z",
+    "url": "https://hk.marketscreener.com/news/monopar-initiates-rolling-nda-submission-for-alxn1840-in-wilson-disease-ce7f51d9db8cf222",
+    "fallback": false
+  },
+  {
+    "id": "2c23154e8853",
+    "category": "临床试验",
+    "title": "Zydus获准开展Desidustat治疗镰状细胞病III期试验",
+    "summary": "2026年07月23日，Zydus Lifesciences宣布其口服疗法Desidustat用于治疗镰状细胞病的III期临床试验已获得监管批准，并将与印度医学研究理事会（ICMR）合作开展。该试验的推进基于此前完成的II期概念验证试验，该试验已成功达到主要终点，展示了积极的初步疗效与安全性数据。此次III期试验旨在进一步评估Desidustat在该患者群体中的有效性与安全性，为潜在的新治疗选择提供更高级别的证据支持。",
+    "source": "indiamedtoday(indiamedtoday.com)",
+    "date": "2026-07-23T07:56:20.000Z",
+    "url": "https://indiamedtoday.com/zydus-receives-approval-for-phase-iii-trial-of-desidustat-in-patients-with-sickle-cell-disease-to-be-conducted-in-collaboration-with-icmr/",
+    "fallback": false
+  },
+  {
+    "id": "a8ab27922c93",
+    "category": "行业资讯",
+    "title": "Arrowhead  Pharmaceuticals 公布 Plozasiran 治疗严重高甘油三酯血症患者 III 期 SHASTA-3 和 SHASTA-4 研究顶线结果 - BioSpace",
+    "summary": "Plozasiran 已以 REDEMPLO® 名义在美国、欧盟、中国、澳大利亚和加拿大获得监管批准，作为饮食辅助手段，用于降低经基因确诊或临床诊断患有家族性乳糜微粒血症综合征（FCS）的成年患者的甘油三酯水平，该病是最严重的...",
+    "source": "BioSpace",
+    "date": "2026-07-22T00:00:00.000Z",
+    "url": "https://www.biospace.com/press-releases/arrowhead-pharmaceuticals-reports-topline-results-from-phase-3-shasta-3-and-shasta-4-studies-of-plozasiran-in-patients-with-severe-hypertriglyceridemia",
+    "fallback": true
+  }
+]
