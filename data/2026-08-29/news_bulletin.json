@@ -3,7 +3,7 @@
     "id": "881a7ed70cff",
     "category": "行业资讯",
     "title": "FDA approves Priovant’s rare autoimmune therapy Lisraya in indication first - Pharmaceutical Technology",
-    "summary": "FDA approves Priovant’s rare autoimmune therapy Lisraya in indication first - Pharmaceutical Technology\n...\nFDA approves Priovant’s rare autoimmune therapy\n...\nraya in indication first\n...\nThe biotech is now looking to roll out Lisraya, the first targeted therapy for dermatomyositis, across the US via specialty pharmacies immediately. \n\n Annabel Kartal Allen August 28, 2026 \n\nPriovant is also evaluating\n...\nredit: luchschenF / Shutterstock.com.\n...\nPriovant Therapeutics has secured approval from",
+    "summary": "FDA approves Priovant’s rare autoimmune therapy Lisraya in indication first - Pharmaceutical Technology\n...\nPriovant Therapeutics has secured approval from the US Food and Drug Administration (FDA) for its oral therapy Lisraya (brepocitinib) in a rare autoimmune disease called dermatomyositis, becoming the first targeted therapy authorised for this condition.\n...\nBased on the FDA’s verdict, the once-daily, dual tyrosine kinase 2 (TYK) and Janus kinase 1 (JAK1) inhibitor will now become available",
     "source": "制药技术(Pharmaceutical Technology)",
     "date": "2026-08-28T00:00:00.000Z",
     "url": "https://www.pharmaceutical-technology.com/news/priovant-rare-autoimmune-therapy-lisraya-fda-approval-dermatomyositis/",
@@ -20,6 +20,36 @@
     "fallback": true
   },
   {
+    "id": "09332ec1fbe6",
+    "category": "行业资讯",
+    "title": "FDA Approval of Genglycos (pariglasgene brecaparvovec-opnr) Gene Therapy, to treat Glycogen Storage Disease Type Ia - Ultragenyx - Medical Update Online",
+    "summary": "Ultragenyx Pharmaceutical announced that the FDA granted accelerated approval for Genglycos (pariglasgene brecaparvovec-opnr), also known as DTX 401, in adult and pediatric patients eight years and older with glycogen storage disease type Ia (GSDIa).\n...\nEric Crombez, M.D., chief medical officer at Ultragenyx – “The approval of Genglycos fulfills our commitment to provide the first therapy that directly targets the root cause of GSDIa. The reduced reliance on cornstarch, experienced by patients ",
+    "source": "medicalupdateonline(medicalupdateonline.com)",
+    "date": "2026-08-28T00:00:00.000Z",
+    "url": "https://medicalupdateonline.com/2026/08/fda-approval-of-genglycos-pariglasgene-brecaparvovec-opnr-gene-therapy-to-treat-glycogen-storage-disease-type-ia-ultragenyx/",
+    "fallback": true
+  },
+  {
+    "id": "819e6593e656",
+    "category": "行业资讯",
+    "title": "Mayo Clinic collaborates on ARPA-H award to advance gene-editing therapies for rare immune diseases",
+    "summary": "Mayo Clinic collaborates\n...\nPA-H award to advance gene-editing therapies\n...\nROCHESTER, Minn. — Mayo Clinic is a clinical collaborator on an award of up to $27.7 million from the Advanced Research Projects Agency for Health (ARPA-H) to help develop affordable, scalable gene-editing therapies for children with rare inherited immune disorders.\n...\nThe five-year initiative aims to advance gene-editing treatments for children with inborn errors of immunity— a group of more than 500 rare genetic dis",
+    "source": "newsnetwork.mayoclinic(newsnetwork.mayoclinic.org)",
+    "date": "2026-08-27T13:48:58.834Z",
+    "url": "https://newsnetwork.mayoclinic.org/discussion/mayo-clinic-collaborates-on-arpa-h-award-to-advance-gene-editing-therapies-for-rare-immune-diseases/",
+    "fallback": true
+  },
+  {
+    "id": "a2e739670f11",
+    "category": "行业资讯",
+    "title": "Experimental Cushing's treatment scores orphan drug status in EU",
+    "summary": "Asedebart, an experimental treatment designed to ease symptoms in Cushing’s disease and other forms of endogenous Cushing’s syndrome, has been granted orphan drug status in the European Union.\n...\nThat designation, awarded to the Lundbeck therapy by the European Commission, aims to incentivize the development of treatments for rare health conditions, specifically those affecting fewer than 5 of every 10,000 people across the EU. Such status will provide the developer with perks that include redu",
+    "source": "cushingsdiseasenews(cushingsdiseasenews.com)",
+    "date": "2026-08-28T16:00:57.000Z",
+    "url": "https://cushingsdiseasenews.com/news/experimental-cushings-treatment-scores-orphan-drug-status-european-union/",
+    "fallback": true
+  },
+  {
     "id": "7260f7bf8cf3",
     "category": "行业资讯",
     "title": "FDA approves first oral drug to treat dermatomyositis - PharmaLive",
@@ -27,16 +57,6 @@
     "source": "pharmalive(pharmalive.com)",
     "date": "2026-08-28T12:00:44.000Z",
     "url": "https://www.pharmalive.com/fda-approves-first-oral-drug-to-treat-dermatomyositis/",
-    "fallback": true
-  },
-  {
-    "id": "1eb627fff3a3",
-    "category": "行业资讯",
-    "title": "A Medical Milestone: FDA Approves First Gene Therapy for Glycogen Storage Disease Type Ia",
-    "summary": "on August 28, 2026 \n\nIn a landmark decision that promises to redefine the standard of care for an ultra-rare metabolic disorder, the U.S. Food and Drug Administration (FDA) has granted approval to Ultragenyx Pharmaceutical for its novel gene therapy, Genglycos. The therapy, formerly known as DTX401, represents the first-ever genetic medicine approved for patients aged 8 and older living with Glycogen Storage Disease type Ia (GSDIa).\n...\n-6-phosphatase directly to the liver. By restoring the body",
-    "source": "healthrecoverysupport(healthrecoverysupport.com)",
-    "date": "2026-08-28T00:00:00.000Z",
-    "url": "https://healthrecoverysupport.com/a-medical-milestone-fda-approves-first-gene-therapy-for-glycogen-storage-disease-type-ia/",
     "fallback": true
   },
   {
@@ -50,13 +70,23 @@
     "fallback": true
   },
   {
-    "id": "7f3174b68e80",
+    "id": "687a0beaa08f",
     "category": "行业资讯",
-    "title": "RNA breakthrough provides hope for thousands of untreatable diseases",
-    "summary": "Researchers at the University of Toronto have developed a next-generation RNA therapeutic approach with the potential to treat a wide range of genetic diseases that share certain disease-causing mutations.\n...\nThe work advances an emerging platform in genetic medicine centred on transfer RNA, or tRNA. The team engineered tRNA to help cells read through premature stop signals and complete production of full-length proteins that would otherwise be truncated or absent.\n...\nLi, an associate professo",
-    "source": "utoronto.ca(utoronto.ca)",
-    "date": "2026-08-27T20:10:56.502Z",
-    "url": "https://www.utoronto.ca/news/rna-breakthrough-provides-hope-thousands-untreatable-diseases",
+    "title": "Roivant’s $35K LISRAYA dermatomyositis drug wins FDA OK | ROIV 8-K Filing",
+    "summary": "Roivant Sciences Ltd. (ROIV), through its consolidated affiliate Priovant, announces U.S. FDA approval and immediate commercial launch of LISRAYA (brepocitinib) as an oral TYK2/JAK1 inhibitor indicated for treatment of dermatomyositis in adult patients. The wholesale acquisition cost is $35,000 for a 30‑count bottle of 30 mg tablets, and a limited distribution specialty pharmacy network plus the My Compass Support hub are active, with eligible patients able to pay as little as $0 per month.\n...\n",
+    "source": "stocktitan(stocktitan.net)",
+    "date": "2026-08-28T00:00:00.000Z",
+    "url": "https://www.stocktitan.net/sec-filings/ROIV/8-k-roivant-sciences-ltd-reports-material-event-ddb6ecebb4bd.html",
+    "fallback": true
+  },
+  {
+    "id": "91bc6786cf4b",
+    "category": "行业资讯",
+    "title": "FDA Nod for Inflammation Drug Notches Wins for Rare Disease Patients, Roivant’s Biz Strategy  - News On Click",
+    "summary": "Treatment for dermatomyositis has not changed in decades, which makes a new FDA approval particularly meaningful for patients who have this rare immuinological disease affecting the skin and muscles. The available therapies aren’t specific to dermatomyositis and they come with a long list of limitations. Roivant Sciences’ new drug is the first developed to address an underlying driver of inflammation in this chronic condition.\n...\nThe drug, brepocitinib, was developed by Roivant subsidiary Priov",
+    "source": "newsonclick(newsonclick.com)",
+    "date": "2026-08-28T00:00:00.000Z",
+    "url": "https://newsonclick.com/fda-nod-for-inflammation-drug-notches-wins-for-rare-disease-patients-roivants-biz-strategy/",
     "fallback": true
   },
   {
@@ -70,43 +100,33 @@
     "fallback": true
   },
   {
-    "id": "ccb38bf2353d",
+    "id": "1b1520f05a9f",
     "category": "行业资讯",
-    "title": "Rare disease at FDA: two frameworks, one queue",
-    "summary": "In February, the US Food and Drug Administration (FDA) issued draft guidance describing how developers of individualized therapies for ultra-rare genetic conditions can establish effectiveness when a randomized controlled trial is not feasible.\n...\nPublished jointly by the Center for Biologics Evaluation and Research (CBER) and the Center for Drug Evaluation and Research (CDER), it is known as the plausible mechanism framework.\n...\nPTC to expand rare disease portfolio with ST-920 buy\n...\nGalen a",
-    "source": "thepharmaletter(thepharmaletter.com)",
-    "date": "2026-08-27T20:10:58.040Z",
-    "url": "https://www.thepharmaletter.com/insights/rare-disease-at-the-fda-two-frameworks-one-queue",
-    "fallback": true
-  },
-  {
-    "id": "fc6f27d70c31",
-    "category": "行业资讯",
-    "title": "Roivant (NASDAQ: ROIV) gets FDA ok for first targeted dermatomyositis pill",
-    "summary": "BASEL, Switzerland and LONDON and NEW YORK, August 27, 2026 (GLOBE NEWSWIRE) -- Roivant (Nasdaq: ROIV) today announced that the U.S. Food and Drug Administration (FDA) has approved LISRAYA™ (brepocitinib) 30 mg for the treatment of adults with dermatomyositis (DM). LISRAYA is a pill taken once daily.\n...\nDM is a rare systemic autoimmune disease characterized by progressive muscle weakness and extensive, painful, and pruritic skin lesions. DM significantly impairs patients’ quality of life throug",
-    "source": "stocktitan(stocktitan.net)",
-    "date": "2026-08-27T21:24:44.000Z",
-    "url": "https://www.stocktitan.net/sec-filings/ROIV/8-k-roivant-sciences-ltd-reports-material-event-c867f45ba2d7.html",
-    "fallback": true
-  },
-  {
-    "id": "bd92880be70d",
-    "category": "行业资讯",
-    "title": "韩国食品药品安全处在罕见病·重症治疗药物快速审评中纳入“患者声音” - 阿视亚经济",
-    "summary": "处在罕见病·重症治疗药物快速审评中纳入“\n...\n韩国食品药品安全处将在罕见病和重症疾病治疗药物的快速审评过程中，纳入患者在实际治疗中经历的症状等体验。\n\n \n\n忠清北道清州市食品药品安全处大楼。阿视亚经济资料图片\n...\nGIFT是一项针对治疗危及生命的严重疾病或罕见病、且创新性突出的医疗产品进行快速审评的制度。\n...\n根据此次修订，制药和生物企业可在申请GIFT指定阶段一并提交患者体验数据（PED）。此举旨在使审评过程中能够参考仅凭临床试验结果难以充分掌握的患者症状、功能状态、生活质量及治疗期间面临的困难等信息。\n...\n为此，韩国食品药品安全处在GIFT指定申请表中新增了患者体验数据核对清单。企业可标明所提交资料的类型及是否提交，并附上相关材料。指南中还增加了对GIFT指定对象“严重重症疾病”的详细说明。\n...\n可提交的患者体验数据包括：▲患者直接评估自身症状或生活质量等形成的患者报告结局（PRO）等临床结局评价资料；▲分析患者对治疗效果、不良事件、给药途径及治疗期限等偏好的研究；▲患者及照护者访谈等定性研究；▲患者视频、录音文字稿、书面意见等患者参与活动资料。\n...\n此前",
-    "source": "asiae.co.kr(asiae.co.kr)",
+    "title": "新倡议旨在规模化治疗罕见病的个体化疗法 - 健康研究 - 家医大健康",
+    "summary": "化疗法 -\n...\n关键路径研究所（C-Path）宣布启动“从一到百万”全球公私合作倡议，旨在利用先进技术（如反义寡核苷酸、基因编辑和基因疗法）为极少数患者群体（甚至个体患者）开发可扩展的个体化疗法。该倡议通过整合监管级数据平台、推动FDA合理机制框架和罕见病证据原则，解决现有监管和报销体系无法跟上技术发展、导致患者延迟获得治疗的问题。多位专家强调，系统性数据共享和迭代学习是加速安全有效药物开发的关键。\n...\n关键路径研究所®（C-Path）今日宣布启动“从一到百万”（One to Millions）倡议，这是一项全球性的、多方利益相关者参与的公私合作计划，旨在推动高度个体化疾病的先进疗法实现可规模化开发。反义寡核苷酸、基因组编辑、基因疗法和基于RNA的治疗等技术快速进步，使得为极小的患者群体——甚至单个患者——设计精准靶向干预成为可能。然而，现有的监管和报销框架是基于人群用药和线性开发模式构建的，已无法跟上步伐，由此产生的差距日益扩大，导致患者无法及时获得治疗。\n...\n“在n-Lorem，我们已建立了一个强大且可扩展的流程，将个体化ASO药物带给纳米罕见患者。迄今为止，我们已经发",
+    "source": "familydoctor(familydoctor.cn)",
     "date": "2026-08-28T00:00:00.000Z",
-    "url": "https://www.asiae.co.kr/cn/article/2026082809121698665",
+    "url": "https://www.familydoctor.cn/news/xin-changyi-zhizai-guimohua-zhiliao-hanjianbing-getihua-liaofa-369518.html",
     "fallback": true
   },
   {
-    "id": "a80163724fd5",
+    "id": "15c8ac1eff40",
     "category": "行业资讯",
-    "title": "单日多款国产1类新药获批上市，自免、肿瘤赛道再添“利器”！_药企,国产药-制药网",
-    "summary": "、肿瘤赛道再添“利器”！\n\n 来源：制药网 2026/8/28 11:19:42 648 \n\n 【制药网 行业动态】 8月以来，国产1类创新药在获批上市和临床试验获批两个层面均取得了密集进展。其中，在8月27日，就有来自丽珠医药、智翔金泰等企业的多款新药已获批上市。 \n\n 丽珠集团：莱康奇塔单抗注射液 (丽倍坦®) \n\n 8月27日，丽珠集团公告，由公司开发的1类创新生物药丽倍坦(通用名：莱康奇塔单抗注射液)获国家药监局批准上市，用于适合接受系统治疗或光疗的中重度斑块状银屑病的成人患者。 \n\n 据悉，莱康奇塔单抗注射液已完成中重度斑块状银屑病的Ⅲ期临床试验，该研究以对标IL-17A抑制剂司库奇尤单抗开展头对头研究。基于机制创新与临床硬数据，该药被国家药品监督管理局纳入优先审评审批程序，加速获批。目前，公司累计直接研发已投入约人民币22,331.36万元。 \n\n 智翔金泰：纬利妥米单抗注射液 (维可妥®) \n\n 智翔金泰公告，公司收到国家药品监督管理局核准签发的《药品注册证书》，批准公司自主研发的1类治疗用生物制品纬利妥米单抗注射液(GR1803注射液)附条件上市。据悉，GR1803注射",
-    "source": "m.zyzhan(m.zyzhan.com)",
+    "title": "火箭制药基因疗法Kresladi获FDA批准用于罕见免疫疾病 - 创新药物 - 家医大健康",
+    "summary": "火箭制药基因疗法Kresladi获FDA批准用于罕见免疫疾病 - 创新药物 - 家医大健康\n...\n美国FDA加速批准了火箭制药的基因疗法Kresladi（marnetegragene autotemcel），用于治疗患有严重白细胞黏附缺陷症I型（LAD-I）的儿童患者，这是该超罕见免疫疾病的首个药物选择。Kresladi通过基因修饰患者自身的造血干细胞，恢复ITGB2基因编码的蛋白质，帮助白细胞黏附于血管壁并迁移至感染部位。该批准基于Ⅰ/Ⅱ期临床试验数据，显示治疗后12个月时中性粒细胞CD18和CD11a表面表达水平升高，且效果持续至24个月。FDA同时授予火箭制药一张优先审评券，当前市场价值约2亿美元。由于该疗法针对极罕见疾病，预计2031年全球销售额为1.2亿美元，但对患者群体意义重大。杰弗里·莫德尔基金会CEO瓦内莎·特南鲍姆表示，批准凸显了持续改善原发性免疫缺陷患者预后的重要性。\n...\n美国食品药品监督管理局已批准火箭制药的Kresladi（marnetegragene autotemcel）用于治疗白细胞黏附缺陷症I型（LAD-I），成为该超罕见免疫疾病儿童患者的首个药物",
+    "source": "familydoctor(familydoctor.cn)",
     "date": "2026-08-28T00:00:00.000Z",
-    "url": "https://m.zyzhan.com/news/detail/100175.html",
+    "url": "https://www.familydoctor.cn/news/huojian-zhiyao-kresladi-jiyinliaofa-fda-mianyibing-371581.html",
+    "fallback": true
+  },
+  {
+    "id": "e7d4c20d38fc",
+    "category": "行业资讯",
+    "title": "新AI突破助力罕见病诊断，缩短漫长寻因之路 - AI与医疗健康 - 家医大健康",
+    "summary": "一种新开发的AI工具EvORanker通过分析超过1000个物种的基因进化模式，快速识别罕见病的致病基因，在临床测试中正确率接近70%，并将候选基因范围缩小至前五名以内（95%），甚至能发现此前从未与疾病关联的基因。该工具由耶路撒冷希伯来大学团队研发，发表于《Genetics in Medicine》，有望将罕见病患者的诊断时间从数年缩短至数周，并为癌症等疾病研究提供新思路。\n...\n在测试中，它成功识别出致病基因的情况占大多数，即便该基因此前从未与任何疾病相关联。这种方法有望大幅缩短诊断之旅，并帮助医生更早地指导有效治疗。\n...\n但数字背后是真实的患者。研究中描述的一个案例：一名患有复杂神经发育障碍的儿童经过广泛检测仍未确诊。使用EvORanker，研究人员识别出一个此前未被认识的基因作为可能原因，为理解该疾病乃至潜在治疗打开了大门。另一个案例中，该算法揭示了一种影响多个器官的严重多系统疾病的遗传基础。这一发现不仅为家庭提供了答案，还指出研究人员可能找到了治疗策略。\n...\n其意义还不止于此。通过揭示新的疾病基因，EvORanker还有助于识别可被重新利用的现有药物，这一捷径可以节",
+    "source": "familydoctor(familydoctor.cn)",
+    "date": "2026-08-28T00:00:00.000Z",
+    "url": "https://www.familydoctor.cn/news/xin-ai-tupo-zhuli-hanjianbing-zhenduan-suoduan-manchang-yin-zhilu-372196.html",
     "fallback": true
   },
   {
@@ -120,33 +140,13 @@
     "fallback": true
   },
   {
-    "id": "d19f5350557d",
+    "id": "0699180248ba",
     "category": "行业资讯",
-    "title": "Roivant, Priovant launch newly approved rare disease ...",
-    "summary": "Skip to main content\n\nExclusive news, data and analytics for financial market professionals Learn more about Refinitiv\n\n - Roivant (ROIV.O), opens new tab and partner Priovant Therapeutics on Friday set a list price of $35,000 for a ​30-day supply of their newly approved rare disease drug, ‌Lisraya.\n\nHere are the details:\n\nSign uphere. [...] The daily pill, which launched immediately after FDA approval, is the first targeted oral treatment for dermatomyositis, a rare condition ​that causes painf",
-    "source": "路透社(Reuters)",
-    "date": "2026-08-28T13:46:04Z",
-    "url": "https://www.reuters.com/legal/litigation/roivant-priovant-launch-newly-approved-rare-disease-drug-lisraya-35000-month-2026-08-28",
-    "fallback": true
-  },
-  {
-    "id": "dd43ca339a65",
-    "category": "行业资讯",
-    "title": "FDA approves Roivant therapy for rare autoimmune disease",
-    "summary": "The Food and Drug Administration onThursday approved a new medicine from Roivant and its subsidiary Priovant for the treatment of dermatomyositis, a rare autoimmune disease characterized by muscle weakness and a painful skin rash.\n\nThe drug, called brepocitinib, will be marketed under the brand name Lisraya. It’s a pill taken once daily.\n\nAdvertisement [...] 1. ### STAT Plus: Inside Moderna and Merck’s cancer vaccine triumph\n2. ### STAT Plus: Capricor Therapeutics' Duchenne treatment is heading ",
-    "source": "STAT新闻(STAT News)",
-    "date": "2026-08-27T19:47:01Z",
-    "url": "https://www.statnews.com/2026/08/27/fda-approves-roivant-therapy-for-rare-autoimmune-disease",
-    "fallback": true
-  },
-  {
-    "id": "05024bb2ca24",
-    "category": "行业资讯",
-    "title": "BioCryst is profitable. Now it wants to buy more rare ...",
-    "summary": "This month saw the launch of Rare Ventures — a new venture philanthropy-based accelerator lead by EB Research Partnership CEO, Michael Hund. The launch comes thanks to an investment of up to $25 million from the Richard K. Mellon Foundation, and with the hope that the funding model that contributed to the successful development of 3 FDA approved treatments for epidermolysis bullosa can be applied to other rare diseases — which has been a long-term goal of Hund and EBRP's founders, Jill and [...]",
-    "source": "CNBC",
-    "date": "2026-08-28T11:00:01Z",
-    "url": "https://www.cnbc.com/2026/08/28/biocryst-is-profitable-now-it-wants-to-buy-more-rare-disease-drugs.html",
+    "title": "FDA Nod for Inflammation Drug Notches Wins for Rare ...",
+    "summary": "MedCity News\n\nBioPharma,     Pharma\n\n# FDA Nod for Inflammation Drug Notches Wins for Rare Disease Patients, Roivant’s Biz Strategy\n\nRoivant Sciences subsidiary Priovant Therapeutics received FDA approval for Lisraya as a treatment for the rare inflammatory disorder dermatomyositis. Licensed from Pfizer, this once-daily pill designed to block JAK1 and TYK2 proteins is also in clinical development for three additional rare immunological disorders, each with blockbuster potential. [...] Treatment ",
+    "source": "medcitynews(medcitynews.com)",
+    "date": "2026-08-28T20:19:24Z",
+    "url": "https://medcitynews.com/2026/08/roivant-sciences-priovant-brepocitinib-lisraya-dermatomyositis-jak1-tyk2-inhibitor-fda-approval-inflammation-immunology-rare-disease-roiv",
     "fallback": true
   }
 ]
