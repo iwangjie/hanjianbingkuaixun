@@ -1,102 +1,102 @@
 [
   {
-    "id": "0efc8aa5a49d",
-    "category": "行业资讯",
-    "title": "Gene therapy may ease swallowing problems in rare MD type",
-    "summary": "Treatment with the experimental gene therapy BB-301 was found to improve swallowing ability for every person with a rare type of muscular dystrophy (MD) that mainly affects the throat and eyes who are taking part in a first-in-human clinical trial.\n\n...\n\nThe new update covers data from a total of nine patients treated with BB-301: Six given a low dose have now been followed for at least one year since treatment, and three given a higher dose have been tracked for at least three months. Updated s",
-    "source": "musculardystrophynews(musculardystrophynews.com)",
-    "date": "2026-11-05T15:15:20.000Z",
-    "url": "https://musculardystrophynews.com/news/gene-therapy-eases-swallowing-problems-rare-md-type-early-trial/",
-    "fallback": true
-  },
-  {
     "id": "29a5034f8cba",
     "category": "行业资讯",
     "title": "Epileptic seizures nearly vanish after people receive experimental gene therapy in their brains | Nature",
-    "summary": "Three people with epilepsy resistant to drug treatment saw the number of seizures they had per month fall by more than 90%, after gene-laden viruses were infused directly into their brains as part of an early-stage clinical trial 1.\n\nIn each participant, the gene therapy was precisely targeted to a small patch of brain tissue that was the source of their seizures. The viruses carried a gene that makes neurons sensitive to a specific drug, which works like a dimmer switch for the therapy. By comb",
+    "summary": "Three people with epilepsy resistant to drug treatment saw the number of seizures they had per month fall by more than 90% after gene-laden viruses were infused directly into their brains as part of an early-stage clinical trial 1.\n\nIn each participant, the gene therapy was precisely targeted to a small patch of brain tissue that was the source of their seizures. The viruses carried a gene that makes neurons sensitive to a specific drug, which works like a dimmer switch for the therapy. By combi",
     "source": "自然(Nature)",
     "date": "2026-11-04T22:52:20.000Z",
     "url": "https://www.nature.com/articles/d41586-026-03566-2",
     "fallback": true
   },
   {
-    "id": "389487560d6a",
+    "id": "0efc8aa5a49d",
     "category": "行业资讯",
-    "title": "Two Gene Therapy Approvals Expand Options for Rare Immune Disorders as Access Challenges Persist",
-    "summary": "Two gene therapies for inherited immune disorders have received FDA approval within the past year, offering new treatment options while exposing a persistent challenge: successful genetic correction does not always translate into consistent clinical benefit or commercial availability.\n\n...\n\nIn December 2025, the FDA approved etuvetidigene autotemcel (etu-cel, Waskyra; Fondazione Telethon ETS) for patients aged 6 months and older with Wiskott-Aldrich syndrome (WAS) who are eligible for hematopoie",
-    "source": "pharmacytimes(pharmacytimes.com)",
-    "date": "2026-11-04T22:21:17.000Z",
-    "url": "https://www.pharmacytimes.com/view/two-gene-therapy-approvals-expand-options-for-rare-immune-disorders-as-access-challenges-persist",
+    "title": "Gene therapy may ease swallowing problems in rare MD type",
+    "summary": "Treatment with the experimental gene therapy BB-301 was found to improve swallowing ability for every person with a rare type of muscular dystrophy (MD) that mainly affects the throat and eyes who are taking part in a first-in-human clinical trial.\n\n...\n\nBB-301 is a gene therapy that uses a strategy called silence-and-replace: Essentially, the treatment candidate aims to inactivate the mutated PABPN1 gene while simultaneously delivering a working copy of the gene to muscle cells. The therapy is ",
+    "source": "musculardystrophynews(musculardystrophynews.com)",
+    "date": "2026-11-05T15:15:20.000Z",
+    "url": "https://musculardystrophynews.com/news/gene-therapy-eases-swallowing-problems-rare-md-type-early-trial/",
     "fallback": true
   },
   {
-    "id": "c95f9688f1fb",
+    "id": "88bea38bac6f",
     "category": "行业资讯",
-    "title": "BTKi shows promise for warm haemolytic anaemia",
-    "summary": "The first clinical study of a BTK inhibitor in patients with warm autoimmune haemolytic anaemia has shown robust and durable haemoglobin responses, researchers report.\n\nAlongside increased haemoglobin concentrations, the drug was linked with reduced haemolysis markers, lactate dehydrogenase, reticulocytes, and total bilirubin, as well as clinically meaningful improvements in fatigue, according to the paper, published in Lancet Haematology [link here].\n\nIn addition, elevated haemoglobin levels wi",
-    "source": "thelimbic(thelimbic.com)",
+    "title": "Haplotype-Based ASOs Can Bypass Bespoke Rare Disease Drug Design | Inside Precision Medicine",
+    "summary": "Now, researchers have identified a potential way around this barrier by designing ASOs that target common genetic variations rather than individual disease-causing mutations. In a study published in The American Journal of Human Genetics, researchers led by Stephen Kingsmore, MD, DSc, of Cleveland Clinic demonstrated how a small collection of ASOs could potentially serve patients carrying different mutations in the same disease-associated gene. The strategy could allow highly personalized geneti",
+    "source": "insideprecisionmedicine(insideprecisionmedicine.com)",
+    "date": "2026-11-05T16:00:30.000Z",
+    "url": "https://www.insideprecisionmedicine.com/topics/precision-medicine/haplotype-based-asos-can-bypass-bespoke-rare-disease-drug-design/",
+    "fallback": true
+  },
+  {
+    "id": "0749c2415ede",
+    "category": "行业资讯",
+    "title": "FDA approves Zanvastro, first drug for Alexander disease",
+    "summary": "The FDA has approved Zanvastro (zilganersen), the first drug cleared for Alexander disease and the first to target the glial fibrillary acidic protein that drives it. It is given as a 50 mg spinal injection every three months, for patients from infancy through adulthood.\n\n...\n\nZanvastro is an antisense oligonucleotide: a short synthetic strand that binds GFAP RNA and triggers its cleavage, so astrocytes produce less of the protein that clumps into Rosenthal fibres. It is the first therapy to tar",
+    "source": "flash24(flash24.org)",
+    "date": "2026-11-06T12:58:54.000Z",
+    "url": "https://flash24.org/stories/fda-approves-first-drug-for-alexander-disease-a-quart/",
+    "fallback": true
+  },
+  {
+    "id": "aac201cf9947",
+    "category": "行业资讯",
+    "title": "Kamau Therapeutics Announces First Multi-Patient Clinical Data Showing Precise Correction of the Sickle Cell Mutation and Restoration of Adult Hemoglobin - BioSpace",
+    "summary": "All\n\n...\n\nThe presentation, titled “First Clinical Results of Precise HBB Gene Correction by Homology-Directed Repair in Patients with Severe Sickle Cell Disease: Safety and Efficacy from Phase 1A of the RESTORE Study,” will deliver the first results from the ongoing study using a revised manufacturing process (V2.0) for nula-cel. Data include three patients treated with the V2.0 product, two with more than six months of follow-up, along with continued follow-up of the first patient ever treated",
+    "source": "BioSpace",
+    "date": "2026-11-05T01:40:10.000Z",
+    "url": "https://www.biospace.com/press-releases/kamau-therapeutics-announces-first-multi-patient-clinical-data-showing-precise-correction-of-the-sickle-cell-mutation-and-restoration-of-adult-hemoglobin",
+    "fallback": true
+  },
+  {
+    "id": "8583a8311e70",
+    "category": "行业资讯",
+    "title": "News: Liver Biopsy Confirms Gene Correction in AATD - CRISPR Medicine",
+    "summary": "A liver biopsy has provided direct evidence that adenine base editing can correct the pathogenic SERPINA1 Z variant in a patient with alpha-1 antitrypsin deficiency (AATD). Ten weeks after one YOLT-202 infusion, 54–57% of alleles in the sampled liver tissue were corrected, alongside sustained circulating AAT with preserved anti-elastase activity.\n\n...\n\nThe 66-year-old man received a single intravenous infusion of YolTech Therapeutics' YOLT-202, a lipid nanoparticle-formulated adenine base editor",
+    "source": "crisprmedicinenews(crisprmedicinenews.com)",
+    "date": "2026-11-06T00:00:00.000Z",
+    "url": "https://crisprmedicinenews.com/news/liver-biopsy-confirms-gene-correction-in-aatd/",
+    "fallback": true
+  },
+  {
+    "id": "a826af751207",
+    "category": "行业资讯",
+    "title": "Nonprofit gene therapy for Wiskott-Aldrich syndrome lands in US",
+    "summary": "In 2010, GSK delivered a breakthrough gene therapy called etuvetidigene autotemcel (etu-cel, or Waskyra) to a Wiskott-Aldrich syndrome (WAS) patient for the first time. Two more patients followed. A 2013 Science paper reported that the small proof-of-concept cohort showed stable engraftment and expression of the healthy WASP gene, representing a promising step toward curing the immunodeficiency condition.\n\n...\n\nThat’s where Italian nonprofit Fondazione Telethon (FT) picked up the baton. FT added",
+    "source": "bioxconomy(bioxconomy.com)",
+    "date": "2026-11-05T17:54:52.000Z",
+    "url": "https://www.bioxconomy.com/modalities/nonprofit-gene-therapy-wiskott-aldrich-syndrome-us-shores",
+    "fallback": true
+  },
+  {
+    "id": "f7a4d0b26204",
+    "category": "行业资讯",
+    "title": "3D Printed Treatment Options | The CheckRare Brief | CheckRare",
+    "summary": "The FDA has approved a new oral pellet formulation of Orladeyo (berotralstat) for adults and adolescents 12 and older with hereditary angioedema (HAE). \n\nHAE, is a rare genetic condition that causes sudden, unpredictable episodes of swelling in the skin, the gut, and sometimes the airway, which can be life-threatening.\n\nOrladeyo is a once-daily prophylactic oral therapy that blocks plasma kallikrein to reduce the swelling that occurs in HAE. The original formulation, a capsule, was first approve",
+    "source": "checkrare(checkrare.com)",
+    "date": "2026-11-04T17:47:08.000Z",
+    "url": "https://checkrare.com/3d-printed-treatment-options-the-checkrare-brief/",
+    "fallback": true
+  },
+  {
+    "id": "95efb0a4ddd9",
+    "category": "行业资讯",
+    "title": "Gene Therapy for Crigler-Najjar Remains Effective After 4 Years | Mirage News",
+    "summary": "On November 5, 2026, the New England Journal of Medicine published a study on the long-term efficacy of AAV8-mediated gene therapy (GNT0003) in patients with Crigler-Najjar syndrome . The clinical trial was sponsored as part of the international CureCN consortium by Généthon , a unique non-profit organization specializing in gene therapy research and development, founded by the French Muscular Dystrophy Association (AFM-Téléthon).\n\nCrigler-Najjar syndrome is an extremely rare congenital liver di",
+    "source": "miragenews(miragenews.com)",
+    "date": "2026-11-05T17:52:38.000Z",
+    "url": "https://www.miragenews.com/gene-therapy-for-crigler-najjar-remains-1772756/",
+    "fallback": true
+  },
+  {
+    "id": "e614c0b754ac",
+    "category": "行业资讯",
+    "title": "Phase 3 Findings Strong for New Complement... : Neurology Today",
+    "summary": "Believed to be the first nanobody therapy to be successfully evaluated in a phase 3 trial in neurology, gefurulimab has received orphan drug designation from the U.S. Food and Drug Administration for treating generalized myasthenia gravis. The drug, which comes in a prefilled syringe with a needle safety device, could provide patients with greater autonomy and a predictable treatment schedule compared to other intravenous drugs, the senior author of the study says.\n\nA weekly subcutaneous nanobod",
+    "source": "ovid(ovid.com)",
     "date": "2026-11-05T00:00:00.000Z",
-    "url": "https://thelimbic.com/haematology/btki-shows-promise-for-warm-haemolytic-anaemia/",
-    "fallback": true
-  },
-  {
-    "id": "c6e92d5486f5",
-    "category": "行业资讯",
-    "title": "How a CRISPR sickle cell therapy moved from lab to clinical trial | UCLA",
-    "summary": "A UCLA-led team has described how they advanced an experimental CRISPR approach for sickle cell disease into a blood stem cell therapy that can be manufactured at the scale and quality required for a clinical trial.\n\nThe therapy uses CRISPR-Cas9 gene editing to correct the single-point mutation that causes sickle cell disease in a patient’s own blood-forming stem cells. In preclinical studies, the researchers established a reproducible manufacturing process and showed that red blood cells in vit",
-    "source": "newsroom.ucla.edu(newsroom.ucla.edu)",
-    "date": "2026-11-04T19:05:00.000Z",
-    "url": "https://newsroom.ucla.edu/releases/how-crispr-sickle-cell-therapy-moved-from-lab-clinical-trial",
-    "fallback": true
-  },
-  {
-    "id": "6b57990fb388",
-    "category": "行业资讯",
-    "title": "Treatment may curb long-term organ damage risk in congenital TTP",
-    "summary": "Regular preventive treatment with the approved infusion therapy Adzynma (ADAMTS13 recombinant-krhn) may help reduce the long-term risk of organ damage in people with congenital thrombotic thrombocytopenic purpura (TTP), according to a study.\n\nBased on predictions from six U.K. clinicians experienced in treating the rare bleeding disorder, researchers estimated that fewer than 8% of patients receiving regular preventive treatment with Adzynma would develop serious complications affecting the brai",
-    "source": "bleedingdisordersnews(bleedingdisordersnews.com)",
-    "date": "2026-11-04T18:45:14.000Z",
-    "url": "https://bleedingdisordersnews.com/news/treatment-curb-long-term-organ-damage-risk-congenital-ttp/",
-    "fallback": true
-  },
-  {
-    "id": "480710461867",
-    "category": "行业资讯",
-    "title": "FDA Fast-Tracks GV101 for Friedreich Ataxia",
-    "summary": "Graviton Bioscience announced that GV101, an investigational oral therapy being developed for Friedreich ataxia (FA), has received Fast Track designation from the US Food and Drug Administration (FDA).\n\n...\n\nGV101 is a potent, highly selective inhibitor of Rho-associated coiled-coil containing protein kinase 2 (ROCK2), a protein involved in regulating several cellular pathways, including gene expression. The investigational therapy aims to increase frataxin production by enhancing both frataxin ",
-    "source": "rarediseaseadvisor(rarediseaseadvisor.com)",
-    "date": "2026-11-04T17:42:01.000Z",
-    "url": "https://www.rarediseaseadvisor.com/news/fda-fast-track-designation-gv101-frataxin-increasing-therapy-friedreich-ataxia/",
-    "fallback": true
-  },
-  {
-    "id": "a4a805c677ee",
-    "category": "行业资讯",
-    "title": "‘Off-the-Shelf’ CAR T-Cell Tx Shows Early Safety in MS",
-    "summary": "‘Off-the-Shelf’ CAR T-Cell Tx Shows Early Safety in MS\n# ‘Off-the-Shelf’ CAR T-Cell Therapy Shows Early Safety Signal in Progressive MS\nPauline Anderson\nNovember 05, 2026\nTORONTO — The first allogeneic CD19-directed chimeric antigen receptor (CAR) T-cell therapy to be evaluated in progressive multiple sclerosis (MS) showed no serious safety signals in early phase 1 results.\nAmong 18 patients with refractory progressive MS, treatment with azercabtagene zapreleucel (azer-cel) produced no dose-limi",
-    "source": "Medscape",
-    "date": "2026-11-05T12:22:48.000Z",
-    "url": "https://www.medscape.com/viewarticle/shelf-car-t-cell-therapy-shows-early-safety-signal-2026a100169g?src=rss",
-    "fallback": true
-  },
-  {
-    "id": "88fbf83f6758",
-    "category": "行业资讯",
-    "title": "VeonGen Announces FDA Alignment on Pivotal Phase 3",
-    "summary": "- FDA alignment on pivotal Phase 3 study design and CMC strategy marks an important milestone in VG801’s clinical development\n- VG801 demonstrates consistent and sustained functional improvements through Month 12 across best-corrected visual acuity (BCVA), Virtual Reality Visual Test (VRVT) and microperimetry fixation, alongside a favorable safety profile to date\n- All 13 patients with measurable baseline BCVA showed improvements from baseline to Month 6 or Month 12, with 11 achieving gains of ≥",
-    "source": "环球新闻社(GlobeNewswire)",
-    "date": "2026-11-05T13:00:00.000Z",
-    "url": "https://www.globenewswire.com/news-release/2026/11/05/3396355/0/en/veongen-announces-fda-alignment-on-pivotal-phase-3-development-and-clinical-progress-of-vg801-for-stargardt-disease.html",
-    "fallback": true
-  },
-  {
-    "id": "a180b0679c2f",
-    "category": "行业资讯",
-    "title": "FDA Places Partial Clinical Hold on BMB-101 Trial in DEEs",
-    "summary": "In the phase 2 BREAKTHROUGH trial, 6 patients with a DEE who completed the main treatment period had a median 63.3% reduction in major motor seizures. \n\nThe US Food and Drug Administration (FDA) has placed a partial clinical hold on a planned phase 2 trial of BMB-101 for seizures linked to developmental and epileptic encephalopathies (DEEs), including Dravet syndrome (DS) and Lennox-Gastaut syndrome (LGS).\n\n...\n\nApproximately 90 people have received BMB-101 so far. In a phase 1 study of 64 healt",
-    "source": "rarediseaseadvisor(rarediseaseadvisor.com)",
-    "date": "2026-11-04T18:23:32.000Z",
-    "url": "https://www.rarediseaseadvisor.com/news/fda-partial-hold-phase-2-bmb-101-trial-dees/",
+    "url": "https://www.ovid.com/jnls/neurotodayonline/fulltext/10.1097/01.wnt.0001291720.05064.f5~phase-3-findings-strong-for-new-complement-inhibitor-for",
     "fallback": true
   },
   {
@@ -110,16 +110,6 @@
     "fallback": true
   },
   {
-    "id": "6a7944f33ce7",
-    "category": "行业资讯",
-    "title": "Ono Pharma Receives Orphan Medicinal Product Designation for Sapablursen from European Commission and Plans to Present Trial-in-Progress Poster at ASH 2026 | ONO CORPORATE",
-    "summary": "Osaka, Japan, November 5, 2026 -- Ono Pharmaceutical Co., Ltd. (Headquarters: Osaka, Japan; President and COO: Toichi Takino; “Ono”) today announced that the European Commission has granted Orphan Medicinal Product Designation to sapablursen (ONO-0530) in polycythemia vera (PV). Sapablursen has previously received Fast Track Designation in January 2024, Orphan Drug Designation in August 2024, and Breakthrough Therapy Designation in May 2025 from the U.S. Food and Drug Administration (FDA). In Ja",
-    "source": "ono-pharma(ono-pharma.com)",
-    "date": "2026-11-05T00:00:00.000Z",
-    "url": "https://www.ono-pharma.com/en/news/20261105.html",
-    "fallback": true
-  },
-  {
     "id": "799de6d2aae3",
     "category": "行业资讯",
     "title": "Interim report Q3 2026 - Egetis Therapeutics",
@@ -130,23 +120,33 @@
     "fallback": true
   },
   {
-    "id": "6b853008b4f1",
+    "id": "9fdd4c5f6a7d",
     "category": "行业资讯",
-    "title": "Sapablursen: EU Orphan Status, Phase 3 Lists 250",
-    "summary": "Ono Pharmaceutical said on 4 November 2026 that the European Commission granted orphan medicinal product designation to sapablursen, also called ONO-0530, for polycythemia vera. The public EU orphan register was not the page used here, so the grant stays Ono's statement. ClinicalTrials.gov lists the Phase 3 INTREPID study as recruiting, with an estimated 250 participants. FDA designated the US orphan use on 5 August 2024 and has not approved that use.\n\n...\n\n- Ono said on 4 November 2026 that the",
-    "source": "novapharmanews(novapharmanews.com)",
-    "date": "2026-11-04T18:28:49.000Z",
-    "url": "https://novapharmanews.com/eu/news/sapablursen-eu-orphan-phase3-250",
+    "title": "FDA Accepts First Gene Therapy for Huntington's",
+    "summary": "FDA accepted uniQure’s Biologics License Application for AMT-130 (ifezuntirgene ... ) on 2 November 2026, granting Priority Review\n...\n, with the study underway well before any approval decision. If the confirmatory trial does not verify",
+    "source": "regulatorynews(regulatorynews.com)",
+    "date": "2026-11-05T15:00:38.000Z",
+    "url": "https://regulatorynews.com/uniqure-amt-130-huntingtons-physicians",
     "fallback": true
   },
   {
-    "id": "a97400946337",
+    "id": "f78b0b777c8d",
     "category": "行业资讯",
-    "title": "HUTCHMED Announces Sovleplenib Granted US FDA Orphan Drug",
-    "summary": "HONG KONG and FLORHAM PARK, N.J., Nov. 04, 2026 (GLOBE NEWSWIRE) -- HUTCHMED (China) Limited (“ HUTCHMED”) (Nasdaq/AIM:​HCM; HKEX:​13) today announces that the US Food and Drug Administration (“FDA”) has granted Orphan Drug Designation to sovleplenib for the treatment of autoimmune hemolytic anemia (“AIHA”). Sovleplenib is a novel, selective, oral spleen tyrosine kinase (“Syk”) inhibitor.\n\nThis marks the second Orphan Drug Designation granted by the US FDA for sovleplenib, following the designat",
-    "source": "环球新闻社(GlobeNewswire)",
-    "date": "2026-11-05T00:00:00.000Z",
-    "url": "https://www.globenewswire.com/news-release/2026/11/05/3395972/0/en/hutchmed-announces-sovleplenib-granted-us-fda-orphan-drug-designation-for-autoimmune-hemolytic-anemia.html",
+    "title": "EU Grants Sapablursen Orphan Status in Polycythemia Vera",
+    "summary": "The European Commission has granted orphan medicinal product designation to sapablursen, Ono Pharmaceutical's antisense oligonucleotide against TMPRSS6, for polycythemia vera. Ono said the same day that a trial-in-progress poster on the global Phase III INTREPID study will be presented at the American Society of Hematology annual meeting in New Orleans on Dec. 13.\n\n...\n\n- Designation: EU orphan medicinal product status in polycythemia vera, announced by Ono on Nov. 4, 2026.\n- Earlier designation",
+    "source": "apoapenews(apoapenews.com)",
+    "date": "2026-11-04T23:15:18.000Z",
+    "url": "https://www.apoapenews.com/articles/ono-sapablursen-ec-orphan-designation-intrepid-ash-2026/",
+    "fallback": true
+  },
+  {
+    "id": "59e723636230",
+    "category": "行业资讯",
+    "title": "Orphan Therapeutics Accelerator In-Licenses Its First Gene Therapy, Eyes Pipeline Expansion",
+    "summary": "Orphan Therapeutics Accelerator In-Licenses Its First Gene Therapy, Eyes Pipeline Expansion\n# Orphan Therapeutics Accelerator In-Licenses Its First Gene Therapy, Eyes Pipeline Expansion\nBy Uduak Thomas\nNovember 5, 2026\nCredit: Nemes Laszlo / Science Photo Library / Getty Images\nRecently, the Orphan Therapeutics Accelerator (OTXL) announced an agreement with UCL Ventures, the commercialization company of University College London (UCL), and Children’s Medical Research Institute (CMRI) to in-licen",
+    "source": "genengnews(genengnews.com)",
+    "date": "2026-11-05T18:29:40.000Z",
+    "url": "https://www.genengnews.com/topics/translational-medicine/orphan-therapeutics-accelerator-in-licenses-its-first-gene-therapy-eyes-pipeline-expansion/",
     "fallback": true
   }
 ]
